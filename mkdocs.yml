@@ -259,7 +259,7 @@ nav:
   - CUSTOM FILES:
       - Templates: builders/templates.md
       - Filters: builders/filters.md
-      - Builders Overview: builders/builders.md
+      - Builders Overview: metadata/builders.md
       - "PLEX & SMART BUILDERS":
         - Plex Builders:
           - Overview: builders/plex.md
