@@ -10,7 +10,7 @@ theme:
   name: material
   logo: assets/icon.png
   favicon: assets/favicon.png
-  custom_dir: overrides
+  custom_dir: docs/overrides
   features:
     - content.tabs.link
     - content.code.copy
