@@ -17,8 +17,7 @@
 
 Plex Meta Manager is a powerful tool designed to give you complete control over your media libraries. With Plex Meta Manager, you can take your customization to the next level, with granular control over metadata, collections, overlays, and much more.
 
-Unlock the full potential of your media library with Plex Meta Manager! Unlike any other tool, Plex Meta Manager lets you connect to third-party services such as TMDb, Trakt, IMDb, and more, giving you the power to create unique collections and overlays, allowing you to create media libraries that truly stand out and are tailored to your individual needs.
-
+Transform your media library with Plex Meta Manager and discover its full potential! Connect to third-party services like TMDb, Trakt, and IMDb, among others, to create one-of-a-kind collections, overlays and more. Your media library will stand out and be tailored to your specific needs.
 
 ## What Can Plex Meta Manager Do?
 
