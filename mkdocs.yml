@@ -33,7 +33,7 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: custom
-      accent: green
+      accent: deep purple
       toggle:
         icon: material/weather-night
         name: Switch to light mode
@@ -42,7 +42,7 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: custom
-      accent: green
+      accent: deep purple
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode

@@ -53,9 +53,7 @@ Finally, this walkthrough is intended to give you a basic grounding in how to ge
 
 ### Prepare a small test library [optional]
 
-{%
-   include-markdown "wt/wt-test-library.md"
-%}
+{% include-markdown "wt/wt-test-library.md" %}
 
 ### Starting up your terminal.
 
