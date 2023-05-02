@@ -8,7 +8,7 @@ Each showcased photo has been confirmed to be fully functional with Plex Meta Ma
 
 === "Example 1"
 
-    ![Overlay Showcase 1](overlay-showcase1.jpg){width="600" align=left }
+    ![Overlay Showcase 1](overlay-showcase1.jpg){width="600" align=left loading=lazy }
     
     This example shows a minimalistic Overlay application with the resolution, audio codec and video format on display.
 
@@ -41,7 +41,7 @@ Each showcased photo has been confirmed to be fully functional with Plex Meta Ma
 
 === "Example 2"
 
-    ![Overlay Showcase 2](overlay-showcase2.jpg){width="600" align=left }
+    ![Overlay Showcase 2](overlay-showcase2.jpg){width="600" align=left loading=lazy }
     
     This example shows a minimalistic Overlay application with the ratings and ribbon of the movie.
 
@@ -91,3 +91,62 @@ Each showcased photo has been confirmed to be fully functional with Plex Meta Ma
     ```
 
     **Replace `Movies` with the name of your library** and **Set the font location to wherever you place them**
+
+
+## Example 3
+
+=== "Example 3"
+
+    ![Overlay Showcase 3](overlay-showcase3.jpg){width="600" align=left loading=lazy }
+    
+    This example shows a minimalistic Overlay application with the ratings applied at the bottom of the poster
+
+    This example uses two PMM Default Overlay files: [Ratings](../defaults/overlays/ratings.md) and [Runtimes](../defaults/overlays/runtimes.md).
+
+    Ratings are set to show the TMDb, Trakt and IMDb ratings, which have been set using [Library Operations](../config/operations/#mass--rating-update)
+
+    The runtimes overlay is modified to show no text, but to instead produce the black bar which the ratigns sit on top of.
+
+    **Click the image to enlarge it**
+
+=== "Click to view Example 3 code"
+
+    This code belongs in config.yml
+
+    ```yml
+    libraries:
+      Movies:
+        overlay_path:
+        - pmm: runtimes
+          template_variables:
+            text: ""
+            horizontal_position: center
+            rating_alignment: horizontal
+            vertical_position: bottom
+            back_width: 2500
+            back_radius: 1
+            back_color: "#000000"
+            horizontal_offset: 0
+            vertical_offset: 0
+        - pmm: ratings
+          template_variables:
+            rating1: critic
+            rating1_image: tmdb
+            rating2: audience
+            rating2_image: trakt
+            rating3: user
+            rating3_image: imdb
+            horizontal_position: center
+            rating_alignment: horizontal
+            vertical_position: bottom
+            back_width: 1
+            back_radius: 0
+            back_height: 40
+            back_color: "#000000"
+        operations:
+          mass_critic_rating_update: tmdb
+          mass_audience_rating_update: trakt
+          mass_user_rating_update: imdb
+    ```
+
+    **Replace `Movies` with the name of your library**
