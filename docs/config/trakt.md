@@ -21,9 +21,9 @@ trakt:
 
 | Attribute       | Allowed Values                  | Default | Required |
 |:----------------|:--------------------------------|:--------|:--------:|
-| `client_id`     | Trakt Application Client ID     | N/A     | &#9989;  |
-| `client_secret` | Trakt Application Client Secret | N/A     | &#9989;  |
-| `pin`           | Trakt Pin                       | None    | &#10060; |
+| `client_id`     | Trakt Application Client ID     | N/A     | :fontawesome-solid-circle-check:{ .green }  |
+| `client_secret` | Trakt Application Client Secret | N/A     | :fontawesome-solid-circle-check:{ .green }  |
+| `pin`           | Trakt Pin                       | None    | :fontawesome-solid-circle-check:{ .grey } |
 
 * All other attributes will be filled in by Plex Meta Manager. 
 

@@ -8,8 +8,8 @@ It has watch analytics that can show the most watched or most popular Movies/Sho
 
 | Attribute                                      | Description                         | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
 |:-----------------------------------------------|:------------------------------------|:-----------------:|:----------------:|:------------------------------------:|
-| [`tautulli_popular`](#tautulli-popularwatched) | Gets the Tautulli Most Popular List |      &#9989;      |     &#9989;      |               &#9989;                |
-| [`tautulli_watched`](#tautulli-popularwatched) | Gets the Tautulli Most Watched List |      &#9989;      |     &#9989;      |               &#9989;                |
+| [`tautulli_popular`](#tautulli-popularwatched) | Gets the Tautulli Most Popular List |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .green }      |               :fontawesome-solid-circle-check:{ .green }                |
+| [`tautulli_watched`](#tautulli-popularwatched) | Gets the Tautulli Most Watched List |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .green }      |               :fontawesome-solid-circle-check:{ .green }                |
 
 ## Tautulli Popular/Watched
 
@@ -17,9 +17,9 @@ Both Tautulli Popular and Tautulli Watched have the same sub-attributes detailed
 
 | Attribute      | Description                                                | Required | Default |
 |:---------------|:-----------------------------------------------------------|:--------:|:-------:|
-| `list_days`    | Number of Days to look back of the list.                   | &#10060; |  `30`   |
-| `list_minimum` | Minimum Number of Users Watching/Plays to add to the list. | &#10060; |   `0`   |
-| `list_size`    | Number of Movies/Shows to add to this list.                | &#10060; |  `10`   |
+| `list_days`    | Number of Days to look back of the list.                   | :fontawesome-solid-circle-check:{ .grey } |  `30`   |
+| `list_minimum` | Minimum Number of Users Watching/Plays to add to the list. | :fontawesome-solid-circle-check:{ .grey } |   `0`   |
+| `list_size`    | Number of Movies/Shows to add to this list.                | :fontawesome-solid-circle-check:{ .grey } |  `10`   |
 
 The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
 

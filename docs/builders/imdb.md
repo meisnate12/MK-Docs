@@ -4,10 +4,10 @@ You can find items using the features of [IMDb.com](https://www.imdb.com/) (IMDb
 
 | Attribute                           | Description                                                                                                                                               | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
 |:------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------:|:----------------:|:------------------------------------:|
-| [`imdb_id`](#imdb-id)               | Gets the movie/show specified.                                                                                                                            |      &#9989;      |     &#9989;      |               &#10060;               |
-| [`imdb_chart`](#imdb-chart)         | Gets every movie/show in an IMDb Chart like [IMDb Top 250 Movies](https://www.imdb.com/chart/top).                                                        |      &#9989;      |     &#9989;      |               &#9989;                |
-| [`imdb_list`](#imdb-list)           | Gets every movie/show in an IMDb List, [IMDb Keyword Search](https://www.imdb.com/search/keyword/), or [IMDb Search](https://www.imdb.com/search/title/). |      &#9989;      |     &#9989;      |               &#9989;                |
-| [`imdb_watchlist`](#imdb-watchlist) | Gets every movie/show in an IMDb User's Watchlist.                                                                                                        |      &#9989;      |     &#9989;      |               &#9989;                |
+| [`imdb_id`](#imdb-id)               | Gets the movie/show specified.                                                                                                                            |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .green }      |               :fontawesome-solid-circle-check:{ .grey }               |
+| [`imdb_chart`](#imdb-chart)         | Gets every movie/show in an IMDb Chart like [IMDb Top 250 Movies](https://www.imdb.com/chart/top).                                                        |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .green }      |               :fontawesome-solid-circle-check:{ .green }                |
+| [`imdb_list`](#imdb-list)           | Gets every movie/show in an IMDb List, [IMDb Keyword Search](https://www.imdb.com/search/keyword/), or [IMDb Search](https://www.imdb.com/search/title/). |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .green }      |               :fontawesome-solid-circle-check:{ .green }                |
+| [`imdb_watchlist`](#imdb-watchlist) | Gets every movie/show in an IMDb User's Watchlist.                                                                                                        |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .green }      |               :fontawesome-solid-circle-check:{ .green }                |
 
 ## IMDb ID
 
@@ -31,14 +31,14 @@ The `sync_mode: sync` and `collection_order: custom` Details are recommended sin
 
 | Name                                                                           | Attribute        | Works with Movies | Works with Shows |
 |:-------------------------------------------------------------------------------|:-----------------|:-----------------:|:----------------:|
-| [Box Office](https://www.imdb.com/chart/boxoffice)                             | `box_office`     |      &#9989;      |     &#10060;     |
-| [Most Popular Movies](https://www.imdb.com/chart/moviemeter)                   | `popular_movies` |      &#9989;      |     &#10060;     |
-| [Top 250 Movies](https://www.imdb.com/chart/top)                               | `top_movies`     |      &#9989;      |     &#10060;     |
-| [Top Rated English Movies](https://www.imdb.com/chart/top-english-movies)      | `top_english`    |      &#9989;      |     &#10060;     |
-| [Most Popular TV Shows](https://www.imdb.com/chart/tvmeter)                    | `popular_shows`  |     &#10060;      |     &#9989;      |
-| [Top 250 TV Shows](https://www.imdb.com/chart/toptv)                           | `top_shows`      |     &#10060;      |     &#9989;      |
-| [Top Rated Indian Movies](https://www.imdb.com/india/top-rated-indian-movies/) | `top_indian`     |      &#9989;      |     &#10060;     |
-| [Lowest Rated Movies](https://www.imdb.com/chart/bottom)                       | `lowest_rated`   |      &#9989;      |     &#10060;     |
+| [Box Office](https://www.imdb.com/chart/boxoffice)                             | `box_office`     |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .grey }     |
+| [Most Popular Movies](https://www.imdb.com/chart/moviemeter)                   | `popular_movies` |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .grey }     |
+| [Top 250 Movies](https://www.imdb.com/chart/top)                               | `top_movies`     |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .grey }     |
+| [Top Rated English Movies](https://www.imdb.com/chart/top-english-movies)      | `top_english`    |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .grey }     |
+| [Most Popular TV Shows](https://www.imdb.com/chart/tvmeter)                    | `popular_shows`  |     :fontawesome-solid-circle-check:{ .grey }      |     :fontawesome-solid-circle-check:{ .green }      |
+| [Top 250 TV Shows](https://www.imdb.com/chart/toptv)                           | `top_shows`      |     :fontawesome-solid-circle-check:{ .grey }      |     :fontawesome-solid-circle-check:{ .green }      |
+| [Top Rated Indian Movies](https://www.imdb.com/india/top-rated-indian-movies/) | `top_indian`     |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .grey }     |
+| [Lowest Rated Movies](https://www.imdb.com/chart/bottom)                       | `lowest_rated`   |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .grey }     |
 
 ```yaml
 collections:

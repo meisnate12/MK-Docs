@@ -6,8 +6,8 @@ No configuration is required for these builders.
 
 | Attribute                                         | Description                                                                                                         | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
 |:--------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------|:-----------------:|:----------------:|:------------------------------------:|
-| [`icheckmovies_list`](#icheckmovies-list)         | Finds every movie in the ICheckMovies List                                                                          |      &#9989;      |     &#10060;     |               &#9989;                |
-| [`icheckmovies_list_details`](#icheckmovies-list) | Finds every movie in the ICheckMovies List and updates the collection with the description of the ICheckMovies list |      &#9989;      |     &#10060;     |               &#9989;                |
+| [`icheckmovies_list`](#icheckmovies-list)         | Finds every movie in the ICheckMovies List                                                                          |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .grey }     |               :fontawesome-solid-circle-check:{ .green }                |
+| [`icheckmovies_list_details`](#icheckmovies-list) | Finds every movie in the ICheckMovies List and updates the collection with the description of the ICheckMovies list |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .grey }     |               :fontawesome-solid-circle-check:{ .green }                |
 
 ## ICheckMovies List
 

@@ -19,12 +19,12 @@ webhooks:
 
 | Attribute                               | Global  | Library  | Collection |
 |:----------------------------------------|:-------:|:--------:|:----------:|
-| [`error`](#error-notifications)         | &#9989; | &#10060; |  &#10060;  |
-| [`version`](#version-notifications)     | &#9989; | &#10060; |  &#10060;  |
-| [`run_start`](#run-start-notifications) | &#9989; | &#10060; |  &#10060;  |
-| [`run_end`](#run-end-notifications)     | &#9989; | &#10060; |  &#10060;  |
-| [`delete`](#delete-notifications)       | &#9989; | &#10060; |  &#10060;  |
-| [`changes`](#changes-notifications)     | &#9989; | &#9989;  |  &#9989;   |
+| [`error`](#error-notifications)         | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-check:{ .grey } |  :fontawesome-solid-circle-check:{ .grey }  |
+| [`version`](#version-notifications)     | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-check:{ .grey } |  :fontawesome-solid-circle-check:{ .grey }  |
+| [`run_start`](#run-start-notifications) | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-check:{ .grey } |  :fontawesome-solid-circle-check:{ .grey }  |
+| [`run_end`](#run-end-notifications)     | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-check:{ .grey } |  :fontawesome-solid-circle-check:{ .grey }  |
+| [`delete`](#delete-notifications)       | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-check:{ .grey } |  :fontawesome-solid-circle-check:{ .grey }  |
+| [`changes`](#changes-notifications)     | :fontawesome-solid-circle-check:{ .green } | :fontawesome-solid-circle-check:{ .green }  |  :fontawesome-solid-circle-check:{ .green }   |
 
 * Each Attribute can be either a webhook url as a string or a comma-separated list of webhooks urls.
 * To send notifications to [Notifiarr](notifiarr) just add `notifiarr` to a webhook instead of the webhook url.

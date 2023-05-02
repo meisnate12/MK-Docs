@@ -36,3 +36,21 @@
 .heart {
   animation: heart 1000ms infinite;
 }
+
+.green {
+  color: #00e676;
+}
+
+.orange {
+  color: #e69800;
+}
+
+[data-md-color-scheme="slate"] .grey {
+  color: #414454;
+}
+
+
+[data-md-color-scheme="default"] .grey {
+  color: #f1f1f1;
+}
+

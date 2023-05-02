@@ -13,7 +13,7 @@ notifiarr:
 
 | Attribute | Allowed Values                           | Required |
 |:----------|:-----------------------------------------|:--------:|
-| `apikey`  | Notifiarr API Key                        | &#9989;  |
+| `apikey`  | Notifiarr API Key                        | :fontawesome-solid-circle-check:{ .green }  |
 
 Once you have added the apikey your config.yml you have to add `notifiarr` to any [webhook](webhooks) to send that notification to Notifiarr.
 

@@ -6,8 +6,8 @@ No configuration is required for these builders.
 
 | Attribute                                     | Description                                                                                                     | Works with Movies | Works with Shows  | Works with Playlists and Custom Sort |
 |:----------------------------------------------|:----------------------------------------------------------------------------------------------------------------|:-----------------:|:-----------------:|:------------------------------------:|
-| [`letterboxd_list`](#letterboxd-list)         | Finds every movie in the Letterboxd List                                                                        |      &#9989;      |     &#10060;      |               &#9989;                |
-| [`letterboxd_list_details`](#letterboxd-list) | Finds every movie in the Letterboxd List and updates the collection with the description of the Letterboxd list |      &#9989;      |     &#10060;      |               &#9989;                |
+| [`letterboxd_list`](#letterboxd-list)         | Finds every movie in the Letterboxd List                                                                        |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .grey }      |               :fontawesome-solid-circle-check:{ .green }                |
+| [`letterboxd_list_details`](#letterboxd-list) | Finds every movie in the Letterboxd List and updates the collection with the description of the Letterboxd list |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .grey }      |               :fontawesome-solid-circle-check:{ .green }                |
 
 ## Letterboxd List
 

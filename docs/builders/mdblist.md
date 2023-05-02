@@ -4,7 +4,7 @@ You can find items using the features of [MdbList.com](https://mdblist.com/) (Md
 
 | Attribute                       | Description                                                               | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
 |:--------------------------------|:--------------------------------------------------------------------------|:-----------------:|:----------------:|:------------------------------------:|
-| [`mdblist_list`](#mdblist-list) | Gets every movie/show in a [MdbList List](https://mdblist.com/toplists/). |      &#9989;      |     &#9989;      |               &#9989;                |
+| [`mdblist_list`](#mdblist-list) | Gets every movie/show in a [MdbList List](https://mdblist.com/toplists/). |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .green }      |               :fontawesome-solid-circle-check:{ .green }                |
 
 ## MdbList List
 
