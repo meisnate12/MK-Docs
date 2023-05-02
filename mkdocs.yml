@@ -29,12 +29,13 @@ theme:
     - search.share
   language: en
   palette:
-    # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: custom
       accent: green
       toggle:
-        icon: material/brightness-auto
+        icon: material/weather-night
         name: Switch to light mode
 
     # Palette toggle for light mode
@@ -43,17 +44,8 @@ theme:
       primary: custom
       accent: green
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-sunny
         name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: custom
-      accent: green
-      toggle:
-        icon: material/brightness-4
-        name: Switch to system preference
 
 plugins:
   - search:
