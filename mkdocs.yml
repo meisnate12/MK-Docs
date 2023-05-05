@@ -421,5 +421,5 @@ nav:
     - Editing TV Metadata: metadata/metadata/show.md
     - Editing Music Metadata: metadata/metadata/music.md
     - Formula 1 Metadata Guide: pmm/install/guides/formula.md
-  - SHOWCASE:
-    - Overlays Showcase: showcase/overlays.md
+#  - SHOWCASE:
+#    - Overlays Showcase: showcase/overlays.md
