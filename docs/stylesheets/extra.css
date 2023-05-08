@@ -16,6 +16,18 @@
    display: table;
 }
 
+.md-typeset .tabbed-set {
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.md-typeset pre {
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 6px;
+    padding: 1px;
+}
+
 @media only screen and (min-width: 76.25em) {
   .md-main__inner {
     max-width: 80%;
