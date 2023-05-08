@@ -11,7 +11,7 @@ The path types are outlined as follows:
 * `- pmm:` refers to a [PMM Defaults](/defaults/guide) builders/overlay/playlist file. 
 * `- url:` refers to a metadata file which is hosted publicly on the internet. 
 * `- git:` refers to a metadata file which is hosted on the [Configs Repo](https://github.com/meisnate12/Plex-Meta-Manager-Configs).
-* `- repo:` refers to a metadata file which is hosted on a custom repository specified aby the user with the [`custom_repo` Setting Attribute](settings/#custom-repo).
+* `- repo:` refers to a metadata file which is hosted on a custom repository specified by the user with the [`custom_repo` Setting Attribute](settings/#custom-repo).
 
 
 ## YAML Controls

@@ -17,6 +17,9 @@ Supported Overlay Level: Movie, Show
 | Rotten Tomatoes Certified Fresh | `rotten`     | `30`   |
 | Metacritic Must See             | `metacritic` | `20`   |
 | Commonsense Selection           | `common`     | `10`   |
+| Golden Globe Winners            | `golden`     | `6`    |
+| Emmy Winners                    | `emmys`      | `4`    |
+| Razzie Winners                  | `razzie`     | `2`    |
 
 ## Config
 
