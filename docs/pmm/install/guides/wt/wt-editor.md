@@ -9,8 +9,8 @@
     I’m using `nano` here mostly because it’s simpler than any other editor on Linux.
     
     If you see something like:
-    ```bash
-     $ nano config/config.yml
+    ``` { .bash .no-copy }
+    $ nano config/config.yml
     zsh: command not found: nano
     ```
     

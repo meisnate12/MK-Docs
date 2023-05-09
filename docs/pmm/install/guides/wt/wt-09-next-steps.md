@@ -37,4 +37,3 @@ The command in this walkthrough will run all collections and libraries immediate
 ### Creating Collections, Overlays, Playlists, etc.
 
 These things are all generally defined in metadata files that are referred to in the config file.  The starting point for creating these files is [here](../../../../metadata/metadata.md).
-

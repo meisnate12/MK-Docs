@@ -12,6 +12,7 @@ theme:
   favicon: assets/favicon.png
   custom_dir: docs/overrides
   features:
+    - content.code.annotate
     - content.tabs.link
     - content.code.copy
     - header.autohide
@@ -68,7 +69,12 @@ extra:
     name: GitHub
 copyright: Copyright &copy; 2023 meisnate12
 markdown_extensions:
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed:

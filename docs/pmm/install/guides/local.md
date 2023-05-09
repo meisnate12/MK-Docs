@@ -28,25 +28,33 @@ Finally, this article provides a basic guide to get you started with Plex Meta M
 
 ## Prerequisites.
 
-???+ info
+???+ tip
 
     Nearly anywhere you see
-    
-    ```
+       
+    ``` { .shell .no-copy }
     something like this
     ```
-    
+       
     That’s a command you’re going to type or paste into your terminal (OSX or Linux) or Powershell (Windows).  In some cases it's displaying *output* from a command you've typed, but the difference should be apparent in context.
+   
+    Additionally, anywhere you see this icon:
+   
+    > :fontawesome-solid-circle-plus:
+   
+    That's a tooltip, you can press them to get more information.
 
-IMPORTANT NOTE:
-This walkthrough is going to be pretty pedantic.  I’m assuming you’re reading it because you have no idea how to get a Python script going, so I’m proceeding from the assumption that you want to be walked through every little detail.   You’re going to deliberately cause errors and then fix them as you go through it.  This is to help you understand what exactly is going on behind the scenes so that when you see these sorts of problems in the wild you will have some background to understand what’s happening.  If I only give you the happy path, then when you make a typo later on you’ll have no idea where that typo might be or why it’s breaking things.
+???+ warning "Important"
 
-I am assuming you do not have any of these tools already installed.  When writing this up I started with a brand new Windows 10 install.
+    This walkthrough is going to be pretty pedantic.  I’m assuming you’re reading it because you have no idea how to get a Python script going, so I’m proceeding from the assumption that you want to be walked through every little detail.   You’re going to deliberately cause errors and then fix them as you go through it.  This is to help you understand what exactly is going on behind the scenes so that when you see these sorts of problems in the wild you will have some background to understand what’s happening.  If I only give you the happy path, then when you make a typo later on you’ll have no idea where that typo might be or why it’s breaking things.
+   
+    I am assuming you do not have any of these tools already installed.  When writing this up I started with a brand new Windows 10 install.
+   
+    This walkthrough involves typing commands into a command window.  On Mac OS X or Linux, you can use your standard terminal window, whether that's the builtin Terminal app or something like iTerm.  On Windows, you should use PowerShell.  There are other options for command windows in Windows, but if you want this to work as written, which I assume is the case since you've read this far, you should use Powershell.
 
-This walkthrough involves typing commands into a command window.  On Mac OS X or Linux, you can use your standard terminal window, whether that's the builtin Terminal app or something like iTerm.  On Windows, you should use PowerShell.  There are other options for command windows in Windows, but if you want this to work as written, which I assume is the case since you've read this far, you should use Powershell.
+???+ danger "Super Important"
 
-IMPORTANT:
-This walkthrough is assuming you are doing the entire process on the same platform; i.e. you're installing Plex Meta Manager and editing its config files on a single Linux, Windows, or OS X machine.  It doesn't account for situations like running Plex Meta Manager on a Linux machine while editing the config files on your Windows box.
+    This walkthrough is assuming you are doing the entire process on the same platform; i.e. you're installing Plex Meta Manager and editing its config files on a single Linux, Windows, or OS X machine.  It doesn't account for situations like running Plex Meta Manager on a Linux machine while editing the config files on your Windows box.
 
 ### Prepare a small test library [optional]
 
@@ -158,41 +166,33 @@ Now we're going to use `git` to make a copy of the code on your local computer.
 
 Clone the repo into your home directory and go into that directory [type this into your terminal]:
 
-```
-cd ~
-git clone https://github.com/meisnate12/Plex-Meta-Manager
-cd Plex-Meta-Manager
+``` { .shell .no-copy linenums="1"} 
+cd ~ #(1)!
+git clone https://github.com/meisnate12/Plex-Meta-Manager #(2)!
+cd Plex-Meta-Manager #(3)!
 ```
 
-**NOTE: The rest of this walkthrough assumes you are staying in this directory in this terminal/Powershell window.**
+1.  This changes to your home directory, which will be something like `/home/yourname` or `/Users/yourname` or `C:\Users\YourName` depending on the platform.
+2.  This uses `git` to make a copy of (`clone`) the Plex Meta Manager code from where it is stored on `github`.
+3.  This moves into the directory that was created by the `clone` command.
 
-**IMPORTANT: In the future, when you want to run Plex Meta Manager at the command line, you have to be in this directory.**
+???+ warning "Important"
+
+    The rest of this walkthrough assumes you are staying in this directory in this terminal/Powershell window.
+
+    In the future, when you want to run Plex Meta Manager at the command line, you have to be in this directory.
 
 When you open a command window to run Plex Meta Manager, the first step will always be:
 
+``` { .shell .no-copy linenums="1"}
+cd ~ #(1)!
+cd Plex-Meta-Manager #(2)!
 ```
-cd ~
-cd Plex-Meta-Manager
-```
+
+1.  This changes to your home directory, which will be something like `/home/yourname` or `/Users/yourname` or `C:\Users\YourName` depending on the platform.
+2.  This moves into the Plex Meta Manager directory
 
 There are parts of the code that are assuming and expecting that you will be in this directory when you run Plex Meta Manager [the fonts used in overlays are one example].  Be sure that you are always in this directory when you run Plex Meta Manager.
-
-<details>
-  <summary>What did that do?</summary>
-
-  ```
-  cd ~
-  ```
-  This changes to your home directory, which will be something like `/home/yourname` or `/Users/yourname` or `C:\Users\YourName` depending on the platform.
-  ```
-  git clone https://github.com/meisnate12/Plex-Meta-Manager
-  ```
-  This uses `git` to make a copy of (`clone`) the Plex Meta Manager code from where it is stored on `github`.
-  ```
-  cd Plex-Meta-Manager
-  ```
-  This moves into the directory that was created by the `clone` command.
-</details>
 
 Later on you can move it elsewhere if you want, but for now put it there.  This will ensure that everything to follow works just like it says here.  Presumably you’re reading this because the other docs are unclear to you.  Don’t make unilateral changes to my assumptions while doing this.
 
@@ -225,8 +225,11 @@ This walkthrough is going to use a "virtual environment", since that provides a 
     ```
     python3 -m venv pmm-venv
     ```
+    
+    This tells Python3 to use the `venv` module to create a virtual environment called `pmm-venv`.  The only visible effect will be the creation of a `pmm-venv` directory.
+
     If you see an error like:
-    ```
+    ``` { .shell .no-copy }
     Error: Command '['/home/mroche/Plex-Meta-Manager/pmm-venv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
     ```
     You probably need to make sure the Python 3.9-specific virtualenv support library is installed:
@@ -243,31 +246,26 @@ This walkthrough is going to use a "virtual environment", since that provides a 
     python3 -m venv pmm-venv
     ```
 
+    This tells Python3 to use the `venv` module to create a virtual environment called `pmm-venv`.  The only visible effect will be the creation of a `pmm-venv` directory.
+
 === ":fontawesome-brands-windows: Windows"
 
     [type this into your terminal]
     ```
     python -m venv pmm-venv
     ```
+
+    This tells Python3 to use the `venv` module to create a virtual environment called `pmm-venv`.  The only visible effect will be the creation of a `pmm-venv` directory.
+
     If you see:
-    ```
+    ``` { .shell .no-copy }
     Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Manage App Execution Aliases.
     ```
     You apparently didn't check the “Add to path” checkbox above under [installing Python](#installing-python).  "Repair" your Python install and check "add python to environment variables".
 
+Your terminal should now look something like this:
 
-<details>
-  <summary>What did that do?</summary>
-
-  ```
-  python3 -m venv pmm-venv
-  ```
-  This tells Python3 to use the `venv` module to create a virtual environment called `pmm-venv`.  The only visible effect will be the creation of a `pmm-venv` directory.
-</details>
-
-That command will not produce any output if it works; it will display an error if a problem occurs.  If everything is fine, you will be looking at something like this:
-
-```
+``` { .shell .no-copy }
 > python -m venv pmm-venv
 >
 ```
@@ -297,7 +295,7 @@ That will create the virtual environment, and then you need to activate it:
     .\pmm-venv\Scripts\activate
     ```
     If you see something like this:
-    ```powershell
+    ``` { .powershell .no-copy linenums="1"}
     .\pmm-venv\Scripts\activate : File C:\Users\mroche\Plex-Meta-Manager\pmm-venv\Scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink LinkID=135170.
     At line:1 char:1
     + .\pmm-venv\Scripts\activate
@@ -316,7 +314,7 @@ That command will not produce any output if it works; it will display an error i
 
 You may see a change in your prompt, something like this:
 
-```
+``` { .shell .no-copy }
 ➜  Plex-Meta-Manager git:(master) ✗ source pmm-venv/bin/activate
 (pmm-venv) ➜  Plex-Meta-Manager git:(master) ✗
 ```
@@ -331,29 +329,30 @@ Note that the prompt now shows the name of the virtual environment.  You may not
 
 An advantage of doing this in a virtual environment is that in the event something goes wrong with this part of the setup, you can delete that pmm-venv directory and do the setup again.
 
-**IMPORTANT: In the future, when you want to run Plex Meta Manager, you will need to do this "activation" step every time.  Not the venv creation, just the activation**:
+???+ warning "Important"
 
-=== ":fontawesome-brands-linux: Linux"
+    In the future, when you want to run Plex Meta Manager, you will need to do this "activation" step every time.  Not the venv creation, just the activation:
 
-    [type this into your terminal]
-    ```
-    source pmm-venv/bin/activate
-    ```
-
-=== ":fontawesome-brands-apple: macOS"
-
-    [type this into your terminal]
-    ```
-    source pmm-venv/bin/activate
-    ```
-
-=== ":fontawesome-brands-windows: Windows"
-
-    [type this into your terminal]
-    ```
-    .\pmm-venv\Scripts\activate
-    ```
-
+    === ":fontawesome-brands-linux: Linux"
+   
+        [type this into your terminal]
+        ```
+        source pmm-venv/bin/activate
+        ```
+   
+    === ":fontawesome-brands-apple: macOS"
+   
+        [type this into your terminal]
+        ```
+        source pmm-venv/bin/activate
+        ```
+   
+    === ":fontawesome-brands-windows: Windows"
+   
+        [type this into your terminal]
+        ```
+        .\pmm-venv\Scripts\activate
+        ```
 
 ### Installing requirements
 
@@ -367,7 +366,7 @@ python -m pip install -r requirements.txt
 
 You should see something like this [I’ve removed a few lines for space, and the specific versions may have changed since this was captured]:
 Studio: 441 and 1807 and 2495 and 1286 and 2503 and 2264
-```
+``` { .shell .no-copy }
 Collecting PlexAPI==4.7.0
   Downloading PlexAPI-4.7.0-py3-none-any.whl (133 kB)
      |████████████████████████████████| 133 kB 821 kB/s
@@ -390,7 +389,7 @@ Don't worry about the WARNING about `pip version thus-and-such` if it comes up.
 
   If you see an error that ends in something like this:
 
-```
+``` { .shell .no-copy }
    ...
    building 'lxml.etree' extension
    error: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/
@@ -420,7 +419,7 @@ This is going to fail with an error, which you will then fix.
 
 You should see something like this:
 
-```
+``` { .shell .no-copy }
 Config Error: config not found at /Users/mroche/Plex-Meta-Manager/config
 ```
 
@@ -562,7 +561,7 @@ deactivate
 === ":fontawesome-brands-linux: Linux"
 
     [type this into your terminal]
-    ```
+    ``` { .shell .no-copy linenums="1"}
     cd ~/Plex-Meta-Manager
     git pull
     source pmm-venv/bin/activate
@@ -572,7 +571,7 @@ deactivate
 === ":fontawesome-brands-apple: macOS"
 
     [type this into your terminal]
-    ```
+    ``` { .shell .no-copy linenums="1"}
     cd ~/Plex-Meta-Manager
     git pull
     source pmm-venv/bin/activate
@@ -582,7 +581,7 @@ deactivate
 === ":fontawesome-brands-windows: Windows"
 
     [type this into your terminal]
-    ```
+    ``` { .shell .no-copy linenums="1"}
     cd ~\Plex-Meta-Manager
     git pull
     .\pmm-venv\Scripts\activate
@@ -595,7 +594,7 @@ deactivate
 === ":fontawesome-brands-linux: Linux"
 
     [type this into your terminal]
-    ```
+    ``` { .shell .no-copy linenums="1"}
     cd ~/Plex-Meta-Manager
     git checkout develop
     git pull
@@ -606,7 +605,7 @@ deactivate
 === ":fontawesome-brands-apple: macOS"
 
     [type this into your terminal]
-    ```
+    ``` { .shell .no-copy linenums="1"}
     cd ~/Plex-Meta-Manager
     git checkout develop
     git pull
@@ -617,7 +616,7 @@ deactivate
 === ":fontawesome-brands-windows: Windows"
 
     [type this into your terminal]
-    ```
+    ``` { .shell .no-copy linenums="1"}
     cd ~/Plex-Meta-Manager
     git checkout develop
     git pull

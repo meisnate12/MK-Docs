@@ -4,7 +4,7 @@ This may take quite a while depending on the size of this library.
 
 Eventually, you'll see it start applying overlays to all your movies:
 
-```
+``` { .shell .no-copy }
 |=========================================================|
 |     Applying Overlays for the Movies - 4K Library       |
 |=========================================================|

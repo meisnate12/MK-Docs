@@ -1,6 +1,6 @@
 You should see that the metadata file gets loaded:
 
-```
+``` { .shell .no-copy }
 | Loading Metadata File: config/Movies.yml
 | Metadata File Loaded Successfully
 ```

@@ -29,27 +29,33 @@ Finally, this walkthrough is intended to give you a basic grounding in how to ge
 
 ## Prerequisites.
 
-???+ info
+???+ tip
 
     Nearly anywhere you see
-    
-    ```
+       
+    ``` { .shell .no-copy }
     something like this
     ```
+       
+    That’s a command you’re going to type or paste into your terminal (OSX or Linux) or Powershell (Windows).  In some cases it's displaying *output* from a command you've typed, but the difference should be apparent in context.
+   
+    Additionally, anywhere you see this icon:
+   
+    > :fontawesome-solid-circle-plus:
+   
+    That's a tooltip, you can press them to get more information.
 
-   That’s a command you’re going to type or paste into your terminal (OSX or Linux) or Powershell (Windows).
+???+ warning "Important"
 
-**IMPORTANT NOTES:**
-
-* This walkthrough is going to be pretty pedantic.  I’m assuming you’re reading it because you have no idea how to get a Docker container going, so I’m proceeding from the assumption that you want to be walked through every little detail.  You’re going to deliberately cause errors and then fix them as you go through it.  This is to help you understand what exactly is going on behind the scenes so that when you see these sorts of problems in the wild you will have some background to understand what’s happening.  If I only give you the happy path walkthrough, then when you make a typo later on you’ll have no idea where that typo might be or why it’s breaking things.
-
-* I am assuming you do not have any of these tools already installed.  When writing this up I started with a brand new Windows 10 install.
-
-* I'm also assuming you are doing this on a computer, not through a NAS interface or the like.  You can do all this through something like the Synology NAS UI or Portainer or the like, but those aren't documented here.  This uses the docker command line because it works the same on all platforms.
-
-* You may want to take an hour to get familiar with Docker fundamentals with the [official tutorial](https://www.docker.com/101-tutorial/).
-
-* DO NOT MAKE ANY CHANGES BELOW if you want this to just work.  Don't change the docker image [`linuxserver.io` will not work for this, for example]; don't change the paths, etc.
+    This walkthrough is going to be pretty pedantic.  I’m assuming you’re reading it because you have no idea how to get a Docker container going, so I’m proceeding from the assumption that you want to be walked through every little detail.  You’re going to deliberately cause errors and then fix them as you go through it.  This is to help you understand what exactly is going on behind the scenes so that when you see these sorts of problems in the wild you will have some background to understand what’s happening.  If I only give you the happy path walkthrough, then when you make a typo later on you’ll have no idea where that typo might be or why it’s breaking things.
+   
+    I am assuming you do not have any of these tools already installed.  When writing this up I started with a brand new Windows 10 install.
+   
+    I'm also assuming you are doing this on a computer, not through a NAS interface or the like.  You can do all this through something like the Synology NAS UI or Portainer or the like, but those aren't documented here.  This uses the docker command line because it works the same on all platforms.
+   
+    You may want to take an hour to get familiar with Docker fundamentals with the [official tutorial](https://www.docker.com/101-tutorial/).
+   
+    DO NOT MAKE ANY CHANGES BELOW if you want this to just work.  Don't change the docker image [`linuxserver.io` will not work for this, for example]; don't change the paths, etc.
 
 ### Prepare a small test library [optional]
 
@@ -90,7 +96,7 @@ Once you have Docker installed, test it at the command line with:
 docker run --rm hello-world
 ```
 You should see something that starts with:
-```
+``` { .shell .no-copy }
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
 ...
@@ -117,7 +123,7 @@ This is going to fail with an error.  That's expected.
 
 You should see something like this:
 
-```
+``` { .shell .no-copy }
 Unable to find image 'meisnate12/plex-meta-manager:latest' locally
 latest: Pulling from meisnate12/plex-meta-manager
 7d63c13d9b9b: Already exists
@@ -144,21 +150,27 @@ Go to your home directory and create a new directory:
 
 [type this into your terminal]
 
+``` { .shell .no-copy linenums="1"}
+cd ~ #(1)!
+mkdir plex-meta-manager #(2)!
 ```
-cd ~
-mkdir plex-meta-manager
-```
+
+1.  This changes to your home directory, which will be something like `/home/yourname` or `/Users/yourname` or `C:\Users\YourName` depending on the platform.
+2.  This creates a directory called "plex-meta-manager"
 
 cd into that directory and create another directory:
 
 [type this into your terminal]
 
-```
-cd ~/plex-meta-manager
-mkdir config
+``` { .shell .no-copy linenums="1"}
+cd ~/plex-meta-manager #(1)!
+mkdir config #(2)!
 ```
 
-get the full path:
+1.  This navigates to the plex-meta-manager folder within your home directory.
+2.  This creates a directory called "config"
+
+3. get the full path:
 
 [type this into your terminal]
 
@@ -170,19 +182,19 @@ This will display a full path:
 
 === ":fontawesome-brands-linux: Linux"
 
-      ```
+      ``` { .shell .no-copy }
       /home/YOURUSERNAME/plex-meta-manager
       ```
 
 === ":fontawesome-brands-apple: macOS"
 
-      ```
+      ``` { .shell .no-copy }
       /Users/YOURUSERNAME/plex-meta-manager
       ```
 
 === ":fontawesome-brands-windows: Windows"
 
-      ```
+      ``` { .shell .no-copy }
       C:\Users\YOURUSERNAME\plex-meta-manager
       ```
 
@@ -230,8 +242,8 @@ You'll need to add this to the docker command every time you run it, like this:
 
 If you run that command now it will display a similar error to before, but without all the image loading:
 
-```
- $ docker run --rm -it -v "/Users/mroche/plex-meta-manager/config:/config:rw" meisnate12/plex-meta-manager --run
+``` { .bash .no-copy }
+$ docker run --rm -it -v "/Users/mroche/plex-meta-manager/config:/config:rw" meisnate12/plex-meta-manager --run
 Config Error: config not found at //config
 ```
 
