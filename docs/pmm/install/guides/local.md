@@ -26,7 +26,7 @@ Also, configuring Plex Meta Manager requires editing YAML files. If this is new 
 
 Finally, this article provides a basic guide to get you started with Plex Meta Manager. It doesn't cover all the advanced features that this tool offers, such as creating custom collections or adding overlays. It's intended to help those who are new to running Python scripts get up and running with Plex Meta Manager.
 
-## Prerequisites.
+## Prerequisites
 
 ???+ tip
 
@@ -62,7 +62,7 @@ Finally, this article provides a basic guide to get you started with Plex Meta M
    include-markdown "wt/wt-test-library.md"
 %}
 
-### Starting up your terminal.
+### Starting up your terminal
 
 Since most of this is typing commands into a terminal, you'll need to have a terminal open.
 
@@ -84,7 +84,7 @@ Since most of this is typing commands into a terminal, you'll need to have a ter
     Use the Start menu to open PowerShell.  This will be the window into which you type commands throughout this walkthrough, so leave it open.
 
 
-### Installing Python.
+### Installing Python
 
 In order to run a Python script. the first thing you'll need is a Python interpreter.  This is typically already present on Linux and Mac, but will probably have to be installed on Windows.
 
@@ -501,7 +501,7 @@ Then run Plex Meta Manager again:
 
 {% include-markdown "wt/wt-03-lib-err-and-fix.md" %}
 
-### Creating a few sample collections.
+### Creating a few sample collections
 
 {% include-markdown "wt/wt-04-default-intro.md" %}
 
@@ -512,7 +512,7 @@ So let's run Plex Meta Manager and see this happen:
 
 {% include-markdown "wt/wt-04b-default-after.md" %}
 
-### Setting up a metadata file and creating a sample collection.
+### Setting up a metadata file and creating a sample collection
 
 {% include-markdown "wt/wt-05-local-file.md" %}
 
@@ -526,7 +526,7 @@ Then run Plex Meta Manager again:
 
 {% include-markdown "wt/wt-06-local-after.md" %}
 
-### Adding Overlays to movies.
+### Adding Overlays to movies
 
 {% include-markdown "wt/wt-07-overlay-add.md" %}
 

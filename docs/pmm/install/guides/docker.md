@@ -27,7 +27,7 @@ If the idea of editing YAML files by hand is daunting, this may not be the tool 
 Finally, this walkthrough is intended to give you a basic grounding in how to get Plex Meta Manager running.  It doesn't cover how to create your own collections, or how to add overlays, or any of the myriad other things Plex Meta Manager is capable of.  It provides a simple "Getting Started" guide for those for whom the standard install instructions make no sense; presumably because you've never run a Docker container before.
 
 
-## Prerequisites.
+## Prerequisites
 
 ???+ tip
 
@@ -61,7 +61,7 @@ Finally, this walkthrough is intended to give you a basic grounding in how to ge
 
 {% include-markdown "wt/wt-test-library.md" %}
 
-### Starting up your terminal.
+### Starting up your terminal
 
 Since most of this is typing commands into a terminal, you'll need to have a terminal open.
 
@@ -83,7 +83,7 @@ Since most of this is typing commands into a terminal, you'll need to have a ter
 
 
 
-### Installing Docker.
+### Installing Docker
 
 To run Docker images, you need to have Docker installed.  It is not typically installed on new Mac, Linux, or Windows machines.
 
@@ -351,7 +351,7 @@ Then run Plex Meta Manager again:
 %}
 
 
-### Creating a few sample collections.
+### Creating a few sample collections
    
 {%
    include-markdown "wt/wt-04-default-intro.md"
@@ -370,7 +370,7 @@ So let's run Plex Meta Manager and see this happen:
 %}
 
 
-### Setting up a metadata file and creating a few sample collections.
+### Setting up a metadata file and creating a few sample collections
    
 {%
    include-markdown "wt/wt-05-local-file.md"
@@ -396,7 +396,7 @@ Then run Plex Meta Manager again:
 %}
 
 
-### Adding Overlays to movies.
+### Adding Overlays to movies
 
 {%
    include-markdown "wt/wt-07-overlay-add.md"

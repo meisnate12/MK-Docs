@@ -28,6 +28,31 @@
   padding: 1px;
 }
 
+.md-typeset h1, .md-typeset h2 {
+    font-weight: bold;
+    color: #0e8a6a;
+    text-transform: uppercase;
+}
+
+.md-typeset h2 {
+    font-weight: bold;
+    color: #0e8a6a;
+    text-transform: uppercase;
+
+}
+
+.md-typeset h3 {
+    font-weight: bold;
+    color: #0e8a6a;
+    text-transform: uppercase;
+}
+
+.md-typeset h4 {
+    font-weight: bold;
+    color: #0e8a6a;
+    text-transform: uppercase;
+}
+
 @media only screen and (min-width: 76.25em) {
   .md-main__inner {
     max-width: 80%;

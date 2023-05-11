@@ -7,7 +7,7 @@ This article will walk you through getting Plex Meta Manager [Plex Meta Manager]
 1. (Advanced) Creating dynamic configuration files with an Init Container
 
 
-## Prerequisites.
+## Prerequisites
 
 This walk through assumes you are familiar with Kubernetes concepts and have an exiting cluster to deploy into.  If you
 do not, but are interested, [minikube](https://minikube.sigs.k8s.io/docs/start/) is a great place to start.
