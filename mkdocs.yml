@@ -99,6 +99,7 @@ nav:
       - INSTALLATION:
         - Installing PMM: pmm/install/installation.md
         - Installation Guides:
+          - Local & Docker: pmm/install/installation/#local-install-overview
           - unRAID Walkthrough: pmm/install/guides/unraid.md
           - Kubernetes Walkthrough: pmm/install/guides/kubernetes.md
           - QNAP Walkthrough: pmm/install/guides/qnap.md
@@ -106,7 +107,6 @@ nav:
         - In-Depth Walkthroughs:
           - Local (Win/Mac/Linux): pmm/install/guides/local.md
           - Docker: pmm/install/guides/docker.md
-
       - POST-INSTALL:
         - Run Commands & Env Variables: pmm/essentials/environmental.md
         - Knowledgebase / FAQ: pmm/essentials/kb.md
