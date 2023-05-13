@@ -30,20 +30,19 @@ Finally, this article provides a basic guide to get you started with Plex Meta M
 
 ???+ tip
 
-    Nearly anywhere you see
+    Anywhere you see:
        
-    ``` { .shell .no-copy }
-    something like this
+    <div class="termy">
+   
+    ```console
+    $ ping
+    <span style="color: grey;">pong!</span>
     ```
-       
-    That’s a command you’re going to type or paste into your terminal (OSX or Linux) or Powershell (Windows).  In some cases it's displaying *output* from a command you've typed, but the difference should be apparent in context.
-   
-    Additionally, anywhere you see this icon:
-   
-    > :fontawesome-solid-circle-plus:
-   
-    That's a tooltip, you can press them to get more information.
 
+    </div>
+       
+    That’s a command you’re going to type or paste into your terminal (OSX or Linux) or Powershell (Windows).  In the above example, you would type "ping" into your terminal. The "pong!" is an example output from the system, you **do not** type that.
+   
 ???+ warning "Important"
 
     This walkthrough is going to be pretty pedantic.  I’m assuming you’re reading it because you have no idea how to get a Python script going, so I’m proceeding from the assumption that you want to be walked through every little detail.   You’re going to deliberately cause errors and then fix them as you go through it.  This is to help you understand what exactly is going on behind the scenes so that when you see these sorts of problems in the wild you will have some background to understand what’s happening.  If I only give you the happy path, then when you make a typo later on you’ll have no idea where that typo might be or why it’s breaking things.
@@ -51,8 +50,6 @@ Finally, this article provides a basic guide to get you started with Plex Meta M
     I am assuming you do not have any of these tools already installed.  When writing this up I started with a brand new Windows 10 install.
    
     This walkthrough involves typing commands into a command window.  On Mac OS X or Linux, you can use your standard terminal window, whether that's the builtin Terminal app or something like iTerm.  On Windows, you should use PowerShell.  There are other options for command windows in Windows, but if you want this to work as written, which I assume is the case since you've read this far, you should use Powershell.
-
-???+ danger "Super Important"
 
     This walkthrough is assuming you are doing the entire process on the same platform; i.e. you're installing Plex Meta Manager and editing its config files on a single Linux, Windows, or OS X machine.  It doesn't account for situations like running Plex Meta Manager on a Linux machine while editing the config files on your Windows box.
 
@@ -88,11 +85,17 @@ Since most of this is typing commands into a terminal, you'll need to have a ter
 
 In order to run a Python script. the first thing you'll need is a Python interpreter.  This is typically already present on Linux and Mac, but will probably have to be installed on Windows.
 
-First let's check if it's installed already [type this into your terminal]:
+First let's check if it's installed already:
+
+<div class="termy">
+   
+```console
+$ python3 --version
+<span style="color: grey;">Python 3.11</span>
 
 ```
-python3 --version
-```
+
+</div>
 
 If this doesn't return `3.7.0` or higher, you'll need to get Python 3 installed.
 
@@ -108,9 +111,15 @@ If this doesn't return `3.7.0` or higher, you'll need to get Python 3 installed.
 
     Before installing Python, try again without the `3`:
 
+    <div class="termy">
+      
+    ```console
+    $ python --version
+    <span style="color: grey;">Python 3.11</span>
+
     ```
-    python --version
-    ```
+   
+    </div>
 
     Depending on the version of Python, you may need to use one or the other.  If this works, you're ready to go, jsut substitute `python` for `python3` in the couple places it appears below.
     
@@ -131,11 +140,17 @@ For Windows 10, you will need to enable scripts in PowerShell.  Follow the instr
 
 To copy the Plex Meta Manager code to your machine, we'll be using git.  This may be installed on Mac or Linux, and probably isn't in Windows.
 
-First let's check if it's installed already [type this into your terminal]:
+First let's check if it's installed already:
+
+<div class="termy">
+   
+```console
+$ git --version
+<span style="color: grey;">git version 2.39.1</span>
 
 ```
-git --version
-```
+
+</div>
 
 If this doesn't return a version number, you'll need to get git installed.
 
@@ -164,33 +179,41 @@ If this doesn't return a version number, you'll need to get git installed.
 
 Now we're going to use `git` to make a copy of the code on your local computer.
 
-Clone the repo into your home directory and go into that directory [type this into your terminal]:
+Clone the repo into your home directory and go into that directory:
 
-``` { .shell .no-copy linenums="1"} 
-cd ~ #(1)!
-git clone https://github.com/meisnate12/Plex-Meta-Manager #(2)!
-cd Plex-Meta-Manager #(3)!
+<div class="termy">
+   
+```console
+$ cd ~
+<span style="color: grey;">The above command will navigate to your home directory</span>
+$ git clone https://github.com/meisnate12/Plex-Meta-Manager
+<span style="color: grey;">The above command will use `git` to make a copy (`clone`) of the Plex Meta Manager code from where it is stored on `github`. You will see output similar to this:
+
+Cloning into 'Plex-Meta-Manager'...
+remote: Enumerating objects: ..., done.
+remote: Counting objects: 100% ..., done.
+remote: Compressing objects: 100% ..., done.
+Receiving objects: 100% ..., done.
+remote: Total  ...
+Resolving deltas: 100% ..., done.</span>
+$ cd Plex-Meta-Manager
+<span style="color: grey;">The above command will into the directory that was created by the `git clone` command above</span>
 ```
 
-1.  This changes to your home directory, which will be something like `/home/yourname` or `/Users/yourname` or `C:\Users\YourName` depending on the platform.
-2.  This uses `git` to make a copy of (`clone`) the Plex Meta Manager code from where it is stored on `github`.
-3.  This moves into the directory that was created by the `clone` command.
+</div>
+
+When you open a command window to run Plex Meta Manager, the first step will always be:
+
+``` { .shell .no-copy linenums="1"}
+cd ~
+cd Plex-Meta-Manager
+```
 
 ???+ warning "Important"
 
     The rest of this walkthrough assumes you are staying in this directory in this terminal/Powershell window.
 
     In the future, when you want to run Plex Meta Manager at the command line, you have to be in this directory.
-
-When you open a command window to run Plex Meta Manager, the first step will always be:
-
-``` { .shell .no-copy linenums="1"}
-cd ~ #(1)!
-cd Plex-Meta-Manager #(2)!
-```
-
-1.  This changes to your home directory, which will be something like `/home/yourname` or `/Users/yourname` or `C:\Users\YourName` depending on the platform.
-2.  This moves into the Plex Meta Manager directory
 
 There are parts of the code that are assuming and expecting that you will be in this directory when you run Plex Meta Manager [the fonts used in overlays are one example].  Be sure that you are always in this directory when you run Plex Meta Manager.
 
@@ -200,17 +223,29 @@ Later on you can move it elsewhere if you want, but for now put it there.  This 
   <summary>Why use git instead of downloading the release ZIP?</summary>
 
   Retrieving the code with `git` makes updating simpler.  When you want to update to the newest version, you can go into this directory and type:
+  <div class="termy">
+      
+  ```console
+  $ git pull
+  <span style="color: grey;"Already up to date.</span>
   ```
-  git pull
-  ```
+   
+  </div>
+
   No need to download a new ZIP, uncompress it, etc.
   Also, if you are asked to [or want to] switch to the latest develop or nightly code, you can do so with:
+  <div class="termy">
+      
+  ```console
+  $ git checkout develop
+  <span style="color: grey;">The above command will switch to the develop branch</span>
+  $ git checkout nightly
+  <span style="color: grey;">The above command will switch to the nightly branch</span>
+  $ git checkout master
+  <span style="color: grey;">The above command will switch back to the master branch</span>
   ```
-  git checkout develop
-  ```
-  ```
-  git checkout nightly
-  ```
+   
+  </div>
 </details>
 
 ---
@@ -221,41 +256,60 @@ This walkthrough is going to use a "virtual environment", since that provides a 
 
 === ":fontawesome-brands-linux: Linux"
 
-    [type this into your terminal]
+    <div class="termy">
+         
+    ```console
+    $ python3 -m venv pmm-venv
+    <span style="color: grey;">This tells Python3 to use the `venv` module to create a virtual environment called `pmm-venv`.
+    The only visible effect will be the creation of a `pmm-venv` directory.</span>
+    $ 
+    <span style="color: grey;">If you get no response, as shown above, then the virtual environment is successfully set up</span>
     ```
-    python3 -m venv pmm-venv
-    ```
-    
-    This tells Python3 to use the `venv` module to create a virtual environment called `pmm-venv`.  The only visible effect will be the creation of a `pmm-venv` directory.
+
+    </div>
 
     If you see an error like:
     ``` { .shell .no-copy }
     Error: Command '['/home/mroche/Plex-Meta-Manager/pmm-venv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
     ```
     You probably need to make sure the Python 3.9-specific virtualenv support library is installed:
-    [type this into your terminal]
+    <div class="termy">
+         
+    ```console
+    $ sudo apt-get install python3.9-venv
     ```
-    sudo apt-get install python3.9-venv
-    ```
+
+    </div>
+
     Then try the original venv command above again.
 
 === ":fontawesome-brands-apple: macOS"
 
-    [type this into your terminal]
-    ```
-    python3 -m venv pmm-venv
+    <div class="termy">
+         
+    ```console
+    $ python3 -m venv pmm-venv
+    <span style="color: grey;">This tells Python3 to use the `venv` module to create a virtual environment called `pmm-venv`.
+    The only visible effect will be the creation of a `pmm-venv` directory.</span>
+    $ 
+    <span style="color: grey;">If you get no response, as shown above, then the virtual environment is successfully set up</span>
     ```
 
-    This tells Python3 to use the `venv` module to create a virtual environment called `pmm-venv`.  The only visible effect will be the creation of a `pmm-venv` directory.
+    </div>
 
 === ":fontawesome-brands-windows: Windows"
 
-    [type this into your terminal]
-    ```
-    python -m venv pmm-venv
+    <div class="termy">
+         
+    ```console
+    $ python3 -m venv pmm-venv
+    <span style="color: grey;">This tells Python3 to use the `venv` module to create a virtual environment called `pmm-venv`.
+    The only visible effect will be the creation of a `pmm-venv` directory.</span>
+    $ 
+    <span style="color: grey;">If you get no response, as shown above, then the virtual environment is successfully set up</span>
     ```
 
-    This tells Python3 to use the `venv` module to create a virtual environment called `pmm-venv`.  The only visible effect will be the creation of a `pmm-venv` directory.
+    </div>
 
     If you see:
     ``` { .shell .no-copy }

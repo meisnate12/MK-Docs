@@ -69,6 +69,8 @@ extra:
     name: GitHub
 copyright: Copyright &copy; 2023 meisnate12
 markdown_extensions:
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -92,6 +94,12 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/termynal.css
+  - stylesheets/custom.css
+
+extra_javascript:
+  - stylesheets/termynal.js
+  - stylesheets/custom.js
 
 nav:
   - PLEX META MANAGER:

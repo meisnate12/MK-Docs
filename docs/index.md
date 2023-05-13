@@ -21,17 +21,47 @@ Transform your media library with Plex Meta Manager and discover its full potent
 
 ## What Can Plex Meta Manager Do?
 
-Unlock the potential of your libraries with Plex Meta Manager, which makes it easy to:
+<div class="grid cards" markdown>
 
-1. Create unique and powerful collections based on hand-crafted or pre-made lists from a variety of sources such as Trakt, Flixpatrol and MDBList.
+-   :octicons-versions-24:{ .lg .middle } __Overhaul Your Media Libraries__
 
-2. Elevate your library with beautifully crafted metadata - customize artwork, titles, summaries, and more to create a stunning library.
+    ---
 
-3. Add overlays to artwork to display useful details such as ratings, resolution, edition, and more, to make browsing your library a breeze.
+    Elevate your library with beautifully crafted metadata - customize artwork, titles, summaries, and more to create a stunning library.
 
-4. Effortlessly send missing items from external lists, such as the IMDB 250, to Radarr or Sonarr for automatic downloading.
+    [:octicons-arrow-right-24: Getting started](#getting-started)
 
-5. And more. Plex Meta Manager is constantly evolving to bring you even more powerful features to take your library management experience to the next level.
+-   :octicons-sliders-16:{ .lg .middle } __PMM Defaults__
+
+    ---
+
+    Take advantage of pre-made modular Collections & Overlays to reduce the manual effort and get to the good stuff with less effort!
+
+    [:octicons-arrow-right-24: Learn More](#plex-meta-manager-defaults)
+
+</div>
+
+<div class="grid cards" markdown>
+
+- :material-connection:{ .lg .middle } __Third-Party Integrations__
+
+    ---
+
+    Harness the power of Trakt, TMDb, IMDb, Flixpatrol and more to create collections and overlays!
+    Integrate with Sonarr and Radarr to automate your library growth.
+
+    [:octicons-arrow-right-24: Learn about Builders](metadata/builders.md)
+
+-   :material-star-face:{ .lg .middle } __And More!__
+
+    ---
+
+    We're constantly working on new features to take your library management experience to the next level.
+    Consider sponsoring the project to allow us to continue building great features for you!
+
+    [:material-heart-outline: Sponsor PMM](https://github.com/sponsors/meisnate12)
+
+</div>
 
 **Example Movie Collections using the [Plex Meta Manager Defaults](#Plex Meta Manager-defaults)** (click to enlarge):
 
