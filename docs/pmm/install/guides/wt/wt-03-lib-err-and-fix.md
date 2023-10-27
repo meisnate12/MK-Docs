@@ -1,6 +1,6 @@
 I’ve removed some of the lines for space, but have left the important bits:
 
-``` { .shell .no-copy }
+```
 ...
 |                                            Starting Run|
 ...
@@ -24,15 +24,49 @@ I’ve removed some of the lines for space, but have left the important bits:
 
 You can see there that PMM found its config file, was able to connect to TMDb, was able to connect to Plex, and then failed trying to read the “Movies-NOSUCHLIBRARY" library, which of course doesn’t exist.
 
+<details>
+  <summary>I got a ModuleError instead</summary>
+
+  If you see this error instead:
+  ```
+  ModuleNotFoundError: No module named 'pkg_resources'
+  ```
+  Chances are you're using Python 3.12 and skipped the bit above about Python 3.12.
+
+  Type this into your term minal
+  ```
+  pip install setuptools
+  ```
+  Then try the run command from above again.
+</details>
+
 Open the config file again and change "Movies-NOSUCHLIBRARY" to reflect *your own* Movie library in Plex.
 
-My Movies library is called “Main Movies", so mine looks like this:
+Say my Movies library is called “All The Movies", so mine looks like this:
 
 ```yaml
 libraries:
-  Main Movies:                            ## <<< CHANGE THIS LINE
+  All The Movies:                            ## <<< CHANGE THIS LINE
     metadata_path:
       - pmm: basic               # This is a file within the defaults folder in the Repository
       - pmm: imdb                # This is a file within the defaults folder in the Repository
       # see the wiki for how to use local files, folders, URLs, or files from git
 ```
+
+At this point, the top bit of your config file should look like this:
+
+```yaml
+libraries:
+  THE_NAME_OF_YOUR_MOVIE_LIBRARY:         ## <<< CHANGE THIS LINE
+    metadata_path:
+      - pmm: basic               # This is a file within the defaults folder in the Repository
+      - pmm: imdb                # This is a file within the defaults folder in the Repository
+      # see the wiki for how to use local files, folders, URLs, or files from git
+playlist_files:
+  - pmm: playlist                # This is a file within PMM's defaults folder
+  # see the wiki for how to use local files, folders, URLs, or files from git
+```
+
+Where `THE_NAME_OF_YOUR_MOVIE_LIBRARY` has been replaced by the name of your movie library as shown in Plex ["All The Movies" here]:
+
+![movie-lib-name](../movie-lib-name.png)

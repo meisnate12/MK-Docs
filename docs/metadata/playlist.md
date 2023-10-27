@@ -1,33 +1,19 @@
 # Playlist Files
 
-As playlists are not tied to one specific library and can combine media from multiple libraries, they require their own special [Playlist Files](../metadata/playlist) to work.
-
-Within the [Config File](configuration), the `playlist_files` attribute specifies the [path type](paths) and path of the [Playlist Files](../metadata/playlist) that the user wants Plex Meta Manager to act on.
-
-```yaml
-playlist_files:
-  - file: config/playlists.yml
-  - pmm: playlist
-    template_variables:
-      libraries: Movies, TV Shows
-```
-
-**The libraries used in the playlist attribute `libraries` must be defined under the `libraries` attribute of the [Config File](configuration).**
-
 Playlist files are used to create and maintain playlists on the Plex Server.
 
 If utilized to their fullest, these files can be used to maintain the entire server's collections and playlists, and can be used as a backup for these in the event of a restore requirement.
 
 Playlists are defined in one or more Playlist files that are mapped in the [Playlist Files Attribute](../config/playlists) within the Configuration File.
 
-You can use the [`playlist_report` setting](../config/settings/#playlist-report) to get a list of your playlists printed out in your log. 
+You can use the [`playlist_report` setting](../config/settings.md#playlist-report) to get a list of your playlists printed out in your log. 
 
 These are the attributes which can be utilized within the Playlist File:
 
 | Attribute                                               | Description                                                                                                         |
 |:--------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
 | [`templates`](templates)                                | contains definitions of templates that can be leveraged by multiple playlists                                       |
-| [`external_templates`](templates/#external-templates) | contains [path types](../config/paths) that point to external templates that can be leveraged by multiple playlists |
+| [`external_templates`](templates.md#external-templates) | contains [path types](../config/paths) that point to external templates that can be leveraged by multiple playlists |
 | [`playlists`](#playlist-attributes)                     | contains definitions of playlists you wish to add to the server                                                     |
 
 * `playlists` is required in order to run the Playlist File.
@@ -60,10 +46,10 @@ There are multiple types of attributes that can be utilized within a playlist:
 
 | Attribute         | Description                                                                                                                                                                                                                                                                                                                              | Required |
 |:------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------:|
-| `libraries`       | Determine which libraries the playlist will be built from.<br>**Options:** Comma-separated string or list of library mapping names defined in the `libraries` attribute in the base of your [Configuration File](../config/configuration).                                                                                               | :fontawesome-solid-circle-check:{ .green }  |
-| `sync_to_users`   | Determine which Users have the playlist synced.<br>This will override the global [`playlist_sync_to_users` Setting](../config/settings/#playlist-sync-to-users).<br>**Options:** Comma-separated string or list of users, `all` for every user who has server access, or leave blank for just the server owner.                        | :fontawesome-solid-circle-check:{ .grey } |
-| `exclude_users`   | Determine which Users will be excluded from having the playlist synced.<br>This will override the global [`playlist_excude_users` Setting](../config/settings/#playlist-exclude-users).<br>**Options:** Comma-separated string or list of users, `all` for every user who has server access, or leave blank for just the server owner. | :fontawesome-solid-circle-check:{ .grey } |
-| `delete_playlist` | Will delete this playlist for the users defined by sync_to_users.<br>**Options:** `true` or `false`                                                                                                                                                                                                                                      | :fontawesome-solid-circle-check:{ .grey } |
+| `libraries`       | Determine which libraries the playlist will be built from.<br>**Options:** Comma-separated string or list of library mapping names defined in the `libraries` attribute in the base of your [Configuration File](../config/configuration).                                                                                               | &#9989;  |
+| `sync_to_users`   | Determine which Users have the playlist synced.<br>This will override the global [`playlist_sync_to_users` Setting](../config/settings.md#playlist-sync-to-users).<br>**Options:** Comma-separated string or list of users, `all` for every user who has server access, or leave blank for just the server owner.                        | &#10060; |
+| `exclude_users`   | Determine which Users will be excluded from having the playlist synced.<br>This will override the global [`playlist_excude_users` Setting](../config/settings.md#playlist-exclude-users).<br>**Options:** Comma-separated string or list of users, `all` for every user who has server access, or leave blank for just the server owner. | &#10060; |
+| `delete_playlist` | Will delete this playlist for the users defined by sync_to_users.<br>**Options:** `true` or `false`                                                                                                                                                                                                                                      | &#10060; |
 
 * Any defined playlist will be always be visible by The Plex Media Server owner, so it doesn't need to be defined within `sync_to_users`.
 

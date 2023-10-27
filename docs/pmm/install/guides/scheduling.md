@@ -1,6 +1,6 @@
 # Scheduling Guide
 
-Plex Meta Manager is designed to be a background running service that "wakes up" and "sleeps" when it is scheduled to do so. By default and unless configured using the [Time to Run Command](../environmental/#time-to-run), Plex Meta Manager expects to run every day at 5AM local time.
+Plex Meta Manager is designed to be a background running service that "wakes up" and "sleeps" when it is scheduled to do so. By default and unless configured using the [Time to Run Command](../../essentials/environmental.md#time-to-run), Plex Meta Manager expects to run every day at 5AM local time.
 
 Whilst it is possible to have `python plex-meta-manager.py` running in an open window constantly, this is not the recommended approach as it relies on an always-open command window that can be obtrusive to the user.
 
@@ -8,6 +8,7 @@ Instead, it is recommended to set an automated scheduling service so that Plex M
 
 **To control how individual parts of Plex Meta Manager are scheduled see the [Schedule detail](../../metadata/details/schedule)**
 
+IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path to that directory on *your* system.
 
 === "Docker"
     Using docker is the simplest and most robust solution to automating Plex Meta Manager scheduling.
@@ -19,11 +20,12 @@ Instead, it is recommended to set an automated scheduling service so that Plex M
     ```
     docker run -d \
       --restart=unless-stopped \
-      -e TZ=<TIMEZONE>
+      -e TZ=<TIMEZONE> \
       -v /path/to/config:/config:rw \
       meisnate12/plex-meta-manager
     ```
-    
+    Change `/path/to/config` to reflect where you've installed Plex Meta Manager.
+
     TZ=<TIMEZONE>
     <TIMEZONE> is replaced with your local timezone, or the timezone your device is in that is running Plex Meta Manager. For a list of available timezones, please see [Timezones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). You want to replace <TIMEZONE> with the TZ Database Name. 
     
@@ -33,7 +35,7 @@ Instead, it is recommended to set an automated scheduling service so that Plex M
     
     This will run Plex Meta Manager in the background persistently until it is stopped by the user. While the docker container will be persistently running, Plex Meta Manager will not begin the run until the scheduled time.
     
-    Further customizations of the docker run command can be used to specify set times to run Plex Meta Manager, further information on this and other Run Commands can be found [here](../environmental/#time-to-run)
+    Further customizations of the docker run command can be used to specify set times to run Plex Meta Manager, further information on this and other Run Commands can be found [here](../../essentials/environmental.md#time-to-run)
 
 === "Windows Task Scheduler"
     
@@ -55,6 +57,8 @@ Instead, it is recommended to set an automated scheduling service so that Plex M
     
     This is the recommended approach as it allows the user additional control over how and when Plex Meta Manager processes.
     
+    If you don't specify a time, the script will run at 5AM each day.  You can change this with the [time-to-run](../../essentials/environmental.md#time-to-run) runtime flag.
+
     ??? abstract "Background Run Scheduled Task"
     
         1. Create a `waiter.cmd` file by opening the text editor (i.e. Notepad, TextEdit) and pasting the following code:
@@ -169,6 +173,8 @@ Instead, it is recommended to set an automated scheduling service so that Plex M
 
     A couple examples; you'll want to edit the THINGS IN ALL CAPS to reflect your system.
 
+    Change `/path/to/plex-meta-manager` to reflect where you've installed Plex Meta Manager.
+
     Keep PMM running constantly, let it wait to do its thing at 3AM:
     
        ```
@@ -182,7 +188,7 @@ Instead, it is recommended to set an automated scheduling service so that Plex M
         <array>
             <string>sh</string>
             <string>-c</string>
-            <string>pmm-venv/bin/python plex-meta-manager.py --config /PATH/TO/PMM/config/config.yml</string>
+            <string>pmm-venv/bin/python plex-meta-manager.py --config /path/to/plex-meta-managerconfig/config.yml</string>
         </array>
         <key>UserName</key>
         <string>YOUR_USERNAME</string>
@@ -205,7 +211,7 @@ Instead, it is recommended to set an automated scheduling service so that Plex M
         <array>
             <string>sh</string>
             <string>-c</string>
-            <string>pmm-venv/bin/python plex-meta-manager.py --config /PATH/TO/PMM/config/config.yml --run</string>
+            <string>pmm-venv/bin/python plex-meta-manager.py --config /path/to/plex-meta-managerconfig/config.yml --run</string>
         </array>
         <key>StartCalendarInterval</key>
         <array>
@@ -327,7 +333,10 @@ Instead, it is recommended to set an automated scheduling service so that Plex M
        ```
        cd /path/to/plex-meta-manager && pmm-venv/bin/python plex_meta_manager.py --config config/config.yml --run
        ```
-    
+       Change `/path/to/plex-meta-manager` to reflect where you've installed Plex Meta Manager.
+
+       This is an example, which does nothing but run the script immediately.  If you want to add additional flags you can do so.
+
        NOTE: This is assuming you created the `pmm-venv` virtual environment as described in the [Local Walkthrough](local)
     
     2. Open the system crontab for editing:
@@ -335,7 +344,7 @@ Instead, it is recommended to set an automated scheduling service so that Plex M
           ```bash
           sudo crontab -e
           ```
-    
-    3. Paste in the crontab line you got from `crontab-generator`, or type in one of your own.
-    
-    4. Save and close the file.
+
+    3. Paste in the crontab line you got from `crontab-generator`, or type in one of your own.  Depending on the editor being used, you may need to put it into insert mode first.  There's a good chance it's `vi`, in which case you need to press `i` to put it into insert mode, after which you will see `-- INSERT -- ` in the lower left.
+
+    4. Save and close the file.  How you do that depends on which editor is being used.  There's a good chance it's `vi`, in which case `ESC : w RETURN` will save and `ESC : q RETURN` will exit.

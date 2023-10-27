@@ -6,7 +6,7 @@ No configuration is required for this builder.
 
 | Attribute                         | Description                                    | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
 |:----------------------------------|:-----------------------------------------------|:-----------------:|:----------------:|:------------------------------------:|
-| [`reciperr_list`](#reciperr-list) | Finds every movie at a Reciperr JSON data URL. |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .grey }     |               :fontawesome-solid-circle-check:{ .green }                |
+| [`reciperr_list`](#reciperr-list) | Finds every movie at a Reciperr JSON data URL. |      &#9989;      |     &#10060;     |               &#9989;                |
 
 ## Reciperr List
 

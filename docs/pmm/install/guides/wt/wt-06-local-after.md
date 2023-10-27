@@ -1,6 +1,6 @@
 You should see that the metadata file gets loaded:
 
-``` { .shell .no-copy }
+```
 | Loading Metadata File: config/Movies.yml
 | Metadata File Loaded Successfully
 ```
@@ -13,4 +13,4 @@ You should see the new collection:
 
 When you click into each, you’ll see the movies that PMM added to each collection.
 
-Each time you run Plex Meta Manager, new movies that match the collection definitions will be added.  For example, if you don’t have “The ShawShank Redemption” now, when you download it and run PMM again it will be added to the IMDB 250 collection.
+Each time you run the script, new movies that match the collection definitions will be added.  For example, if you don’t have “The ShawShank Redemption” now, when you download it and run PMM again it will be added to the IMDB 250 collection.

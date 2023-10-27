@@ -4,10 +4,8 @@ There are many Default Metadata Files built into PMM itself which offer an easy-
 
 This is the simplest way to create Collections using Plex Meta Manager.
 
-{%
-   include-markdown "collection_list.md"
-%}
-
+```{include} collection_list.md
+```
 
 ## Configurations
 
@@ -56,47 +54,49 @@ For example: `collection_section: 01` translates to `sort_title: "!<<collection_
 
 This is the default PMM collection ordering:
 
-| Collection             | Collection Section |
-|:-----------------------|:-------------------|
-| `seasonal`             | `000`              |
-| `basic`                | `010`              |
-| `anilist`              | `020`              |
-| `imdb`                 | `020`              |
-| `flixpatrol`           | `020`              |
-| `myanimelist`          | `020`              |
-| `other_chart`          | `020`              |
-| `tautulli`             | `020`              |
-| `tmdb`                 | `020`              |
-| `trakt`                | `020`              |
-| `streaming`            | `030`              |
-| `universe`             | `040`              |
-| `network`              | `050`              |
-| `genre`                | `060`              |
-| `studio`               | `070`              |
-| `studio_anime`         | `070`              |
-| `country`              | `080`              |
-| `based`                | `085`              |
-| `audio_language`       | `090`              |
-| `subtitle_language`    | `095`              |
-| `decade`               | `100`              |
-| `year`                 | `105`              |
-| `content_rating_us`    | `110`              |
-| `content_rating_uk`    | `110`              |
-| `content_rating_cs`    | `110`              |
-| `resolution`           | `120`              |
-| `bafta`                | `130`              |
-| `cannes`               | `130`              |
-| `choice`               | `130`              |
-| `emmy`                 | `130`              |
-| `golden`               | `130`              |
-| `oscars`               | `130`              |
-| `other_award`          | `130`              |  
-| `spirit`               | `130`              |
-| `sundance`             | `130`              |
-| `actor`                | `140`              |
-| `director`             | `150`              |
-| `producer`             | `160`              |
-| `writer`               | `170`              |
+| Collection          | Collection Section |
+|:--------------------|:-------------------|
+| `seasonal`          | `000`              |
+| `basic`             | `010`              |
+| `anilist`           | `020`              |
+| `imdb`              | `020`              |
+| `flixpatrol`        | `020`              |
+| `myanimelist`       | `020`              |
+| `other_chart`       | `020`              |
+| `tautulli`          | `020`              |
+| `tmdb`              | `020`              |
+| `trakt`             | `020`              |
+| `streaming`         | `030`              |
+| `universe`          | `040`              |
+| `network`           | `050`              |
+| `genre`             | `060`              |
+| `studio`            | `070`              |
+| `country`           | `080`              |
+| `region`            | `081`              |
+| `continent`         | `082`              |
+| `based`             | `085`              |
+| `audio_language`    | `090`              |
+| `subtitle_language` | `095`              |
+| `decade`            | `100`              |
+| `year`              | `105`              |
+| `content_rating_us` | `110`              |
+| `content_rating_uk` | `110`              |
+| `content_rating_cs` | `110`              |
+| `resolution`        | `120`              |
+| `aspect`            | `125`              |
+| `bafta`             | `130`              |
+| `cannes`            | `130`              |
+| `choice`            | `130`              |
+| `emmy`              | `130`              |
+| `golden`            | `130`              |
+| `oscars`            | `130`              |
+| `other_award`       | `130`              |  
+| `spirit`            | `130`              |
+| `sundance`          | `130`              |
+| `actor`             | `140`              |
+| `director`          | `150`              |
+| `producer`          | `160`              |
+| `writer`            | `170`              |
 
 ## Customizing Configs
 
@@ -188,6 +188,5 @@ libraries:
           use_separator: false
 ```
 
-{%
-   include-markdown "example.md"
-%}
+```{include} example.md
+```

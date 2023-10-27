@@ -134,7 +134,7 @@ nav:
         - User Configs Repository: https://github.com/meisnate12/Plex-Meta-Manager-Configs
         - Discord Server: https://discord.gg/NfH6mGFuAB
         - Donate/Sponsor PMM: https://github.com/sponsors/meisnate12
-        - Acknowledgements: https://metamanager.wiki/en/latest/home/acknowledgements.html
+        - Acknowledgements: pmm/essentials/acknowledgements.md
   - CONFIGURATION FILE:
       - Overview: config/configuration.md
       - "STRUCTURE":

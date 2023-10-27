@@ -6,10 +6,10 @@ No configuration is required for these builders.
 
 | Attribute                           | Description                                                                                    | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
 |:------------------------------------|:-----------------------------------------------------------------------------------------------|:-----------------:|:----------------:|:------------------------------------:|
-| [`anidb_id`](#anidb-id)             | Finds the anime specified by the AniDB ID                                                      |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .green }      |               :fontawesome-solid-circle-check:{ .grey }               |
-| [`anidb_relation`](#anidb-relation) | Finds all anime in the relation graph of the specified AniDB ID                                |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .green }      |               :fontawesome-solid-circle-check:{ .grey }               |
-| [`anidb_popular`](#anidb-popular)   | Finds every anime in AniDB's [Popular Anime](https://anidb.net/latest/anime/popular/?h=1) list |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .green }      |               :fontawesome-solid-circle-check:{ .green }                |
-| [`anidb_tags`](#anidb-tag)          | Finds every anime in a AniDB Tag                                                               |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .green }      |               :fontawesome-solid-circle-check:{ .grey }               |
+| [`anidb_id`](#anidb-id)             | Finds the anime specified by the AniDB ID                                                      |      &#9989;      |     &#9989;      |               &#10060;               |
+| [`anidb_relation`](#anidb-relation) | Finds all anime in the relation graph of the specified AniDB ID                                |      &#9989;      |     &#9989;      |               &#10060;               |
+| [`anidb_popular`](#anidb-popular)   | Finds every anime in AniDB's [Popular Anime](https://anidb.net/latest/anime/popular/?h=1) list |      &#9989;      |     &#9989;      |               &#9989;                |
+| [`anidb_tags`](#anidb-tag)          | Finds every anime in a AniDB Tag                                                               |      &#9989;      |     &#9989;      |               &#10060;               |
 
 ## AniDB ID
 
@@ -74,8 +74,8 @@ Finds anime with the specified AniDB Tag the options are detailed below.
 
 | Attribute | Description                                                   | Required | Default |
 |:----------|:--------------------------------------------------------------|:--------:|:-------:|
-| `tag`     | AniDB Tag ID to search by                                     | :fontawesome-solid-circle-check:{ .green }  |   N/A   |
-| `limit`   | Number of Anime to query from AniDB (use 0 for all; max: 500) | :fontawesome-solid-circle-check:{ .grey } |    0    |
+| `tag`     | AniDB Tag ID to search by                                     | &#9989;  |   N/A   |
+| `limit`   | Number of Anime to query from AniDB (use 0 for all; max: 500) | &#10060; |    0    |
 
 ```yaml
 collections:
