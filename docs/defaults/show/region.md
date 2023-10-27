@@ -2,7 +2,7 @@
 
 The `region` Default Metadata File is used to dynamically create collections based on the countries within your library. The collection aims to be inclusive, with all 230 countries incorporated into 39 countries or collections of countries. Some care has been taken to ensure all countries are included, and the groupings won't fit well with everyone's collections.  Western and Southern Europe, Oceania, and North America could be useful groupings for those libraries with more of an Asian focus, for instance. Please see the comments in the yml below where a decision point might be seen as controversial. You are welcome to edit this to fit your own audience's needs.
 
-**This file has a Movie Library [Counterpart](../movie/region).**
+**This file has a Movie Library [Counterpart](../movie/region.md).**
 
 ![](../images/region1.png)
 
@@ -14,7 +14,7 @@ Supported Library Types: Show
 
 | Collection                         | Key                                                | Description                                                                 |
 |:-----------------------------------|:---------------------------------------------------|:----------------------------------------------------------------------------|
-| `Region Collections`               | `separator`                                        | [Separator Collection](../separators) to denote the Section of Collections. |
+| `Region Collections`               | `separator`                                        | [Separator Collection](../separators.md) to denote the Section of Collections. |
 | `<<Region>>`<br>**Example:** `de`  | `<<2 digit ISO 3166-1 code>>`<br>**Example:** `de` | Collection of TV Shows that have this Region.                               |
 | `Other Regions`                    | `other`                                            | Collection of TV Shows that are in other uncommon Regions.                  |
 
@@ -41,9 +41,9 @@ Template Variables can be used to manipulate the file in various ways to slightl
 
 Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults work. Any value not specified is its default value if it has one if not it's just ignored.
 
-All [Shared Collection Variables](../collection_variables) are available as well as the additional Variables below which can be used to customize the file.
+All [Shared Collection Variables](../collection_variables.md) are available as well as the additional Variables below which can be used to customize the file.
 
-This file contains a [Separator](../separators) so all [Shared Separator Variables](../separators.md#shared-separator-variables) are available as well.
+This file contains a [Separator](../separators.md) so all [Shared Separator Variables](../separators.md#shared-separator-variables) are available as well.
 
 | Variable                        | Description & Values                                                                                                                                                                                                                                                                             |
 |:--------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

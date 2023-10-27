@@ -1,6 +1,6 @@
 # Shared Overlay Template Variables
 
-IMPORTANT: The variables in this table are only valid in the context of the [`PMM default metadata files`](guide).
+IMPORTANT: The variables in this table are only valid in the context of the [`PMM default metadata files`](guide.md.
 
 There are some `template_variables` that all the PMM Defaults except `franchise` can use to manipulate the file from the default settings which are provided.   This page is not an exhaustive list of all such template variables.
 

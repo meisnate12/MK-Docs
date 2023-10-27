@@ -2,7 +2,7 @@
 
 ## Library Attributes
 
-Within the [Configuration File](configuration), the `libraries` attribute specifies the Plex libraries that the user wants Plex Meta Manager to act on.
+Within the [Configuration File](configuration.md), the `libraries` attribute specifies the Plex libraries that the user wants Plex Meta Manager to act on.
 
 Attributes are used to instruct Plex Meta Manager what actions to take, such as "load the following libraries" or "execute the following Collection Definition files". These attributes can be specified individually per library, or can be inherited from the global value if it has been set. If an attribute is specified at both the library and global level, then the library level attribute will take priority.
 
@@ -74,20 +74,20 @@ This example is an advanced version of the library mappings which highlights som
 
 The available attributes for each library are as follows:
 
-| Attribute                                           | Values                                                                                                | Default                               |            Required             |
-|:----------------------------------------------------|:------------------------------------------------------------------------------------------------------|:--------------------------------------|:-------------------------------:|
-| [`library_name`](#library-name)                     | Library name (required only when trying to use multiple libraries with the same name)                 | Base Attribute Name                   |            :fontawesome-solid-circle-check:{ .grey }             |
-| [`metadata_path`](#metadata-path)                   | Location of Metadata YAML files                                                                       | `/config/<<MAPPING_NAME>>.yml`        |            :fontawesome-solid-circle-check:{ .grey }             |
-| [`overlay_path`](#overlay-path)                     | Location of Overlay YAML files                                                                        | None                                  |            :fontawesome-solid-circle-check:{ .grey }             |
-| [`report_path`](#report-path)                       | Location to create the YAML file listing added, removed, filtered, and missing items for this library | `/config/<<MAPPING_NAME>>_report.yml` |            :fontawesome-solid-circle-check:{ .grey }             |
-| [`template_variables`](#library-template-variables) | Library template variables to be applied to every Metadata and Overlay file run.                      | N/A                                   |            :fontawesome-solid-circle-check:{ .grey }             |
-| [`schedule`](../builders/details/schedule)          | Use any [schedule option](../builders/details/schedule) to control when this library is run.          | daily                                 |            :fontawesome-solid-circle-check:{ .grey }             |
-| [`operations`](operations)                          | Library Operations to run                                                                             | N/A                                   |            :fontawesome-solid-circle-check:{ .grey }             |
-| [`settings`](settings)                              | Any `setting` attribute that overrides a global value                                                 | global                                |            :fontawesome-solid-circle-check:{ .grey }             |
-| [`plex`](plex)                                      | Any `plex` attribute that overrides a global value                                                    | global                                | :fontawesome-solid-circle-check:{ .green } Either here or globally |
-| [`radarr`](radarr)                                  | Any `radarr` attribute that overrides a global value                                                  | global                                |            :fontawesome-solid-circle-check:{ .grey }             |
-| [`sonarr`](sonarr)                                  | Any `sonarr` attribute that overrides a global value                                                  | global                                |            :fontawesome-solid-circle-check:{ .grey }             |
-| [`tautulli`](tautulli)                              | Any `tautulli` attribute that overrides a global value                                                | global                                |            :fontawesome-solid-circle-check:{ .grey }             |
+| Attribute                                              | Values                                                                                                | Default                               |                              Required                              |
+|:-------------------------------------------------------|:------------------------------------------------------------------------------------------------------|:--------------------------------------|:------------------------------------------------------------------:|
+| [`library_name`](#library-name)                        | Library name (required only when trying to use multiple libraries with the same name)                 | Base Attribute Name                   |             :fontawesome-solid-circle-check:{ .grey }              |
+| [`metadata_path`](#metadata-path)                      | Location of Metadata YAML files                                                                       | `/config/<<MAPPING_NAME>>.yml`        |             :fontawesome-solid-circle-check:{ .grey }              |
+| [`overlay_path`](#overlay-path)                        | Location of Overlay YAML files                                                                        | None                                  |             :fontawesome-solid-circle-check:{ .grey }              |
+| [`report_path`](#report-path)                          | Location to create the YAML file listing added, removed, filtered, and missing items for this library | `/config/<<MAPPING_NAME>>_report.yml` |        :fontawesome-solid-circle-check:{ .grey }                   |
+| [`template_variables`](#library-template-variables)    | Library template variables to be applied to every Metadata and Overlay file run.                      | N/A                                   |             :fontawesome-solid-circle-check:{ .grey }              |
+| [`schedule`](../builders/details/schedule.md)          | Use any [schedule option](../builders/details/schedule.md) to control when this library is run.       | daily                                 |             :fontawesome-solid-circle-check:{ .grey }              |
+| [`operations`](operations.md)                          | Library Operations to run                                                                             | N/A                                   |             :fontawesome-solid-circle-check:{ .grey }              |
+| [`settings`](settings.md)                              | Any `setting` attribute that overrides a global value                                                 | global                                |             :fontawesome-solid-circle-check:{ .grey }              |
+| [`plex`](plex.md)                                      | Any `plex` attribute that overrides a global value                                                    | global                                | :fontawesome-solid-circle-check:{ .green } Either here or globally |
+| [`radarr`](radarr.md)                                  | Any `radarr` attribute that overrides a global value                                                  | global                                |             :fontawesome-solid-circle-check:{ .grey }              |
+| [`sonarr`](sonarr.md)                                  | Any `sonarr` attribute that overrides a global value                                                  | global                                |             :fontawesome-solid-circle-check:{ .grey }              |
+| [`tautulli`](tautulli.md)                              | Any `tautulli` attribute that overrides a global value                                                | global                                |             :fontawesome-solid-circle-check:{ .grey }              |
 
 ### Library Name
 
@@ -115,7 +115,7 @@ Each library that the user wants Plex Meta Manager to interact with must be docu
 
 ### Metadata Path
 
-The `metadata_path` attribute is used to define [Metadata Files](../metadata/metadata) by specifying the path type and path of the files that will be executed against the parent library. See [Path Types](paths) for how to define them.
+The `metadata_path` attribute is used to define [Metadata Files](../metadata/metadata.md) by specifying the path type and path of the files that will be executed against the parent library. See [Path Types](paths.md) for how to define them.
 
 ```yaml
 libraries:
@@ -135,7 +135,7 @@ libraries:
 
 ### Overlay Path
 
-The `overlay_path` attribute is used to define [Overlay Files](../metadata/overlay) by specifying the path type and path of the files that will be executed against the parent library. See [Path Types](paths) for how to define them.
+The `overlay_path` attribute is used to define [Overlay Files](../metadata/overlay.md) by specifying the path type and path of the files that will be executed against the parent library. See [Path Types](paths.md) for how to define them.
 
 ```yaml
 libraries:
@@ -204,7 +204,7 @@ You can reset overlays from a library by adding `reset_overlays` to `overlay_pat
 
 ### Schedule Overlays
 
-You can schedule all overlays from a library by adding `schedule` to `overlay_path` and setting it to [Any Schedule Option](../builders/details/schedule).
+You can schedule all overlays from a library by adding `schedule` to `overlay_path` and setting it to [Any Schedule Option](../builders/details/schedule.md).
     
 You cannot schedule individual Overlay Files, as any unscheduled overlay file will be removed each time PMM is run.
 

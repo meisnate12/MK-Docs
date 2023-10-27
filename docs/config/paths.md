@@ -1,17 +1,17 @@
 # Path Types
 
-YAML Files are defined by their path type and path location for the [`metadata_path`](libraries/#metadata-path),  [`overlay_path`](libraries/#overlay-path), [`playlist_files`](libraries/#metadata-path), and [`external_templates`](libraries/#metadata-path) attributes.
+YAML Files are defined by their path type and path location for the [`metadata_path`](libraries.md#metadata-path),  [`overlay_path`](libraries.md#overlay-path), [`playlist_files`](libraries.md#metadata-path), and [`external_templates`](libraries.md#metadata-path) attributes.
 
-They can either be on the local system, online at an url, directly from the [Plex Meta Manager Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs) repository, or from another [`Custom Repository`](settings/#custom-repo).
+They can either be on the local system, online at an url, directly from the [Plex Meta Manager Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs) repository, or from another [`Custom Repository`](settings.md#custom-repo).
 
 The path types are outlined as follows:
 
 * `- file:` refers to a metadata file which is located within the system that PMM is being run from.
 * `- folder:` refers to a directory containing metadata files which is located within the system that PMM is being run from.
-* `- pmm:` refers to a [PMM Defaults](/defaults/guide) builders/overlay/playlist file. 
+* `- pmm:` refers to a [PMM Defaults](/defaults/guide.md builders/overlay/playlist file. 
 * `- url:` refers to a metadata file which is hosted publicly on the internet. 
 * `- git:` refers to a metadata file which is hosted on the [Configs Repo](https://github.com/meisnate12/Plex-Meta-Manager-Configs).
-* `- repo:` refers to a metadata file which is hosted on a custom repository specified by the user with the [`custom_repo` Setting Attribute](settings/#custom-repo).
+* `- repo:` refers to a metadata file which is hosted on a custom repository specified by the user with the [`custom_repo` Setting Attribute](settings.md#custom-repo).
 
 
 ## Examples
@@ -48,7 +48,7 @@ You can have some control of yaml files from inside your Configuration file by u
 
 ### Template Variables 
 
-You can define [Template Variables](../builders/templates/#template-variables) that will be added to every template in the associated YAML file by adding the `template_variables` attribute to the dictionary defining the file.
+You can define [Template Variables](../builders/templates.md#template-variables) that will be added to every template in the associated YAML file by adding the `template_variables` attribute to the dictionary defining the file.
 
 #### Example
 
@@ -74,7 +74,7 @@ What these variables will do depends on how they're defined in the Metadata File
 
 ### Schedule
 
-Each [`metadata_path`](libraries/#metadata-path),  [`overlay_path`](libraries/#overlay-path), or [`playlist_files`](libraries/#metadata-path) can be scheduled by adding the `schedule` attribute to the dictionary defining the file.
+Each [`metadata_path`](libraries.md#metadata-path),  [`overlay_path`](libraries.md#overlay-path), or [`playlist_files`](libraries.md#metadata-path) can be scheduled by adding the `schedule` attribute to the dictionary defining the file.
 
 Below is an example of a scheduled Metadata File and Playlist File:
 
@@ -114,7 +114,7 @@ playlist_files:
 
 ## Metadata Path 
 
-The [`metadata_path`](libraries/#metadata-path) attribute is defined under the [`libraries`](libraries) attribute in your [Configuration File](configuration). 
+The [`metadata_path`](libraries.md#metadata-path) attribute is defined under the [`libraries`](libraries.md) attribute in your [Configuration File](configuration.md. 
 
 ??? example
     
@@ -145,7 +145,7 @@ The [`metadata_path`](libraries/#metadata-path) attribute is defined under the [
 
 ## Overlay Path 
 
-The [`overlay_path`](libraries/#overlay-path) attribute is defined under the [`libraries`](libraries) attribute in your [Configuration File](configuration). 
+The [`overlay_path`](libraries.md#overlay-path) attribute is defined under the [`libraries`](libraries.md) attribute in your [Configuration File](configuration.md. 
 
 ??? example
 
@@ -176,7 +176,7 @@ The [`overlay_path`](libraries/#overlay-path) attribute is defined under the [`l
 
 ## Playlist Files 
 
-The [`playlist_files`](playlists) at the top level in your [Configuration File](configuration). 
+The [`playlist_files`](playlists.md) at the top level in your [Configuration File](configuration.md. 
 
 ??? example
 
@@ -205,8 +205,8 @@ The [`playlist_files`](playlists) at the top level in your [Configuration File](
 
 ## External Templates 
 
-The [`external_templates`](../builders/templates/#external-templates) attribute is defined at the top level in your [Metadata File](../builders/metadata). 
-
+The [`external_templates`](../builders/templates.md#external-templates) attribute is defined at the top level in your [Metadata File](../builders/details/metadata.md). 
+[metadata.md](..%2Fbuilders%2Fdetails%2Fmetadata.md)
 ??? example
     
     In this example, multiple external template file path types are defined:

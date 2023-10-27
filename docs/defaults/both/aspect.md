@@ -12,7 +12,7 @@ Supported Library Types: Movie, Show
 
 | Collection                     | Key         | Description                                                                 |
 |:-------------------------------|:------------|:----------------------------------------------------------------------------|
-| `Aspect Ratio  Collections`    | `separator` | [Separator Collection](../separators) to denote the Section of Collections. |
+| `Aspect Ratio  Collections`    | `separator` | [Separator Collection](../separators.md) to denote the Section of Collections. |
 | `1.33 - Academy Aperture`      | `1.33`      | Collection of Movies/Shows with a 1.33 aspect ratio                         |
 | `1.65 - Early Widescreen`      | `1.65`      | Collection of Movies/Shows with a 1.65 aspect ratio                         |
 | `1.66 - European Widescreen`   | `1.66`      | Collection of Movies/Shows with a 1.66 aspect ratio                         |
@@ -42,9 +42,9 @@ Template Variables can be used to manipulate the file in various ways to slightl
 
 Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults work. Any value not specified is its default value if it has one if not it's just ignored.
 
-All [Shared Collection Variables](../collection_variables) are available as well as the additional Variables below which can be used to customize the file.
+All [Shared Collection Variables](../collection_variables.md) are available as well as the additional Variables below which can be used to customize the file.
 
-This file contains a [Separator](../separators) so all [Shared Separator Variables](../separators.md#shared-separator-variables) are available as well.
+This file contains a [Separator](../separators.md) so all [Shared Separator Variables](../separators.md#shared-separator-variables) are available as well.
 
 | Variable                        | Description & Values                                                                                                                                                                                                                                                                               |
 |:--------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

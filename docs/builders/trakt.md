@@ -2,7 +2,7 @@
 
 You can find items using the features of [Trakt.tv](https://trakt.tv/) (Trakt). 
 
-[Configuring Trakt](../../config/trakt) in the config is required for any of these builders.
+[Configuring Trakt](../config/trakt.md) in the config is required for any of these builders.
 
 | Attribute                                         | Description                                                                                                                                                                                                                                                                 | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
 |:--------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------:|:----------------:|:------------------------------------:|

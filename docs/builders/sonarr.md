@@ -2,7 +2,7 @@
 
 You can find items in your Plex using the features of [Sonarr](https://sonarr.tv/).
 
-[Configuring Sonarr](../../config/sonarr) in the config is required for any of these builders.
+[Configuring Sonarr](../config/sonarr.md) in the config is required for any of these builders.
 
 | Attribute                           | Description                                  | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
 |:------------------------------------|:---------------------------------------------|:-----------------:|:----------------:|:------------------------------------:|

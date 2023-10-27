@@ -12,7 +12,7 @@ Supported Library Types: Movie, Show
 
 | Collection                                               | Key                                                                                       | Description                                                                 |
 |:---------------------------------------------------------|:------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------|
-| `Subtitle Language Collections`                          | `separator`                                                                               | [Separator Collection](../separators) to denote the Section of Collections. |
+| `Subtitle Language Collections`                          | `separator`                                                                               | [Separator Collection](../separators.md) to denote the Section of Collections. |
 | `<<Subtitle Language>> Audio`<br>**Example:** `Japanese` | `<<ISO 639-1 Code>>`<br>**Example:** `ja` <br>`<<ISO 639-2 Code>>`<br>**Example:** `myn`  | Collection of Movies/Shows that have this Subtitle Language.                |
 | `Other Subtitles`                                        | `other`                                                                                   | Collection of Movies/Shows that are less common Languages.                  |
 
@@ -36,9 +36,9 @@ Template Variables can be used to manipulate the file in various ways to slightl
 
 Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults work. Any value not specified is its default value if it has one if not it's just ignored.
 
-All [Shared Collection Variables](../collection_variables) are available as well as the additional Variables below which can be used to customize the file.
+All [Shared Collection Variables](../collection_variables.md) are available as well as the additional Variables below which can be used to customize the file.
 
-This file contains a [Separator](../separators) so all [Shared Separator Variables](../separators.md#shared-separator-variables) are available as well.
+This file contains a [Separator](../separators.md) so all [Shared Separator Variables](../separators.md#shared-separator-variables) are available as well.
 
 | Variable                      | Description & Values                                                                                                                                                                                                                                                               |
 |:------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

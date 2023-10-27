@@ -252,7 +252,7 @@ Note that I show the example path there.
 <details>
   <summary>Why did we create that `config' directory?</summary>
 
-  This was done so that from here on in the instructions match between this walkthrough and the [Local walkthrough](local).
+  This was done so that from here on in the instructions match between this walkthrough and the [Local walkthrough](local.md).
 
 </details>
 

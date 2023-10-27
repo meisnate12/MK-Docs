@@ -2,7 +2,7 @@
 
 You can find items in your Plex using the features of [Tautulli](https://tautulli.com/).
 
-[Configuring Tautulli](../../config/tautulli) in the config is required for any of these builders.
+[Configuring Tautulli](../config/tautulli.md) in the config is required for any of these builders.
 
 It has watch analytics that can show the most watched or most popular Movies/Shows in each Library.
 

@@ -24,6 +24,7 @@ theme:
     - navigation.tracking
     - navigation.instant
     - navigation.prune
+    - navigation.expand
     - toc.follow
     - search.suggest
     - search.highlight
@@ -89,8 +90,8 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra_css:
   - stylesheets/extra.css
@@ -107,14 +108,13 @@ nav:
       - INSTALLATION:
         - Installing PMM: pmm/install/installation.md
         - Installation Guides:
-          - Local & Docker: pmm/install/installation/#local-install-overview
+          - Local Walkthrough (Win/Mac/Linux): pmm/install/guides/local.md
+          - Docker Walkhrough: pmm/install/guides/docker.md
           - unRAID Walkthrough: pmm/install/guides/unraid.md
           - Kubernetes Walkthrough: pmm/install/guides/kubernetes.md
           - QNAP Walkthrough: pmm/install/guides/qnap.md
           - Synology Walkthrough: pmm/install/guides/synology.md
-        - In-Depth Walkthroughs:
-          - Local (Win/Mac/Linux): pmm/install/guides/local.md
-          - Docker: pmm/install/guides/docker.md
+
       - POST-INSTALL:
         - Run Commands & Env Variables: pmm/essentials/environmental.md
         - Knowledgebase / FAQ: pmm/essentials/kb.md

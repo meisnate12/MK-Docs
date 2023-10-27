@@ -40,7 +40,7 @@ The available attributes for the operations attribute are as follows
 | [Sonarr Remove By Tag](#sonarr-remove-by-tag)                         | Removes every item from Sonarr with the Tags given.                                                                                                        |  :fontawesome-solid-circle-check:{ .grey }  | :fontawesome-solid-circle-check:{ .green }  | :fontawesome-solid-circle-check:{ .grey } |
 | [Genre Mapper](#genre-mapper)                                         | Allows genres to be changed to other genres or be removed from every item in your library.                                                                 |  :fontawesome-solid-circle-check:{ .green }   | :fontawesome-solid-circle-check:{ .green }  | :fontawesome-solid-circle-check:{ .grey } |
 | [Content Rating Mapper](#content-rating-mapper)                       | Allows content ratings to be changed to other content ratings or be removed from every item in your library.                                               |  :fontawesome-solid-circle-check:{ .green }   | :fontawesome-solid-circle-check:{ .green }  | :fontawesome-solid-circle-check:{ .grey } |
-| [Metadata Backup](#metadata-backup)                                   | Creates/Maintains a PMM [Metadata File](../metadata/metadata) with a full `metadata` mapping based on the library's items locked attributes.               |  :fontawesome-solid-circle-check:{ .green }   | :fontawesome-solid-circle-check:{ .green }  | :fontawesome-solid-circle-check:{ .green }  |
+| [Metadata Backup](#metadata-backup)                                   | Creates/Maintains a PMM [Metadata File](../metadata/metadata.md) with a full `metadata` mapping based on the library's items locked attributes.               |  :fontawesome-solid-circle-check:{ .green }   | :fontawesome-solid-circle-check:{ .green }  | :fontawesome-solid-circle-check:{ .green }  |
 
 ## Assets For All
 
@@ -189,7 +189,7 @@ Updates every item's audience/critic/user rating in the library to the chosen si
 
 ???+ warning "Important Note"
     
-    This does not affect the icons displayed in the Plex UI.  This will place the number of your choice in the relevant field in the Plex database.  In other words, if Plex is configured to use Rotten Tomatoes ratings, then no matter what happens with this mass rating update operation, the icons in the Plex UI will remain Rotten Tomatoes.  The human who decided to put TMDB ratings in the critic slot and Letterboxd ratings in the audience slot is the only party who knows that the ratings are no longer Rotten Tomatoes.  One primary use of this feature is to put ratings overlays on posters.  More information on what PMM can do with these ratings can be found [here](../home/guides/ratings).
+    This does not affect the icons displayed in the Plex UI.  This will place the number of your choice in the relevant field in the Plex database.  In other words, if Plex is configured to use Rotten Tomatoes ratings, then no matter what happens with this mass rating update operation, the icons in the Plex UI will remain Rotten Tomatoes.  The human who decided to put TMDB ratings in the critic slot and Letterboxd ratings in the audience slot is the only party who knows that the ratings are no longer Rotten Tomatoes.  One primary use of this feature is to put ratings overlays on posters.  More information on what PMM can do with these ratings can be found [here](../pmm/install/guides/ratings.md).
 
 **Attribute:** `mass_audience_rating_update`/`mass_critic_rating_update`/`mass_user_rating_update`
 
@@ -346,7 +346,7 @@ Splits all duplicate movies/shows found in this library.
 
 ## Radarr Add All
 
-Adds every item in the library to Radarr. The existing paths in plex will be used as the root folder of each item, if the paths in Plex are not the same as your Radarr paths you can use the `plex_path` and `radarr_path` [Radarr](radarr) details to convert the paths.
+Adds every item in the library to Radarr. The existing paths in plex will be used as the root folder of each item, if the paths in Plex are not the same as your Radarr paths you can use the `plex_path` and `radarr_path` [Radarr](radarr.md) details to convert the paths.
 
 **Attribute:** `radarr_add_all`
 
@@ -362,7 +362,7 @@ Removes every item from Radarr with the Tags given.
 
 ## Sonarr Add All
 
-Adds every item in the library to Sonarr. The existing paths in plex will be used as the root folder of each item, if the paths in Plex are not the same as your Sonarr paths you can use the `plex_path` and `sonarr_path` [Sonarr](sonarr) details to convert the paths.
+Adds every item in the library to Sonarr. The existing paths in plex will be used as the root folder of each item, if the paths in Plex are not the same as your Sonarr paths you can use the `plex_path` and `sonarr_path` [Sonarr](sonarr.md) details to convert the paths.
 
 **Attribute:** `sonarr_add_all`
 
@@ -452,7 +452,7 @@ This example will change go through every item in your library and change the co
 
 ## Metadata Backup
 
-Creates/Maintains a Plex Meta Manager [Metadata File](../metadata/metadata) with a full `metadata` mapping based on the library's items locked attributes.
+Creates/Maintains a Plex Meta Manager [Metadata File](../metadata/metadata.md) with a full `metadata` mapping based on the library's items locked attributes.
 
 If you point to an existing Metadata File then PMM will Sync the changes to the file, so you won't lose non plex changes in the file.
 

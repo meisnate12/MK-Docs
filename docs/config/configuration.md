@@ -10,21 +10,21 @@ This table outlines the third-party services that Plex Meta Manager can make use
 
 | Attribute                     | Required                                                              |
 |:------------------------------|:----------------------------------------------------------------------|
-| [`libraries`](libraries)      | :fontawesome-solid-circle-check:{ .green }                            |
-| [`playlist_files`](playlists) | :fontawesome-solid-circle-check:{ .grey }                             |
-| [`settings`](settings)        | :fontawesome-solid-circle-check:{ .grey }                             |
-| [`webhooks`](webhooks)        | :fontawesome-solid-circle-check:{ .grey }                             |
-| [`plex`](plex)                | :fontawesome-solid-circle-check:{ .green } Either here or per library |
-| [`tmdb`](tmdb)                | :fontawesome-solid-circle-check:{ .green }                            |
-| [`github`](github)            | :fontawesome-solid-circle-check:{ .grey }                             |
-| [`tautulli`](tautulli)        | :fontawesome-solid-circle-check:{ .grey }                             |
-| [`omdb`](omdb)                | :fontawesome-solid-circle-check:{ .grey }                             |
-| [`notifiarr`](notifiarr)      | :fontawesome-solid-circle-check:{ .grey }                             |
-| [`anidb`](anidb)              | :fontawesome-solid-circle-check:{ .grey }                             |
-| [`radarr`](radarr)            | :fontawesome-solid-circle-check:{ .grey }                             |
-| [`sonarr`](sonarr)            | :fontawesome-solid-circle-check:{ .grey }                             |
-| [`trakt`](trakt)              | :fontawesome-solid-circle-check:{ .grey }                             |
-| [`mal`](myanimelist)          | :fontawesome-solid-circle-check:{ .grey }                             |
+| [`libraries`](libraries.md)   | :fontawesome-solid-circle-check:{ .green }                            |
+| [`playlist_files`](playlists.md) | :fontawesome-solid-circle-check:{ .grey }                             |
+| [`settings`](settings.md)        | :fontawesome-solid-circle-check:{ .grey }                             |
+| [`webhooks`](webhooks.md)        | :fontawesome-solid-circle-check:{ .grey }                             |
+| [`plex`](plex.md)                | :fontawesome-solid-circle-check:{ .green } Either here or per library |
+| [`tmdb`](tmdb.md)                | :fontawesome-solid-circle-check:{ .green }                            |
+| [`github`](github.md)            | :fontawesome-solid-circle-check:{ .grey }                             |
+| [`tautulli`](tautulli.md)        | :fontawesome-solid-circle-check:{ .grey }                             |
+| [`omdb`](omdb.md)                | :fontawesome-solid-circle-check:{ .grey }                             |
+| [`notifiarr`](notifiarr.md)      | :fontawesome-solid-circle-check:{ .grey }                             |
+| [`anidb`](anidb.md)              | :fontawesome-solid-circle-check:{ .grey }                             |
+| [`radarr`](radarr.md)            | :fontawesome-solid-circle-check:{ .grey }                             |
+| [`sonarr`](sonarr.md)            | :fontawesome-solid-circle-check:{ .grey }                             |
+| [`trakt`](trakt.md)              | :fontawesome-solid-circle-check:{ .grey }                             |
+| [`mal`](myanimelist.md)          | :fontawesome-solid-circle-check:{ .grey }                             |
 
 ## Configuration File Example
 

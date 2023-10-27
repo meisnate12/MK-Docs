@@ -16,7 +16,7 @@ Recommendations: Use the [Mass Content Rating Update Library Operation](../../co
 
 | Collection                                                        | Key                              | Description                                                                           |
 |:------------------------------------------------------------------|:---------------------------------|:--------------------------------------------------------------------------------------|
-| `Ratings Collections`                                             | `separator`                      | [Separator Collection](../separators) to denote the Section of Collections.           |
+| `Ratings Collections`                                             | `separator`                      | [Separator Collection](../separators.md) to denote the Section of Collections.           |
 | `<<Content Rating>> Movies/Shows`<br>**Example:** `Age 5+ Movies` | `<<Number>>`<br>**Example:** `5` | Collection of Movies/Shows that have this Content Rating.                             |
 | `Not Rated Movies/Shows`                                          | `other`                          | Collection of Movies/Shows that are Unrated, Not Rated or any other uncommon Ratings. |
 
@@ -40,9 +40,9 @@ Template Variables can be used to manipulate the file in various ways to slightl
 
 Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults work. Any value not specified is its default value if it has one if not it's just ignored.
 
-All [Shared Collection Variables](../collection_variables) are available as well as the additional Variables below which can be used to customize the file.
+All [Shared Collection Variables](../collection_variables.md) are available as well as the additional Variables below which can be used to customize the file.
 
-This file contains a [Separator](../separators) so all [Shared Separator Variables](../separators.md#shared-separator-variables) are available as well.
+This file contains a [Separator](../separators.md) so all [Shared Separator Variables](../separators.md#shared-separator-variables) are available as well.
 
 | Variable                      | Description & Values                                                                                                                                                                                                                                                    |
 |:------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

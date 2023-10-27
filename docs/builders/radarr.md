@@ -2,7 +2,7 @@
 
 You can find items in your Plex using the features of [Radarr](https://radarr.video/).
 
-[Configuring Radarr](../../config/radarr) in the config is required for any of these builders.
+[Configuring Radarr](../config/radarr.md) in the config is required for any of these builders.
 
 | Attribute                           | Description                                  | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
 |:------------------------------------|:---------------------------------------------|:-----------------:|:----------------:|:------------------------------------:|

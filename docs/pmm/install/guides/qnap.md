@@ -53,7 +53,7 @@ Detailed steps:
 
    ![](qnap/qnap3-06.png) 
 
-1. You can add [command-line switches](../../essentials/environmental) to the "Command" field here.  Do not edit the "Entrypoint" field.
+1. You can add [command-line switches](../../essentials/environmental.md) to the "Command" field here.  Do not edit the "Entrypoint" field.
 
    ![](qnap/qnap3-07.png) 
 
@@ -65,7 +65,7 @@ Detailed steps:
 
    It is more typical in Docker contexts to set these things with environment variables.
 
-   Anything you can do via command-line arguments can be done with [Environment Variables](../../essentials/environmental), which is more typical in Docker environments.
+   Anything you can do via command-line arguments can be done with [Environment Variables](../../essentials/environmental.md), which is more typical in Docker environments.
 
    For example, you could add an environment variable named `PMM_TESTS` with a value of `true` to run the collections you have defined as tests.
 
@@ -137,7 +137,7 @@ Detailed steps:
 
    Typically, in a Docker environment, this sort of thing is done via Environment Variables [the next step here].  Editing the "Entrypoint" is not recommended, as it's easy to render the container non-functional if you are not sure what you're doing.
 
-   Information on available command line arguments can be found [here](../../essentials/environmental)
+   Information on available command line arguments can be found [here](../../essentials/environmental.md)
 
    Click "Advanced Settings >>"
 
@@ -151,7 +151,7 @@ Detailed steps:
 
    For example, you could add an environment variable named `PMM_RUN` with a value of `True` to make PMM run immediately when the container starts up.
 
-   Information on available Environment Variables can be found [here](../../essentials/environmental)
+   Information on available Environment Variables can be found [here](../../essentials/environmental.md)
 
 
    ![](qnap/qnap5.png)

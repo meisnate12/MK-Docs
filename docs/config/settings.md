@@ -10,7 +10,7 @@ Examples of these settings include the ability to:
 
 The settings attribute and attributes can be specified individually per library, or can be inherited from the global value if it has been set. If an attribute is specified at both the library and global level, then the library level attribute will take priority.
 
-There are some attributes which can be specified at the collection level using [Setting Details](../details/definition).
+There are some attributes which can be specified at the collection level using [Setting Details](../builders/details/definition.md).
 
 Attributes set at the collection level will take priority over any library or global-level attribute.
 
@@ -288,7 +288,7 @@ Set the default `collection_order` for every collection run by PMM.
   </tr>
 </table>
 
-<sup>1</sup> `plex_search` sort options can be found [here](../metadata/builders/plex/#sort-options)
+<sup>1</sup> `plex_search` sort options can be found [here](plex.md#sort-options)
 
 ## Minimum Items
 Set the minimum number of items that must be found in order to build or update a collection/playlist.
@@ -338,7 +338,7 @@ If a collection is skipped due to it not being scheduled, delete the collection.
 ## Run Again Delay
 Set the number of minutes to delay running `run_again` collections after daily run is finished.
 For example, if a collection adds items to Sonarr/Radarr, the library can automatically re-run "X" amount of time later so that any downloaded items are processed.
-* A collection is a `run_again` collection if it has the `run_again` [Setting Detail](../builders/details/definition) attribute set to true.
+* A collection is a `run_again` collection if it has the `run_again` [Setting Detail](../builders/details/definition.md) attribute set to true.
 
 <table class="dualTable colwidths-auto align-default table">
   <tr>
@@ -352,7 +352,7 @@ For example, if a collection adds items to Sonarr/Radarr, the library can automa
 </table>
 
 ## Missing Only Released
-Whilst running a collection, all unreleased missing items will be filtered out from the [missing YAML file](../builders/details/definition)
+Whilst running a collection, all unreleased missing items will be filtered out from the [missing YAML file](../builders/details/definition.md)
 
 <table class="dualTable colwidths-auto align-default table">
   <tr>
@@ -429,7 +429,7 @@ While `show_missing` is true items missing from collections will be displayed.
 </table>
 
 ## Only Filter Missing
-Only items missing from a collection will be filtered. **Only specific filters can filter missing. See [Filters](../metadata/filters) for more information.** 
+Only items missing from a collection will be filtered. **Only specific filters can filter missing. See [Filters](../metadata/filters.md) for more information.** 
 * this can be used to filter which missing media items get sent to Sonarr/Radarr
 
 <table class="dualTable colwidths-auto align-default table">
