@@ -81,7 +81,7 @@ The available attributes for each library are as follows:
 | [`overlay_path`](#overlay-path)                     | Location of Overlay YAML files                                                                        | None                                  |            :fontawesome-solid-circle-check:{ .grey }             |
 | [`report_path`](#report-path)                       | Location to create the YAML file listing added, removed, filtered, and missing items for this library | `/config/<<MAPPING_NAME>>_report.yml` |            :fontawesome-solid-circle-check:{ .grey }             |
 | [`template_variables`](#library-template-variables) | Library template variables to be applied to every Metadata and Overlay file run.                      | N/A                                   |            :fontawesome-solid-circle-check:{ .grey }             |
-| [`schedule`](../metadata/details/schedule)          | Use any [schedule option](../metadata/details/schedule) to control when this library is run.          | daily                                 |            :fontawesome-solid-circle-check:{ .grey }             |
+| [`schedule`](../builders/details/schedule)          | Use any [schedule option](../builders/details/schedule) to control when this library is run.          | daily                                 |            :fontawesome-solid-circle-check:{ .grey }             |
 | [`operations`](operations)                          | Library Operations to run                                                                             | N/A                                   |            :fontawesome-solid-circle-check:{ .grey }             |
 | [`settings`](settings)                              | Any `setting` attribute that overrides a global value                                                 | global                                |            :fontawesome-solid-circle-check:{ .grey }             |
 | [`plex`](plex)                                      | Any `plex` attribute that overrides a global value                                                    | global                                | :fontawesome-solid-circle-check:{ .green } Either here or globally |
@@ -204,7 +204,7 @@ You can reset overlays from a library by adding `reset_overlays` to `overlay_pat
 
 ### Schedule Overlays
 
-You can schedule all overlays from a library by adding `schedule` to `overlay_path` and setting it to [Any Schedule Option](../metadata/details/schedule).
+You can schedule all overlays from a library by adding `schedule` to `overlay_path` and setting it to [Any Schedule Option](../builders/details/schedule).
     
 You cannot schedule individual Overlay Files, as any unscheduled overlay file will be removed each time PMM is run.
 

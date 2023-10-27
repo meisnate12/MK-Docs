@@ -338,7 +338,7 @@ If a collection is skipped due to it not being scheduled, delete the collection.
 ## Run Again Delay
 Set the number of minutes to delay running `run_again` collections after daily run is finished.
 For example, if a collection adds items to Sonarr/Radarr, the library can automatically re-run "X" amount of time later so that any downloaded items are processed.
-* A collection is a `run_again` collection if it has the `run_again` [Setting Detail](../metadata/details/definition) attribute set to true.
+* A collection is a `run_again` collection if it has the `run_again` [Setting Detail](../builders/details/definition) attribute set to true.
 
 <table class="dualTable colwidths-auto align-default table">
   <tr>
@@ -352,7 +352,7 @@ For example, if a collection adds items to Sonarr/Radarr, the library can automa
 </table>
 
 ## Missing Only Released
-Whilst running a collection, all unreleased missing items will be filtered out from the [missing YAML file](../metadata/details/definition)
+Whilst running a collection, all unreleased missing items will be filtered out from the [missing YAML file](../builders/details/definition)
 
 <table class="dualTable colwidths-auto align-default table">
   <tr>

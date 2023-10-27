@@ -4,9 +4,9 @@ This may take quite a while depending on the size of this library.
 
 Eventually, you'll see it start applying overlays to all your movies:
 
-``` { .shell .no-copy }
+```
 |=========================================================|
-|     Applying Overlays for the Movies - 4K Library       |
+|    Applying Overlays for the All The Movies Library     |
 |=========================================================|
 |                                                         |
 | 10 Cloverfield Lane         | Overlays Applied: 4K-HDR  |

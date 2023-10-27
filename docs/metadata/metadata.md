@@ -8,13 +8,13 @@ Collections, templates, metadata, and dynamic collections are defined within one
 
 These are the attributes which can be used within the Metadata File:
 
-| Attribute                                                         | Description                                                                                                                                                                       |
-|:------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [`templates`](../builders/templates.md)                           | contains definitions of templates that can be leveraged by multiple collections                                                                                                   |
-| [`external_templates`](../builders/templates/#external-templates) | contains [path types](../config/paths) that point to external templates that can be leveraged by multiple collections                                                             |
-| [`collections`](#collection-attributes)                           | contains definitions of collections you wish to add to one or more libraries                                                                                                      |
-| [`dynamic_collections`](#dynamic-collection-attributes)           | contains definitions of [dynamic collections](dynamic) you wish to create                                                                                                         |
-| [`metadata`](#metadata-attributes)                                | contains definitions of metadata changes to [movie](metadata/movie), [show](metadata/show), or [music](metadata/music) library's items [movie titles, episode descriptions, etc.] |
+| Attribute                                               | Description                                                                                                                                                                       |
+|:--------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [`templates`](templates)                                | contains definitions of templates that can be leveraged by multiple collections                                                                                                   |
+| [`external_templates`](templates.md#external-templates) | contains [path types](../config/paths) that point to external templates that can be leveraged by multiple collections                                                             |
+| [`collections`](#collection-attributes)                 | contains definitions of collections you wish to add to one or more libraries                                                                                                      |
+| [`dynamic_collections`](#dynamic-collection-attributes) | contains definitions of [dynamic collections](dynamic) you wish to create                                                                                                         |
+| [`metadata`](#metadata-attributes)                      | contains definitions of metadata changes to [movie](metadata/movie), [show](metadata/show), or [music](metadata/music) library's items [movie titles, episode descriptions, etc.] |
 
 * One of `metadata`, `collections` or `dynamic_collections` must be present for the Metadata File to execute.
 * Example Metadata Files can be found in the [Plex Meta Manager Configs Repository](https://github.com/meisnate12/Plex-Meta-Manager-Configs/tree/master/PMM)

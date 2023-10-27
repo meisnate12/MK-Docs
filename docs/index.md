@@ -21,47 +21,27 @@ Transform your media library with Plex Meta Manager and discover its full potent
 
 ## What Can Plex Meta Manager Do?
 
-<div class="grid cards" markdown>
+:octicons-versions-24:{ .lg .middle } __Overhaul Your Media Libraries__
 
--   :octicons-versions-24:{ .lg .middle } __Overhaul Your Media Libraries__
+-  Elevate your library with beautifully crafted metadata - customize artwork, titles, summaries, and more to create a stunning library.
 
-    ---
+:octicons-sliders-16:{ .lg .middle } __PMM Defaults__
 
-    Elevate your library with beautifully crafted metadata - customize artwork, titles, summaries, and more to create a stunning library.
+-  Take advantage of pre-made modular Collections & Overlays to reduce the manual effort and get to the good stuff with less effort!
 
-    [:octicons-arrow-right-24: Getting started](#getting-started)
+:material-connection:{ .lg .middle } __Third-Party Integrations__
 
--   :octicons-sliders-16:{ .lg .middle } __PMM Defaults__
+-  Harness the power of Trakt, TMDb, IMDb, Flixpatrol and more to create collections and overlays!
+-  Integrate with Sonarr and Radarr to automate your library growth.
 
-    ---
+:material-star-face:{ .lg .middle } __And More!__
 
-    Take advantage of pre-made modular Collections & Overlays to reduce the manual effort and get to the good stuff with less effort!
+-  We're constantly working on new features to take your library management experience to the next level.
+-  Consider sponsoring the project to allow us to continue building great features for you!
 
-    [:octicons-arrow-right-24: Learn More](#plex-meta-manager-defaults)
+## Example Plex Meta Manager Libraries 
 
-</div>
-
-<div class="grid cards" markdown>
-
-- :material-connection:{ .lg .middle } __Third-Party Integrations__
-
-    ---
-
-    Harness the power of Trakt, TMDb, IMDb, Flixpatrol and more to create collections and overlays!
-    Integrate with Sonarr and Radarr to automate your library growth.
-
-    [:octicons-arrow-right-24: Learn about Builders](metadata/builders.md)
-
--   :material-star-face:{ .lg .middle } __And More!__
-
-    ---
-
-    We're constantly working on new features to take your library management experience to the next level.
-    Consider sponsoring the project to allow us to continue building great features for you!
-
-    [:material-heart-outline: Sponsor PMM](https://github.com/sponsors/meisnate12)
-
-</div>
+Here are some examples of the things you can achieve using Plex Meta Manager!
 
 **Example Movie Collections using the [Plex Meta Manager Defaults](#Plex Meta Manager-defaults)** (click to enlarge):
 

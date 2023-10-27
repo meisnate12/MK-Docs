@@ -6,8 +6,8 @@ You can find items in your Plex using the features of [Sonarr](https://sonarr.tv
 
 | Attribute                           | Description                                  | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
 |:------------------------------------|:---------------------------------------------|:-----------------:|:----------------:|:------------------------------------:|
-| [`sonarr_all`](#sonarr-all)         | Gets all Series in Sonarr.                   |     :fontawesome-solid-circle-check:{ .grey }      |     :fontawesome-solid-circle-check:{ .green }      |               :fontawesome-solid-circle-check:{ .grey }               |
-| [`sonarr_taglist`](#sonarr-taglist) | Gets Series from Sonarr based on their tags. |     :fontawesome-solid-circle-check:{ .grey }      |     :fontawesome-solid-circle-check:{ .green }      |               :fontawesome-solid-circle-check:{ .grey }               |
+| [`sonarr_all`](#sonarr-all)         | Gets all Series in Sonarr.                   |     &#10060;      |     &#9989;      |               &#10060;               |
+| [`sonarr_taglist`](#sonarr-taglist) | Gets Series from Sonarr based on their tags. |     &#10060;      |     &#9989;      |               &#10060;               |
 
 ## Sonarr All
 

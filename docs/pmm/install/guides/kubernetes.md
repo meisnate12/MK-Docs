@@ -1,20 +1,20 @@
 # Kubernetes Walkthrough
 
-This article will walk you through getting Plex Meta Manager [Plex Meta Manager] set up and running in Kubernetes.  It will cover:
+This article will walk you through getting Plex-Meta-Manager [PMM] set up and running in Kubernetes.  It will cover:
 
 1. Creating the Kubernetes CronJob
 1. Creating configuration files as Config Maps
 1. (Advanced) Creating dynamic configuration files with an Init Container
 
 
-## Prerequisites
+## Prerequisites.
 
 This walk through assumes you are familiar with Kubernetes concepts and have an exiting cluster to deploy into.  If you
 do not, but are interested, [minikube](https://minikube.sigs.k8s.io/docs/start/) is a great place to start.
 
 ## Creating the Kubernetes CronJob
 
-When running Plex Meta Manager in Kubernetes, executing it as a CronJob gives us the ability to define a schedule for execution and have
+When running PMM in Kubernetes, executing it as a CronJob gives us the ability to define a schedule for execution and have
 Kubernetes manage the rest.
 
 Some parts of this to tweak to your needs:
@@ -104,15 +104,15 @@ spec:
 
 ## Creating the Config Maps
 
-In Kubernetes, configurations are managed via Config Maps.  So we deploy the configurations for Plex Meta Manager as config maps.  The
-minimum requirement is the Plex Meta Manager config, but the example here assumes you have a separate config for movies and tv shows.
+In Kubernetes, configurations are managed via Config Maps.  So we deploy the configurations for PMM as config maps.  The
+minimum requirement is the PMM config, but the example here assumes you have a separate config for movies and tv shows.
 
-### Plex Meta Manager Config
+### PMM Config
 
-Here's a config map for the `config.yml` file for Plex Meta Manager.  Note there are many placeholders that will need update based on
+Here's a config map for the `config.yml` file for PMM.  Note there are many placeholders that will need update based on
 your environment and needs.
 
-Follow the [Trakt Attributes](../../config/trakt) directions for generating the OAuth authorization
+Follow the [Trakt Attributes](../../../config/trakt) directions for generating the OAuth authorization
 values.
 
 ```
@@ -159,6 +159,7 @@ data:
       url: http://PLEX_IP_HERE:32400
       token: YOUR_TOKEN_HERE
       timeout: 60
+      db_cache: 
       clean_bundles: false
       empty_trash: false
       optimize: false
@@ -361,7 +362,7 @@ spec:
 
 ### Templatizing your configuration
 
-This example will (re)generate the IMBD list URL and include the current date as the end date for the `release_date` value.
+This example will (re)generate the IMDb list URL and include the current date as the end date for the `release_date` value.
 `https://www.imdb.com/search/title/?title_type=tv_series,tv_miniseries&release_date=1980-01-01,{{ now().strftime('%Y-%m-%d') }}`
 
 `{{ now().strftime('%Y-%m-%d') }}` is the Jinja code, which when rendered will be replaced with the current date in

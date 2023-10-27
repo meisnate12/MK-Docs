@@ -6,8 +6,8 @@ You can find items in your Plex using the features of [Radarr](https://radarr.vi
 
 | Attribute                           | Description                                  | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
 |:------------------------------------|:---------------------------------------------|:-----------------:|:----------------:|:------------------------------------:|
-| [`radarr_all`](#radarr-all)         | Gets all Movies in Radarr.                   |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .grey }     |               :fontawesome-solid-circle-check:{ .grey }               |
-| [`radarr_taglist`](#radarr-taglist) | Gets Movies from Radarr based on their tags. |      :fontawesome-solid-circle-check:{ .green }      |     :fontawesome-solid-circle-check:{ .grey }     |               :fontawesome-solid-circle-check:{ .grey }               |
+| [`radarr_all`](#radarr-all)         | Gets all Movies in Radarr.                   |      &#9989;      |     &#10060;     |               &#10060;               |
+| [`radarr_taglist`](#radarr-taglist) | Gets Movies from Radarr based on their tags. |      &#9989;      |     &#10060;     |               &#10060;               |
 
 ## Radarr All
 

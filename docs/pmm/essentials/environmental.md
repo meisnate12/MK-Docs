@@ -26,24 +26,23 @@ Another way to specify environmental variables is by adding them to a .env file 
 | Attribute                                             | Shell Command                                 | Environment Variable      |
 |:------------------------------------------------------|:----------------------------------------------|:--------------------------|
 | [Config](#config)                                     | `-c` or `--config`                            | `PMM_CONFIG`              |
-| [Time to Run](#time-to-run)                           | `-t` or `--time`                              | `PMM_TIME`                |
+| [Time to Run](#time-to-run)                           | `-t` or `--times`                             | `PMM_TIMES`               |
 | [Run Immediately](#run-immediately)                   | `-r` or `--run`                               | `PMM_RUN`                 |
-| [Run Tests](#run-tests)                               | `-rt`, `--tests`, or `--run-tests`            | `PMM_TEST`                |
+| [Run Tests](#run-tests)                               | `-rt`, `--tests`, or `--run-tests`            | `PMM_TESTS`                |
 | [Debug](#debug)                                       | `-db` or `--debug`                            | `PMM_DEBUG`               |
 | [Trace](#trace)                                       | `-tr` or `--trace`                            | `PMM_TRACE`               |
 | [Log Requests](#log-requests)                         | `-lr` or `--log-requests`                     | `PMM_LOG_REQUESTS`        |
 | [Timeout](#timeout)                                   | `-ti` or `--timeout`                          | `PMM_TIMEOUT`             |
 | [Collections Only](#collections-only)                 | `-co` or `--collections-only`                 | `PMM_COLLECTIONS_ONLY`    |
 | [Playlists Only](#playlists-only)                     | `-po` or `--playlists-only`                   | `PMM_PLAYLISTS_ONLY`      |
-| [Operations Only](#operations-only)                   | `-op`, `--operations`, or `--operations-only` | `PMM_OPERATIONS`          |
-| [Overlays Only](#overlays-only)                       | `-ov`, `--overlays`, or `--overlays-only`     | `PMM_OVERLAYS`            |
-| [Run Collections](#run-collections)                   | `-rc` or `--run-collections`                  | `PMM_COLLECTIONS`         |
-| [Run Libraries](#run-libraries)                       | `-rl` or `--run-libraries`                    | `PMM_LIBRARIES`           |
-| [Run Metadata Files](#run-metadata-files)             | `-rm` or `--run-metadata-files`               | `PMM_METADATA_FILES`      |
+| [Operations Only](#operations-only)                   | `-op`, `--operations`, or `--operations-only` | `PMM_OPERATIONS_ONLY`     |
+| [Overlays Only](#overlays-only)                       | `-ov`, `--overlays`, or `--overlays-only`     | `PMM_OVERLAYS_ONLY`       |
+| [Run Collections](#run-collections)                   | `-rc` or `--run-collections`                  | `PMM_RUN_COLLECTIONS`     |
+| [Run Libraries](#run-libraries)                       | `-rl` or `--run-libraries`                    | `PMM_RUN_LIBRARIES`       |
+| [Run Metadata Files](#run-metadata-files)             | `-rm` or `--run-metadata-files`               | `PMM_RUN_METADATA_FILES`  |
 | [Libraries First](#libraries-first)                   | `-lf` or `--libraries-first`                  | `PMM_LIBRARIES_FIRST`     |
 | [Ignore Schedules](#ignore-schedules)                 | `-is` or `--ignore-schedules`                 | `PMM_IGNORE_SCHEDULES`    |
 | [Ignore Ghost](#ignore-ghost)                         | `-ig` or `--ignore-ghost`                     | `PMM_IGNORE_GHOST`        |
-| [Cache Libraries](#cache-libraries)                   | `-ca` or `--cache-libraries`                  | `PMM_CACHE_LIBRARIES`     |
 | [Delete Collections](#delete-collections)             | `-dc` or `--delete-collections`               | `PMM_DELETE_COLLECTIONS`  |
 | [Delete Labels](#delete-labels)                       | `-dl` or `--delete-labels`                    | `PMM_DELETE_LABELS`       |
 | [Resume Run](#resume-run)                             | `-re` or `--resume`                           | `PMM_RESUME`              |
@@ -84,20 +83,20 @@ Specify the location of the configuration YAML file.
 
 Specify the time of day that Plex Meta Manager will run.
 
-|         | Shell Command              | Environment Variable |
-|:--------|:---------------------------|:---------------------|
-| Flags   | `-ti` or `--timeout`       | `PMM_TIMEOUT`        |
-| Example | `--timeout 360`            | `PMM_TIMEOUT=360`    |
-| Values  | Integer Number of Seconds  |
-
+|                  | Shell Command                                      | Environment Variable       |
+|:-----------------|:---------------------------------------------------|:---------------------------|
+| Flags            | `-t` or `--times`                                  | `PMM_TIMES`                |
+| Example          | `--times 06:00,18:00`                              | `PMM_TIMES=06:00,18:00`    |
+| Default Value    | <code>05:00</code>                                 |
+| Available Values | comma-separated list in <code>HH:MM</code> format  |
 !!! example
     === "Local Environment"
         ```
-        python plex_meta_manager.py --time 22:00,03:00
+        python plex_meta_manager.py --times 22:00,03:00
         ```
     === "Docker Environment"
         ```
-        docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --time 22:00,03:00
+        docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --times 22:00,03:00
         ```
 
 ### Run Immediately
@@ -125,8 +124,8 @@ Perform a debug test run immediately, bypassing the time to run flag. This will 
 
 |          | Shell Command                      | Environment Variable |
 |:---------|:-----------------------------------|:---------------------|
-| Flags    | `-rt`, `--tests`, or `--run-tests` | `PMM_TEST`           |
-| Example  | `--run-tests`                      | `PMM_TEST=true`      |
+| Flags    | `-rt`, `--tests`, or `--run-tests` | `PMM_TESTS`           |
+| Example  | `--run-tests`                      | `PMM_TESTS=true`      |
 
 
 * Only collections with `test: true` enabled will be run
@@ -260,10 +259,10 @@ Only run playlist metadata/YAML files, skip library operations, overlays, and co
 
 Only run library operations skipping collections/metadata, playlists, and overlays.
 
-|          | Shell Command           | Environment Variable   |
-|:---------|:------------------------|:-----------------------|
-| Flags    | `-op` or `--operations` | `PMM_OPERATIONS`       |
-| Example  | `--operations`          | `PMM_OPERATIONS=true`  |
+|          | Shell Command           | Environment Variable       |
+|:---------|:------------------------|:---------------------------|
+| Flags    | `-op` or `--operations` | `PMM_OPERATIONS_ONLY`      |
+| Example  | `--operations`          | `PMM_OPERATIONS_ONLY=true` |
 
 !!! example
     === "Local Environment"
@@ -279,10 +278,10 @@ Only run library operations skipping collections/metadata, playlists, and overla
 
 Only run library overlays skipping collections/metadata, playlists, and operations.
 
-|         | Shell Command         | Environment Variable  |
-|:--------|:----------------------|:----------------------|
-| Flags   | `-ov` or `--overlays` | `PMM_OVERLAYS`        |
-| Example | `--overlays`          | `PMM_OVERLAYS=true`   |
+|         | Shell Command         | Environment Variable      |
+|:--------|:----------------------|:--------------------------|
+| Flags   | `-ov` or `--overlays` | `PMM_OVERLAYS_ONLY`       |
+| Example | `--overlays`          | `PMM_OVERLAYS_ONLY=true`  |
 
 !!! example
     === "Local Environment"
@@ -298,10 +297,10 @@ Only run library overlays skipping collections/metadata, playlists, and operatio
 
 Perform a collections run immediately to run only the pre-defined collections, bypassing the time to run flag.
 
-|         | Shell Command                                   | Environment Variable |
-|:--------|:------------------------------------------------|:---------------------|
-| Flags   | `-rc` or `--run-collections`                    | `PMM_COLLECTIONS`    |
-| Example | `--run-collections "Harry Potter\               | Star Wars"`          |`PMM_COLLECTIONS=Harry Potter\|Star Wars`|
+|         | Shell Command                                   | Environment Variable  |
+|:--------|:------------------------------------------------|:----------------------|
+| Flags   | `-rc` or `--run-collections`                    | `PMM_RUN_COLLECTIONS` |
+| Example | `--run-collections "Harry Potter\               | Star Wars"`           |`PMM_COLLECTIONS=Harry Potter\|Star Wars`|
 | Values  | Pipe-separated list of Collection Names to run  |
 
 !!! example
@@ -320,7 +319,7 @@ Perform a libraries run immediately to run only the pre-defined libraries, bypas
 
 |         | Shell Command                               | Environment Variable |
 |:--------|:--------------------------------------------|:---------------------|
-| Flags   | `-rl` or `--run-libraries`                  | `PMM_LIBRARIES`      |
+| Flags   | `-rl` or `--run-libraries`                  | `PMM_RUN_LIBRARIES`  |
 | Example | `--run-libraries "Movies - 4K\              | TV Shows - 4K"`      |`PMM_LIBRARIES=Movies - 4K\|TV Shows - 4K`|
 | Values  | Pipe-separated list of Library Names to run |
 
@@ -338,10 +337,10 @@ Perform a libraries run immediately to run only the pre-defined libraries, bypas
 
 Perform a metadata files run immediately to run only the pre-defined metadata files, bypassing the time to run flag.
 
-|                  | Shell Command                                    | Environment Variable  |
-|:-----------------|:-------------------------------------------------|:----------------------|
-| Flags            | `-rm` or `--run-metadata-files`                  | `PMM_METADATA_FILES`  |
-| Example          | `--run-metadata-files "Movies.yml\               | MovieCharts"`         |`PMM_METADATA_FILES=Movies.yml\|MovieCharts`|
+|                  | Shell Command                                    | Environment Variable     |
+|:-----------------|:-------------------------------------------------|:-------------------------|
+| Flags            | `-rm` or `--run-metadata-files`                  | `PMM_RUN_METADATA_FILES` |
+| Example          | `--run-metadata-files "Movies.yml\               | MovieCharts"`            |`PMM_METADATA_FILES=Movies.yml\|MovieCharts`|
 | Available Values | Pipe-separated list of Metadata Filenames to run |
 
 
@@ -415,25 +414,6 @@ Ignore all ghost logging for the run. A ghost log is what's printed to the conso
     === "Docker Environment"
         ```
         docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --ignore-ghost
-        ```
-
-### Cache Libraries
-
-Cache the library Load for 1 day.
-
-|          | Shell Command                | Environment Variable        |
-|:---------|:-----------------------------|:----------------------------|
-| Flags    | `-ca` or `--cache-libraries` | `PMM_CACHE_LIBRARIES`       |
-| Example  | `--cache-libraries`          | `PMM_CACHE_LIBRARIES=true`  |
-
-!!! example
-    === "Local Environment"
-        ```
-        python plex_meta_manager.py --cache-libraries
-        ```
-    === "Docker Environment"
-        ```
-        docker run -it -v "X:\Media\Plex Meta Manager\config:/config:rw" meisnate12/plex-meta-manager --cache-libraries
         ```
 
 ### Delete Collections

@@ -12,7 +12,7 @@ If you want to remove those collections, open the config file, remove or comment
 
 ```yaml
 libraries:
-  Main Movies:
+  All The Movies:
     metadata_path:
       # - pmm: basic               # This is a file within the defaults folder in the Repository
       # - pmm: imdb                # This is a file within the defaults folder in the Repository
@@ -24,15 +24,14 @@ libraries:
 ```
 
 Edit `Movies.yml` to reflect the actions you want PMM to perform on *your* libraries.
-Edit `Movies.yml` to reflect the actions you want PMM to perform on *your* libraries.
 
-TV Shows and other libraries work the same way as you've seen above.  Create a section under `Libraries:` in the config.yml, refer to default files or create a metadata file, define collections, run Plex Meta Manager.
+TV Shows and other libraries work the same way as you've seen above.  Create a section under `Libraries:` in the config.yml, refer to default files or create a metadata file, define collections, run the script.
 
 Investigate the rest of the wiki to learn about everything Plex-Meta-Manager can do for you.
 
 ### Runtime and Environment Flags
 
-The command in this walkthrough will run all collections and libraries immediately.  If you want to modify that behavior to run just one or some collections, or just one library, or just overlays or the like, review the [Run Commands & Environment Variables](../../../../pmm/essentials/environmental.md).
+The command in this walkthrough will run all collections and libraries immediately.  If you want to modify that behavior to run just one or some collections, or just one library, or just overlays or the like, review the [Run Commands & Environment Variables](../../../essentials/environmental.md).
 
 ### Creating Collections, Overlays, Playlists, etc.
 
