@@ -4,7 +4,7 @@ The `franchise` Default Metadata File is used to create collections based on pop
 
 Unlike most Default Metadata Files, Franchise works by placing collections inline with the main library items if your library allows it. For example, the "Iron Man" franchise collection will appear next to the "Iron Man" movies within your library.
 
-**This file has a Show Library [Counterpart](../show/franchise).**
+**This file has a Show Library [Counterpart](../show/franchise.md).**
 
 ![](../images/moviefranchise.png)
 
@@ -35,7 +35,7 @@ Template Variables can be used to manipulate the file in various ways to slightl
 
 Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults work. Any value not specified is its default value if it has one if not it's just ignored.
 
-**[Shared Collection Variables](../collection_variables) are NOT available to this default file.**
+**[Shared Collection Variables](../collection_variables.md) are NOT available to this default file.**
 
 | Variable                                 | Description & Values                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |:-----------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

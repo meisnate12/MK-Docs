@@ -6,7 +6,7 @@ Whilst it is possible to have `python plex-meta-manager.py` running in an open w
 
 Instead, it is recommended to set an automated scheduling service so that Plex Meta Manager can run in the background when scheduled to without any visible impact to the user (other than the Plex libraries and playlists updating).
 
-**To control how individual parts of Plex Meta Manager are scheduled see the [Schedule detail](../../metadata/details/schedule)**
+**To control how individual parts of Plex Meta Manager are scheduled see the [Schedule detail](../../../builders/details/schedule.md)**
 
 IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path to that directory on *your* system.
 
@@ -15,7 +15,7 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
     
     When running Plex Meta Manager within docker, the session will resume after a system reboot (assuming Docker is set to start at system startup, which is the default) and Plex Meta Manager will run in the background at all times.
     
-    There's a [Docker Walkthrough](docker) with more detailed instructions on setting up Plex Meta Manager within docker. The simplest command to facilitate a docker run is:
+    There's a [Docker Walkthrough](docker.md) with more detailed instructions on setting up Plex Meta Manager within docker. The simplest command to facilitate a docker run is:
     
     ```
     docker run -d \
@@ -39,7 +39,7 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
 
 === "Windows Task Scheduler"
     
-    Windows Task Scheduler is advised for those who followed the Windows instructions in the [Local Walkthrough Guides](local) and/or do not want to run Plex Meta Manager within docker.
+    Windows Task Scheduler is advised for those who followed the Windows instructions in the [Local Walkthrough Guides](local.md) and/or do not want to run Plex Meta Manager within docker.
     
     Windows Task Scheduler allows the user to run commands and services at scheduled times and intervals.
     
@@ -49,7 +49,7 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
     
     These will be explained further down this page.
     
-    These guides assume the user has followed the Windows instructions in the [Local Walkthrough Guides](local) which includes setting up the [virtual environment](local/#setting-up-a-virtual-environment). Please also ensure to edit any commands to be reflective of the live environment (such as usernames, installation directories).
+    These guides assume the user has followed the Windows instructions in the [Local Walkthrough Guides](local.md) which includes setting up the [virtual environment](local.md#setting-up-a-virtual-environment). Please also ensure to edit any commands to be reflective of the live environment (such as usernames, installation directories).
     
     ### Background Run Scheduled Task
     
@@ -300,7 +300,7 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
     
        Change `/path/to/plex-meta-manager` to reflect where you've installed Plex Meta Manager.
     
-       NOTE: This is assuming you created the `pmm-venv` virtual environment as described in the [Local Walkthrough](local)
+       NOTE: This is assuming you created the `pmm-venv` virtual environment as described in the [Local Walkthrough](local.md)
     
        Save and close the file.
     
@@ -337,7 +337,7 @@ IMPORTANT: Every time you see `/path/to` below, it's a placeholder for the path 
 
        This is an example, which does nothing but run the script immediately.  If you want to add additional flags you can do so.
 
-       NOTE: This is assuming you created the `pmm-venv` virtual environment as described in the [Local Walkthrough](local)
+       NOTE: This is assuming you created the `pmm-venv` virtual environment as described in the [Local Walkthrough](local.md)
     
     2. Open the system crontab for editing:
     

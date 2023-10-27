@@ -117,9 +117,9 @@ libraries:
           visible_shared_top: true
 ```
 
-Each file has a page on the wiki showing the available `template_variables` for each file. For example the default `pmm: genre` has a page [here](both/genre).
+Each file has a page on the wiki showing the available `template_variables` for each file. For example the default `pmm: genre` has a page [here](both/genre.md).
 
-**In addition to the defined `template_variables` almost all default Metadata files have access to the [Shared Variables](collection_variables).**
+**In addition to the defined `template_variables` almost all default Metadata files have access to the [Shared Variables](collection_variables.md).**
 
 ### Examples
 

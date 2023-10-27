@@ -43,18 +43,18 @@ Transform your media library with Plex Meta Manager and discover its full potent
 
 Here are some examples of the things you can achieve using Plex Meta Manager!
 
-**Example Movie Collections using the [Plex Meta Manager Defaults](#Plex Meta Manager-defaults)** (click to enlarge):
+**Example Movie Collections using the [Plex Meta Manager Defaults](#Plex Meta Manager-defaults.md)** (click to enlarge):
 
 ![Movie Collection Preview](assets/movie-collection-preview.png){width="600"}
 
-**Example Show Overlays using the [Plex Meta Manager Defaults](#Plex Meta Manager-defaults)** (click to enlarge):
+**Example Show Overlays using the [Plex Meta Manager Defaults](#Plex Meta Manager-defaults.md)** (click to enlarge):
 
 ![Show Library Preview](assets/show-library-preview.png){ width="600" }
 
 
 ## Plex Meta Manager Defaults
 
-Want your library to look like the above images?  With the [PMM Defaults](defaults/guide) you can! These powerful and modular files were designed by the Plex Meta Manager team to make it simple to create a personalized, one-of-a-kind media collection without the hassle of manually defining each one.
+Want your library to look like the above images?  With the [PMM Defaults](defaults/guide.md) you can! These powerful and modular files were designed by the Plex Meta Manager team to make it simple to create a personalized, one-of-a-kind media collection without the hassle of manually defining each one.
 
 Want to see what the community has to offer? Check out the [Plex Meta Manager Configs](https://github.com/meisnate12/Plex-Meta-Manager-Configs) repository on GitHub to see user-submitted configuration files, or even add your own to the mix!
 
@@ -64,11 +64,11 @@ With Plex Meta Manager, you can also manage metadata for all your media types, f
 
 To get started with Plex Meta Manager, follow these simple steps:
 
-1. Install Plex Meta Manager on your device. You can find the installation instructions for a variety of platforms [here](home/installation).
+1. Install Plex Meta Manager on your device. You can find the installation instructions for a variety of platforms [here](pmm/install/installation.md).
 
-2. Once you have installed Plex Meta Manager, create your [Configuration File](config/configuration). This file contains important information such as URLs and credentials needed to connect to services like Plex and TMDb
+2. Once you have installed Plex Meta Manager, create your [Configuration File](config/configuration.md). This file contains important information such as URLs and credentials needed to connect to services like Plex and TMDb
 
-3. After creating the Configuration File, you can start updating Metadata and building automatic Collections by creating a [Metadata File](metadata/metadata) for each Library you want to work with. If you'd rather use some of our pre-made Metadata Files, take a look at the [Plex Meta Manager Defaults](#defaults-and-user-metadataoverlay-files)
+3. After creating the Configuration File, you can start updating Metadata and building automatic Collections by creating a [Metadata File](metadata/metadata.md) for each Library you want to work with. If you'd rather use some of our pre-made Metadata Files, take a look at the [Plex Meta Manager Defaults](#defaults-and-user-metadataoverlay-files)
 
 4. Finally, check out the [Wiki](https://metamanager.wiki/), you'll find new and exciting ways to truly unlock the potential of your libraries.
 
@@ -76,9 +76,9 @@ To get started with Plex Meta Manager, follow these simple steps:
 
 If you're a beginner to the concepts of Python, Git and/or Plex Meta Manager and find the above steps challenging, don't worry. We've got some step-by-step guides that can help you get started. These guides will take you through the process of installing Plex Meta Manager, creating your Configuration File and getting some basic Collections up and running.
 
-   1. The [Local Walkthrough](home/guides/local) covers installing Plex Meta Manager natively [not in docker] on your local computer or a remote server.
-   2. The [Docker Walkthrough](home/guides/docker) covers installing Plex Meta Manager via Docker.
-   3. The [unRAID Walkthrough](home/guides/unraid) gets you started configuring Plex Meta Manager in UNRaid.  It doesn't go through the same steps with regard to creating the config file and metadata file, so you may want to go through the [Docker Walkthrough](home/guides/docker) first on your computer to gain that understanding.
+   1. The [Local Walkthrough](pmm/install/guides/local.md) covers installing Plex Meta Manager natively [not in docker] on your local computer or a remote server.
+   2. The [Docker Walkthrough](pmm/install/guides/docker.md) covers installing Plex Meta Manager via Docker.
+   3. The [unRAID Walkthrough](pmm/install/guides/unraid.md) gets you started configuring Plex Meta Manager in UNRaid.  It doesn't go through the same steps with regard to creating the config file and metadata file, so you may want to go through the [Docker Walkthrough](pmm/install/guides/docker.md) first on your computer to gain that understanding.
 
 ## Example Usage
 
@@ -96,7 +96,7 @@ Imagine having Collections like these at your fingertips:
 
 Plex Meta Manager gives you endless possibilities to curate and organize your media library any way you want. Create custom Collections and Overlays that fit your unique preferences and make discovering your content effortless.
 
-But if you don't want to spend time manually creating Collections and Overlays, we've got you covered. Check out the [PMM Defaults](defaults/guide) - a handcrafted selection of tried-and-tested Collections and Overlays made by the Plex Meta Manager team.
+But if you don't want to spend time manually creating Collections and Overlays, we've got you covered. Check out the [PMM Defaults](defaults/guide.md) - a handcrafted selection of tried-and-tested Collections and Overlays made by the Plex Meta Manager team.
 
 
 

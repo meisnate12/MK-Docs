@@ -2,7 +2,7 @@
 
 ## Radarr Definition Settings
 
-All the following attributes can override the global/library [Radarr](../../config/radarr) attributes which are the default unless otherwise specified.
+All the following attributes can override the global/library [Radarr](../../config/radarr.md) attributes which are the default unless otherwise specified.
 
 | Attribute                 | Description & Values                                                                                                                                                            |
 |:--------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -22,7 +22,7 @@ All the following attributes can override the global/library [Radarr](../../conf
 
 ## Sonarr Definition Settings
 
-All the following attributes can override the global/library [Sonarr](../../config/sonarr) attributes which are the default unless otherwise specified.
+All the following attributes can override the global/library [Sonarr](../../config/sonarr.md) attributes which are the default unless otherwise specified.
 
 | Attribute                 | Description & Values                                                                                                                                                             |
 |:--------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -56,7 +56,7 @@ When `radarr_add_missing`/`sonarr_add_missing` are true the items missing from t
 
 When `radarr_add_existing`/`sonarr_add_existing` are true the items that exist in the collection/playlist will be added to Radarr/Sonarr. 
 
-If your Radarr/Sonarr has different file system mappings from your plex use `radarr_path`/`sonarr_path` along with `plex_path` from your [Radarr](../../config/radarr)/[Sonarr](../../config/sonarr) global config settings.
+If your Radarr/Sonarr has different file system mappings from your plex use `radarr_path`/`sonarr_path` along with `plex_path` from your [Radarr](../../config/radarr.md)/[Sonarr](../../config/sonarr.md) global config settings.
 
 ### Radarr Add Details
 

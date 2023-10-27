@@ -2,7 +2,7 @@
 
 The `decade` Metadata File is used to dynamically create collections based on the decades available in your library, sorted by critic rating to create a "best of <decade>"
 
-**This file has a Movie Library [Counterpart](../movie/decade).**
+**This file has a Movie Library [Counterpart](../movie/decade.md).**
 
 ![](../images/decade.png)
 
@@ -14,7 +14,7 @@ Supported Library Types: Show
 
 | Collection                                           | Key                               | Description                                                                 |
 |:-----------------------------------------------------|:----------------------------------|:----------------------------------------------------------------------------|
-| `Decade Collections`                                 | `separator`                       | [Separator Collection](../separators) to denote the Section of Collections. |
+| `Decade Collections`                                 | `separator`                       | [Separator Collection](../separators.md) to denote the Section of Collections. |
 | `Best of <<Decade>>`<br>**Example:** `Best of 2020s` | `<<Year>>`<br>**Example:** `2020` | Collection of Shows released in this Decade.                                |
  
 ## Config
@@ -34,9 +34,9 @@ Template Variables can be used to manipulate the file in various ways to slightl
 
 Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults work. Any value not specified is its default value if it has one if not it's just ignored.
 
-All [Shared Collection Variables](../collection_variables) are available as well as the additional Variables below which can be used to customize the file.
+All [Shared Collection Variables](../collection_variables.md) are available as well as the additional Variables below which can be used to customize the file.
 
-This file contains a [Separator](../separators) so all [Shared Separator Variables](../separators.md#shared-separator-variables) are available as well.
+This file contains a [Separator](../separators.md) so all [Shared Separator Variables](../separators.md#shared-separator-variables) are available as well.
 
 | Variable                      | Description & Values                                                                                                                                                                                                       |
 |:------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

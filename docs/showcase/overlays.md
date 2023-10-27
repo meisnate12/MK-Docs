@@ -51,7 +51,7 @@ Each showcased photo has been confirmed to be fully functional with Plex Meta Ma
 
     Custom fonts have been used for the ratings which can be sourced in [bullmoose20's repository](https://github.com/meisnate12/Plex-Meta-Manager-Configs/tree/master/bullmoose20) within `fonts.zip`
 
-    A [Library Operation](../config/operations/#mass--rating-update) is used to place the IMDb rating into the user rating slot, as can be seen in the code example.
+    A [Library Operation](../config/operations.md#mass--rating-update) is used to place the IMDb rating into the user rating slot, as can be seen in the code example.
 
     **Click the image to enlarge it**
 
@@ -103,7 +103,7 @@ Each showcased photo has been confirmed to be fully functional with Plex Meta Ma
 
     This example uses two PMM Default Overlay files: [Ratings](../defaults/overlays/ratings.md) and [Runtimes](../defaults/overlays/runtimes.md).
 
-    Ratings are set to show the TMDb, Trakt and IMDb ratings, which have been set using [Library Operations](../config/operations/#mass--rating-update)
+    Ratings are set to show the TMDb, Trakt and IMDb ratings, which have been set using [Library Operations](../config/operations.md#mass--rating-update)
 
     The runtimes overlay is modified to show no text, but to instead produce the black bar which the ratigns sit on top of.
 

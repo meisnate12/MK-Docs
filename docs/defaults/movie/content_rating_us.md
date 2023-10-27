@@ -4,7 +4,7 @@ The `content_rating_us` Default Metadata File is used to dynamically create coll
 
 If you do not use the US-based rating system within Plex, this file will attempt to match the ratings in your library to the respective rating system.
 
-**This file has a Show Library [Counterpart](../show/content_rating_us).**
+**This file has a Show Library [Counterpart](../show/content_rating_us.md).**
 
 ![](../images/moviecontent_rating_us.png)
 
@@ -18,7 +18,7 @@ Recommendation: Set the Certification Country within your library's advanced set
 
 | Collection                                             | Key                                      | Description                                                                     |
 |:-------------------------------------------------------|:-----------------------------------------|:--------------------------------------------------------------------------------|
-| `Country Collections`                                  | `separator`                              | [Separator Collection](../separators) to denote the Section of Collections.     |
+| `Country Collections`                                  | `separator`                              | [Separator Collection](../separators.md) to denote the Section of Collections.     |
 | `<<Content Rating>> Movies`<br>**Example:** `R Movies` | `<<Content Rating>>`<br>**Example:** `R` | Collection of Movies that have this Content Rating.                             |
 | `Not Rated Movies`                                     | `other`                                  | Collection of Movies that are Unrated, Not Rated or any other uncommon Ratings. |
 
@@ -39,9 +39,9 @@ Template Variables can be used to manipulate the file in various ways to slightl
 
 Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults work. Any value not specified is its default value if it has one if not it's just ignored.
 
-All [Shared Collection Variables](../collection_variables) are available as well as the additional Variables below which can be used to customize the file.
+All [Shared Collection Variables](../collection_variables.md) are available as well as the additional Variables below which can be used to customize the file.
 
-This file contains a [Separator](../separators) so all [Shared Separator Variables](../separators.md#shared-separator-variables) are available as well.
+This file contains a [Separator](../separators.md) so all [Shared Separator Variables](../separators.md#shared-separator-variables) are available as well.
 
 | Variable                      | Description & Values                                                                                                                                                                                                                                                    |
 |:------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

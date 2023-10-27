@@ -2,7 +2,7 @@
 
 You can find anime using the features of [MyAnimeList.net](https://myanimelist.net/) (MyAnimeList).
 
-[Configuring MyAnimeList](../../config/myanimelist) in the config is required for any of these builders.
+[Configuring MyAnimeList](../config/myanimelist.md) in the config is required for any of these builders.
 
 | Attribute                                     | Description                                                                                                             | Works with Movies | Works with Shows | Works with Playlists and Custom Sort |
 |:----------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|:-----------------:|:----------------:|:------------------------------------:|

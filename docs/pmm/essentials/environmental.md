@@ -38,7 +38,7 @@ Another way to specify environmental variables is by adding them to a .env file 
 | [Operations Only](#operations-only)                   | `-op`, `--operations`, or `--operations-only` | `PMM_OPERATIONS_ONLY`     |
 | [Overlays Only](#overlays-only)                       | `-ov`, `--overlays`, or `--overlays-only`     | `PMM_OVERLAYS_ONLY`       |
 | [Run Collections](#run-collections)                   | `-rc` or `--run-collections`                  | `PMM_RUN_COLLECTIONS`     |
-| [Run Libraries](#run-libraries)                       | `-rl` or `--run-libraries`                    | `PMM_RUN_LIBRARIES`       |
+| [Run Libraries](#run-libraries.md)                       | `-rl` or `--run-libraries`                    | `PMM_RUN_LIBRARIES`       |
 | [Run Metadata Files](#run-metadata-files)             | `-rm` or `--run-metadata-files`               | `PMM_RUN_METADATA_FILES`  |
 | [Libraries First](#libraries-first)                   | `-lf` or `--libraries-first`                  | `PMM_LIBRARIES_FIRST`     |
 | [Ignore Schedules](#ignore-schedules)                 | `-is` or `--ignore-schedules`                 | `PMM_IGNORE_SCHEDULES`    |

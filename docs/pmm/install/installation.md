@@ -23,22 +23,22 @@ The installation overviews on this page are aimed at users who have previous exp
 
 For those who need full installation walkthroughs, please refer to the following walkthrough guides:
 
-  * [Local Walkthrough](guides/local) - follow this if you are running the script directly on Windows, OS X, or Linux
-  * [Docker Walkthrough](guides/docker) - this discusses using Docker at the command line
+  * [Local Walkthrough](guides/local.md) - follow this if you are running the script directly on Windows, OS X, or Linux
+  * [Docker Walkthrough](guides/docker.md) - this discusses using Docker at the command line
 
 If you are using unRAID, Kubernetes, QNAP, or Synology refer to the following basic guide to Docker container setup for each system:
 **this doesn't cover the PMM setup specifics found in the guides above**
 
-  * [unRAID Walkthrough](guides/unraid)
-  * [Kubernetes Walkthrough](guides/kubernetes)
-  * [QNAP Walkthrough](guides/qnap)
-  * [Synology Walkthrough](guides/synology)
+  * [unRAID Walkthrough](guides/unraid.md)
+  * [Kubernetes Walkthrough](guides/kubernetes.md)
+  * [QNAP Walkthrough](guides/qnap.md)
+  * [Synology Walkthrough](guides/synology.md)
 
 ## Local Install Overview
 
 Plex Meta Manager is compatible with Python 3.8 through 3.11. Later versions may function but are untested.
 
-These are high-level steps which assume the user has knowledge of python and pip, and the general ability to troubleshoot issues. For a detailed step-by-step walkthrough, refer to the [Local Walkthrough](guides/local) guide.
+These are high-level steps which assume the user has knowledge of python and pip, and the general ability to troubleshoot issues. For a detailed step-by-step walkthrough, refer to the [Local Walkthrough](guides/local.md) guide.
 
 1. Clone or [download and unzip](https://github.com/meisnate12/Plex-Meta-Manager/archive/refs/heads/master.zip) the repo.
 
@@ -108,7 +108,7 @@ A `Dockerfile` is included within the GitHub repository for those who require it
 
 ## Customizing the docker-compose file with runtime flags and ENV vars
 
-Plex Meta Manager's behavior can be modified in a variety of ways using either runtime flags or environnment variables.  These flags and vars are detailed [here](environmental).
+Plex Meta Manager's behavior can be modified in a variety of ways using either runtime flags or environnment variables.  These flags and vars are detailed [here](../essentials/environmental.md).
 
 This is optional, and is not necessary to run PMM.  Many if not most users will have no reason to do this and can use something more like the basic docker-compose just above.
 
@@ -139,4 +139,4 @@ services:
 
 `- PMM_LIBRARIES=Movies` tells PMM to process only a library called "Movies"
 
-Again, a list of the available environment variables can be found [here](environmental).
+Again, a list of the available environment variables can be found [here](../essentials/environmental.md).
