@@ -114,7 +114,6 @@ nav:
           - Kubernetes Walkthrough: pmm/install/guides/kubernetes.md
           - QNAP Walkthrough: pmm/install/guides/qnap.md
           - Synology Walkthrough: pmm/install/guides/synology.md
-
       - POST-INSTALL:
         - Run Commands & Env Variables: pmm/essentials/environmental.md
         - Knowledgebase / FAQ: pmm/essentials/kb.md
@@ -167,7 +166,7 @@ nav:
           - Collections: defaults/collections.md
           - Shared Variables: defaults/collection_variables.md
           - Separators: defaults/separators.md
-          - Awards Defaults:
+          - Award:
             - Separator: defaults/award/separator.md
             - Academy Awards (Oscars): defaults/award/oscars.md
             - British Academy of Film Awards: defaults/award/bafta.md
@@ -178,7 +177,7 @@ nav:
             - Independent Spirit Awards: defaults/award/spirit.md
             - Sundance Film Festival Awards: defaults/award/sundance.md
             - Other Awards: defaults/award/other.md
-          - Charts Defaults:
+          - Chart:
             - Separator: defaults/chart/separator.md
             - Basic Charts: defaults/chart/basic.md
             - AniList Charts: defaults/chart/anilist.md
@@ -189,77 +188,78 @@ nav:
             - TMDb Charts: defaults/chart/tmdb.md
             - Trakt Charts: defaults/chart/trakt.md
             - Other Charts: defaults/chart/other.md
-          - Movie Library Defaults:
-            - Actors: defaults/both/actor.md
-            - Audio Languages: defaults/both/audio_language.md
-            - Based On...: defaults/both/based.md
-            - Collectionless: defaults/both/collectionless.md
-            - Common Sense Media Content Ratings: defaults/both/content_rating_cs.md
-            - MyAnimeList Content Ratings: defaults/both/content_rating_mal.md
-            - Content Ratings (US): defaults/movie/content_rating_us.md
-            - Content Ratings (UK): defaults/both/content_rating_uk.md
-            - Countries: defaults/movie/country.md
-            - Decades: defaults/movie/decade.md
-            - Directors: defaults/movie/director.md
-            - Franchises: defaults/movie/franchise.md
+          - Content:
             - Genres: defaults/both/genre.md
-            - Producers: defaults/movie/producer.md
-            - Resolutions: defaults/both/resolution.md
-            - Seasonal: defaults/movie/seasonal.md
-            - Streaming: defaults/both/streaming.md
-            - Studios: defaults/both/studio.md
-            - Anime Studios: defaults/both/studio_anime.md
-            - Subtitle Languages: defaults/both/subtitle_language.md
+            - Franchises (Movie): defaults/movie/franchise.md
+            - Franchises (Show): defaults/show/franchise.md
             - Universes: defaults/both/universe.md
-            - Writers: defaults/movie/writer.md
-            - Years: defaults/both/year.md
-          - Show Library Defaults:
-            - Actors: defaults/both/actor.md
-            - Audio Languages: defaults/both/audio_language.md
             - Based On...: defaults/both/based.md
-            - Collectionless: defaults/both/collectionless.md
-            - Common Sense Media Content Ratings: defaults/both/content_rating_cs.md
-            - MyAnimeList Content Ratings: defaults/both/content_rating_mal.md
-            - US Content Ratings: defaults/show/content_rating_us.md
+          - Content Rating:
+            - US Content Ratings (Movie): defaults/movie/content_rating_us.md
+            - US Content Ratings (Show): defaults/show/content_rating_us.md
             - UK Content Ratings: defaults/both/content_rating_uk.md
-            - Countries: defaults/show/country.md
-            - Decades: defaults/show/decade.md
-            - Franchises: defaults/show/franchise.md
-            - Genres: defaults/both/genre.md
-            - Networks: defaults/show/network.md
+            - MyAnimeList Content Ratings: defaults/both/content_rating_mal.md
+            - Common Sense Media Content Ratings: defaults/both/content_rating_cs.md
+          - Location:
+            - Countries (Movie): defaults/movie/country.md
+            - Countries (Show): defaults/show/country.md
+            - Regions (Movie): defaults/movie/region.md
+            - Regions (Show): defaults/show/region.md
+            - Continents (Movie): defaults/movie/continent.md
+            - Continents (Show): defaults/show/continent.md
+          - Media:
+            - Aspect Rations (Show): defaults/both/aspect.md
             - Resolutions: defaults/both/resolution.md
+            - Audio Languages: defaults/both/audio_language.md
+            - Subtitle Languages: defaults/both/subtitle_language.md
+          - Production:
+            - Networks: defaults/show/network.md
             - Streaming: defaults/both/streaming.md
             - Studios: defaults/both/studio.md
-            - Anime Studios: defaults/both/studio_anime.md
-            - Subtitle Languages: defaults/both/subtitle_language.md
-            - Universes: defaults/both/universe.md
+          - People:
+            - Actors: defaults/both/actor.md
+            - Directors: defaults/movie/director.md
+            - Producers: defaults/movie/producer.md
+            - Writers: defaults/movie/writer.md
+          - Time:
+            - Seasonal: defaults/movie/seasonal.md
             - Years: defaults/both/year.md
+            - Decades (Movie): defaults/movie/decade.md
+            - Decades (Show): defaults/show/decade.md
+          - Utility:
+            - Collectionless: defaults/both/collectionless.md
       - OVERLAY DEFAULTS:
         - Click to Expand:
           - Overlays: defaults/overlays.md
           - Shared Variables: defaults/overlay_variables.md
-          - Overlay Defaults:
-            - Audio Codec: defaults/overlays/audio_codec.md
-            - Common Sense Age Ratings: defaults/overlays/commonsense.md
-            - Content Ratings (UK): defaults/overlays/content_rating_uk.md
-            - Content Ratings (US Movie): defaults/overlays/content_rating_us_movie.md
-            - Content Ratings (US Show): defaults/overlays/content_rating_us_show.md
-            - Direct Play Only: defaults/overlays/direct_play.md
-            - Episode Info: defaults/overlays/episode_info.md
+          - Chart:
             - FlixPatrol Top: defaults/overlays/flixpatrol.md
+            - Ribbon: defaults/overlays/ribbon.md
+          - Content:
+            - Episode Info: defaults/overlays/episode_info.md
+            - MediaStinger: defaults/overlays/mediastinger.md
+            - Ratings: defaults/overlays/ratings.md
+            - Status: defaults/overlays/status.md
+          - Content Rating:
+            - US Content Ratings (Movie): defaults/overlays/content_rating_us_movie.md
+            - US Content Ratings (Show): defaults/overlays/content_rating_us_show.md
+            - UK Content Ratings: defaults/overlays/content_rating_uk.md
+            - Common Sense Age Ratings: defaults/overlays/commonsense.md
+          - Media:
+            - Aspect Ratio: defaults/overlays/aspect.md
+            - Audio Codec: defaults/overlays/audio_codec.md
             - Audio/Subtitle Language Count: defaults/overlays/language_count.md
             - Audio/Subtitle Language Flags: defaults/overlays/languages.md
-            - Languages: defaults/overlays/languages.md
-            - MediaStinger: defaults/overlays/mediastinger.md
-            - Networks: defaults/overlays/network.md
-            - Ratings: defaults/overlays/ratings.md
             - Resolution/Edition: defaults/overlays/resolution.md
-            - Ribbon: defaults/overlays/ribbon.md
             - Runtimes: defaults/overlays/runtimes.md
-            - Status: defaults/overlays/status.md
-            - Streaming: defaults/overlays/streaming.md
             - Versions: defaults/overlays/versions.md
             - Video Format: defaults/overlays/video_format.md
+          - Production:
+            - Networks: defaults/overlays/network.md
+            - Streaming: defaults/overlays/streaming.md
+            - Studios: defaults/overlays/studio.md
+          - Utility:
+            - Direct Play Only: defaults/overlays/direct_play.md
       - PLAYLIST DEFAULTS:
         - Playlists: defaults/playlist.md
   - CUSTOM FILES:
