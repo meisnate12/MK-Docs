@@ -13,8 +13,9 @@ Supported Library Types: Movie, Show
 | `Actors Collections`                            | `separator`                                     | [Separator Collection](../separators.md) to denote the Section of Collections. |
 | `<<actor_name>>`<br>**Example:** `Frank Welker` | `<<actor_name>>`<br>**Example:** `Frank Welker` | Collection of Movies/Shows the actor is top billing in.                     |
 
-```{include} ../people.md
-```
+{%
+   include-markdown "../people.md"
+%}
 
 ## Config
 
