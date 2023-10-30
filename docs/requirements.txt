@@ -1,4 +1,4 @@
 mkdocs-material==9.1.8
 mkdocs-glightbox==0.3.4
 mkdocs-include-markdown-plugin==4.0.4
-pymdown-extensions~=10.3.1
+pymdown-extensions==10.3.1
