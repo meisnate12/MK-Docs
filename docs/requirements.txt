@@ -2,3 +2,14 @@ mkdocs-material
 mkdocs-glightbox
 mkdocs-include-markdown-plugin
 pymdown-extensions
+jinja2
+markdown
+mkdocs
+mkdocs-material-extensions
+pygments
+pymdown-extensions
+babel
+colorama
+paginate
+regex
+requests
