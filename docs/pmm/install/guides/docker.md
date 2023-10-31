@@ -442,7 +442,7 @@ Add the `develop` tag to the image name in your run command [or wherever you spe
 
 ```
 docker run --rm -it -v "Plex Meta Manager_PATH_GOES_HERE:/config:rw" meisnate12/plex-meta-manager:develop --run
-                                                                                    ^^^^^^^
+                                                                                                  ^^^^^^^
 ```
 
 This may not work if you are not using the official image; for example, it does not work with the lsio image.
@@ -453,7 +453,7 @@ Add the `nightly` tag to the image name in your run command [or wherever you spe
 
 ```
 docker run --rm -it -v "Plex Meta Manager_PATH_GOES_HERE:/config:rw" meisnate12/plex-meta-manager:nightly --run
-                                                                                    ^^^^^^^
+                                                                                                  ^^^^^^^
 ```
 
 This may not work if you are not using the official image; for example, it does not work with the lsio image.
@@ -464,7 +464,7 @@ Add the `latest` tag to the image name in your run command [or wherever you spec
 
 ```
 docker run --rm -it -v "Plex Meta Manager_PATH_GOES_HERE:/config:rw" meisnate12/plex-meta-manager:latest --run
-                                                                                    ^^^^^^
+                                                                                                  ^^^^^^
 ```
 
 This is the only version tag supplied by the lsio image.
