@@ -1,3 +1,8 @@
+---
+search:
+  boost: 5 
+---
+
 # Library Attributes
 
 ## Library Attributes
@@ -76,18 +81,18 @@ The available attributes for each library are as follows:
 
 | Attribute                                              | Values                                                                                                | Default                               |                              Required                              |
 |:-------------------------------------------------------|:------------------------------------------------------------------------------------------------------|:--------------------------------------|:------------------------------------------------------------------:|
-| [`library_name`](#library-name)                        | Library name (required only when trying to use multiple libraries with the same name)                 | Base Attribute Name                   |             :fontawesome-solid-circle-check:{ .grey }              |
-| [`metadata_path`](#metadata-path)                      | Location of Metadata YAML files                                                                       | `/config/<<MAPPING_NAME>>.yml`        |             :fontawesome-solid-circle-check:{ .grey }              |
-| [`overlay_path`](#overlay-path)                        | Location of Overlay YAML files                                                                        | None                                  |             :fontawesome-solid-circle-check:{ .grey }              |
-| [`report_path`](#report-path)                          | Location to create the YAML file listing added, removed, filtered, and missing items for this library | `/config/<<MAPPING_NAME>>_report.yml` |        :fontawesome-solid-circle-check:{ .grey }                   |
-| [`template_variables`](#library-template-variables)    | Library template variables to be applied to every Metadata and Overlay file run.                      | N/A                                   |             :fontawesome-solid-circle-check:{ .grey }              |
-| [`schedule`](../builders/details/schedule.md)          | Use any [schedule option](../builders/details/schedule.md) to control when this library is run.       | daily                                 |             :fontawesome-solid-circle-check:{ .grey }              |
-| [`operations`](operations.md)                          | Library Operations to run                                                                             | N/A                                   |             :fontawesome-solid-circle-check:{ .grey }              |
-| [`settings`](settings.md)                              | Any `setting` attribute that overrides a global value                                                 | global                                |             :fontawesome-solid-circle-check:{ .grey }              |
+| [`library_name`](#library-name)                        | Library name (required only when trying to use multiple libraries with the same name)                 | Base Attribute Name                   |             :fontawesome-solid-circle-xmark:{ .red }              |
+| [`metadata_path`](#metadata-path)                      | Location of Metadata YAML files                                                                       | `/config/<<MAPPING_NAME>>.yml`        |             :fontawesome-solid-circle-xmark:{ .red }              |
+| [`overlay_path`](#overlay-path)                        | Location of Overlay YAML files                                                                        | None                                  |             :fontawesome-solid-circle-xmark:{ .red }              |
+| [`report_path`](#report-path)                          | Location to create the YAML file listing added, removed, filtered, and missing items for this library | `/config/<<MAPPING_NAME>>_report.yml` |        :fontawesome-solid-circle-xmark:{ .red }                   |
+| [`template_variables`](#library-template-variables)    | Library template variables to be applied to every Metadata and Overlay file run.                      | N/A                                   |             :fontawesome-solid-circle-xmark:{ .red }              |
+| [`schedule`](../builders/details/schedule.md)          | Use any [schedule option](../builders/details/schedule.md) to control when this library is run.       | daily                                 |             :fontawesome-solid-circle-xmark:{ .red }              |
+| [`operations`](operations.md)                          | Library Operations to run                                                                             | N/A                                   |             :fontawesome-solid-circle-xmark:{ .red }              |
+| [`settings`](settings.md)                              | Any `setting` attribute that overrides a global value                                                 | global                                |             :fontawesome-solid-circle-xmark:{ .red }              |
 | [`plex`](plex.md)                                      | Any `plex` attribute that overrides a global value                                                    | global                                | :fontawesome-solid-circle-check:{ .green } Either here or globally |
-| [`radarr`](radarr.md)                                  | Any `radarr` attribute that overrides a global value                                                  | global                                |             :fontawesome-solid-circle-check:{ .grey }              |
-| [`sonarr`](sonarr.md)                                  | Any `sonarr` attribute that overrides a global value                                                  | global                                |             :fontawesome-solid-circle-check:{ .grey }              |
-| [`tautulli`](tautulli.md)                              | Any `tautulli` attribute that overrides a global value                                                | global                                |             :fontawesome-solid-circle-check:{ .grey }              |
+| [`radarr`](radarr.md)                                  | Any `radarr` attribute that overrides a global value                                                  | global                                |             :fontawesome-solid-circle-xmark:{ .red }              |
+| [`sonarr`](sonarr.md)                                  | Any `sonarr` attribute that overrides a global value                                                  | global                                |             :fontawesome-solid-circle-xmark:{ .red }              |
+| [`tautulli`](tautulli.md)                              | Any `tautulli` attribute that overrides a global value                                                | global                                |             :fontawesome-solid-circle-xmark:{ .red }              |
 
 ### Library Name
 

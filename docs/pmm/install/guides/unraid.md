@@ -8,15 +8,19 @@ This article will walk you through getting Plex-Meta-Manager [PMM] set up and ru
 5. Creating a docker container that will keep running in the background
 
 The specific steps you will be taking:
+
 1. Verify that Plex Meta Manager unRAID app is installed and install it if not
 2. Use `unRAID APPS` to retrieve the PMM Docker image
 3. Create a directory for your config files and learn how to tell app to use it
 4. Gather two things that the script requires:
-   1. TMDb API Key
-   2. Plex URL and Token
+
+    1. TMDb API Key
+    2.  Plex URL and Token
+
 5. Then, iteratively:
-   1. use `unRAID >_Console` to run the commmands
-   2. use a text editor to modify a couple of text files until you have a working config file and a single working metadata file.
+
+    1. use `unRAID >_Console` to run the commmands
+    2. use a text editor to modify a couple of text files until you have a working config file and a single working metadata file.
 
 If the idea of editing YAML files by hand is daunting, this may not be the tool for you.  All the configuration of PMM is done via YAML text files, so if you are unable or unwilling to learn how those work, you should stop here.
 

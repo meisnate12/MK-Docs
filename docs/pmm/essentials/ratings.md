@@ -1,3 +1,7 @@
+---
+search:
+  boost: 2
+---
 # Plex Meta Manager Ratings Explained
 
 How do ratings and ratings overlays work in Plex Meta Manager? This Guide will walk through some basics of how ratings work in conjunction with Plex Meta Manager.

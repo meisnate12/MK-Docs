@@ -21,7 +21,7 @@ mal:
 |:----------------|:--------------------------------------|:--------:|
 | `client_id`     | MyAnimeList Application Client ID     | :fontawesome-solid-circle-check:{ .green }  |
 | `client_secret` | MyAnimeList Application Client Secret | :fontawesome-solid-circle-check:{ .green }  |
-| `localhost_url` | MyAnimeList Authorization URL         | :fontawesome-solid-circle-check:{ .grey } |
+| `localhost_url` | MyAnimeList Authorization URL         | :fontawesome-solid-circle-xmark:{ .red } |
 
 * All other attributes will be filled in by Plex Meta Manager.
 

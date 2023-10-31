@@ -53,6 +53,10 @@
     text-transform: uppercase;
 }
 
+.md-typeset code {
+    word-break: unset;
+}
+
 @media only screen and (min-width: 76.25em) {
   .md-main__inner {
     max-width: 80%;
@@ -85,6 +89,10 @@
   color: #00e676;
 }
 
+.red {
+  color: #ff001a;
+}
+
 .orange {
   color: #e69800;
 }
@@ -96,4 +104,28 @@
 
 [data-md-color-scheme="default"] .grey {
   color: #f1f1f1;
+}
+
+
+.md-typeset__table table:not([class]) td,
+.md-typeset__table table:not([class]) th {
+    padding: 9px;
+}
+
+/* light mode alternating table bg colors */
+.md-typeset__table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+/* dark mode alternating table bg colors */
+[data-md-color-scheme="slate"] .md-typeset__table tr:nth-child(2n) {
+    background-color: #1b1b1b;
+}
+
+.md-typeset mark {
+    background-color: #ac0ce3;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    color: #ffffff;
+    word-break: break-word;
 }

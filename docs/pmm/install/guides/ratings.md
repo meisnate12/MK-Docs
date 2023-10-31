@@ -1,3 +1,7 @@
+---
+search:
+  boost: 3
+---
 # PMM Ratings Explained
 
 How do ratings and ratings overlays work in PMM? This Guide will walk through some basics of how ratings work in conjunction with Plex Meta Manager.

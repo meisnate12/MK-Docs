@@ -1,3 +1,7 @@
+---
+search:
+  boost: 3
+---
 # Radarr Attributes
 
 Configuring [Radarr](https://radarr.video/) is optional but will allow you to send movies to a Radarr instance when they're found missing while updating a library's collections.

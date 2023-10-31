@@ -1,3 +1,7 @@
+---
+search:
+  boost: 3
+---
 # Sonarr Attributes
 
 Configuring [Sonarr](https://sonarr.tv/) is optional but will allow you to send shows to a Sonarr instance when they're found missing while updating a library's collections.
