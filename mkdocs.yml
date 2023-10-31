@@ -48,6 +48,8 @@ theme:
         name: Switch to dark mode
 
 plugins:
+  - search:
+      lang: en
   - include-markdown
 extra:
   social:
