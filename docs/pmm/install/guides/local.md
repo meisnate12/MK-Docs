@@ -1,57 +1,49 @@
 # Local Walkthrough
 
-This article will walk you through getting Plex Meta Manager set up and running.  It will cover:
+This article will walk you through getting Plex-Meta-Manager [PMM] set up and running.  It will cover:
 
-1. Retrieving the Plex Meta Manager code
+1. Retrieving the PMM code
 2. Installing requirements
 3. Setting up the initial config file
 4. Setting up a metadata file and creating a couple sample collections.
 
 The specific steps you will be taking:
-
-1. Verify that Python 3.7 or better is installed and install it if not
+1. Verify that Python 3.8 or better is installed and install it if not
 2. Verify that the Git tools are installed and install them if not
 3. Use `git` to retrieve the code
-4. Install requirements [extra bits of code required for Plex Meta Manager]
-5. Gather two things that Plex Meta Manager requires:
-    - TMDb API Key
-    - Plex URL and Token
+4. Install requirements [extra bits of code required for PMM]
+5. Gather two things that the script requires:
+   1. TMDb API Key
+   2. Plex URL and Token
 6. Then, iteratively:
-    - use `python` to run Plex Meta Manager
-    - use a text editor to modify a couple of text files until you have a working config file and a single working metadata file.
+   1. use `python` to run the script
+   2. use a text editor to modify a couple of text files until you have a working config file and a single working metadata file.
 
-Please note that using Python and Git can be technical. If you're not comfortable with these tools, you may want to use Docker to simplify the process. This will remove the need for Python and Git installs.
+Note that running a Python script is inherently a pretty technical process.  If you are unable or unwilling to learn the rudiments of using tools like python and git, you should probably strongly consider running PMM in [Docker](docker).  That will eliminate the Python and git installs from this process and make it as simple as it can be.
 
-Also, configuring Plex Meta Manager requires editing YAML files. If this is new to you, it may take some time to learn.
+If the idea of editing YAML files by hand is daunting, this may not be the tool for you.  All the configuration of PMM is done via YAML text files, so if you are unable or unwilling to learn how those work, you should stop here.
 
-Finally, this article provides a basic guide to get you started with Plex Meta Manager. It doesn't cover all the advanced features that this tool offers, such as creating custom collections or adding overlays. It's intended to help those who are new to running Python scripts get up and running with Plex Meta Manager.
+Finally, this walkthrough is intended to give you a basic grounding in how to get the script running.  It doesn't cover how to create your own collections, or how to add overlays, or any of the myriad other things PMM is capable of.  It provides a simple "Getting Started" guide for those for whom the standard install instructions make no sense; presumably because you've never run a Python script before.
 
-## Prerequisites
+## Prerequisites.
 
-???+ tip
+Nearly anywhere you see
 
-    Anywhere you see:
-       
-    <div class="termy">
-   
-    ```console
-    $ ping
-    <span style="color: grey;">pong!</span>
-    ```
+```
+something like this
+```
 
-    </div>
-       
-    That’s a command you’re going to type or paste into your terminal (OSX or Linux) or Powershell (Windows).  In the above example, you would type "ping" into your terminal. The "pong!" is an example output from the system, you **do not** type that.
-   
-???+ warning "Important"
+That’s a command you’re going to type or paste into your terminal (OSX or Linux) or Powershell (Windows).  In some cases it's displaying *output* from a command you've typed, but the difference should be apparent in context.
 
-    This walkthrough is going to be pretty pedantic.  I’m assuming you’re reading it because you have no idea how to get a Python script going, so I’m proceeding from the assumption that you want to be walked through every little detail.   You’re going to deliberately cause errors and then fix them as you go through it.  This is to help you understand what exactly is going on behind the scenes so that when you see these sorts of problems in the wild you will have some background to understand what’s happening.  If I only give you the happy path, then when you make a typo later on you’ll have no idea where that typo might be or why it’s breaking things.
-   
-    I am assuming you do not have any of these tools already installed.  When writing this up I started with a brand new Windows 10 install.
-   
-    This walkthrough involves typing commands into a command window.  On Mac OS X or Linux, you can use your standard terminal window, whether that's the builtin Terminal app or something like iTerm.  On Windows, you should use PowerShell.  There are other options for command windows in Windows, but if you want this to work as written, which I assume is the case since you've read this far, you should use Powershell.
+IMPORTANT NOTE:
+This walkthrough is going to be pretty pedantic.  I’m assuming you’re reading it because you have no idea how to get a Python script going, so I’m proceeding from the assumption that you want to be walked through every little detail.   You’re going to deliberately cause errors and then fix them as you go through it.  This is to help you understand what exactly is going on behind the scenes so that when you see these sorts of problems in the wild you will have some background to understand what’s happening.  If I only give you the happy path, then when you make a typo later on you’ll have no idea where that typo might be or why it’s breaking things.
 
-    This walkthrough is assuming you are doing the entire process on the same platform; i.e. you're installing Plex Meta Manager and editing its config files on a single Linux, Windows, or OS X machine.  It doesn't account for situations like running Plex Meta Manager on a Linux machine while editing the config files on your Windows box.
+I am assuming you do not have any of these tools already installed.  When writing this up I started with a brand new Windows 10 install.
+
+This walkthrough involves typing commands into a command window.  On Mac OS X or Linux, you can use your standard terminal window, whether that's the builtin Terminal app or something like iTerm.  On Windows, you should use PowerShell.  There are other options for command windows in Windows, but if you want this to work as written, which I assume is the case since you've read this far, you should use Powershell.
+
+IMPORTANT:
+This walkthrough is assuming you are doing the entire process on the same platform; i.e. you're installing PMM and editing its config files on a single Linux, Windows, or OS X machine.  It doesn't account for situations like running PMM on a Linux machine while editing the config files on your Windows box.
 
 ### Prepare a small test library [optional]
 
@@ -59,7 +51,7 @@ Finally, this article provides a basic guide to get you started with Plex Meta M
    include-markdown "./wt/wt-test-library.md"
 %}
 
-### Starting up your terminal
+### Starting up your terminal.
 
 Since most of this is typing commands into a terminal, you'll need to have a terminal open.
 
@@ -67,13 +59,13 @@ Since most of this is typing commands into a terminal, you'll need to have a ter
 === ":fontawesome-brands-linux: Linux"
 
     If your Linux system is remote to your computer, connect to it via SSH.  That SSH session is the terminal you will be using, so leave it open.
-    
+
     If you are running this on a desktop Linux machine, start up the Terminal application.  That window will be the terminal you will type commands into throughout this walkthrough, so leave it open.
 
 === ":fontawesome-brands-apple: macOS"
 
     Open the Terminal app; this window will be the place you type commands throughout this walkthrough, so leave it open.  The Terminal app is in Applications -> Utilities.
-    
+
     You can also use iTerm or some other terminal app if you wish.  If you don't know what that means, use Terminal.
 
 === ":fontawesome-brands-windows: Windows"
@@ -81,23 +73,17 @@ Since most of this is typing commands into a terminal, you'll need to have a ter
     Use the Start menu to open PowerShell.  This will be the window into which you type commands throughout this walkthrough, so leave it open.
 
 
-### Installing Python
+### Installing Python.
 
 In order to run a Python script. the first thing you'll need is a Python interpreter.  This is typically already present on Linux and Mac, but will probably have to be installed on Windows.
 
-First let's check if it's installed already:
-
-<div class="termy">
-   
-```console
-$ python3 --version
-<span style="color: grey;">Python 3.11</span>
+First let's check if it's installed already [type this into your terminal]:
 
 ```
+python3 --version
+```
 
-</div>
-
-If this doesn't return `3.7.0` or higher, you'll need to get Python 3 installed.
+If this doesn't return `3.8.0` or higher, you'll need to get Python 3 installed.
 
 === ":fontawesome-brands-linux: Linux"
 
@@ -109,48 +95,36 @@ If this doesn't return `3.7.0` or higher, you'll need to get Python 3 installed.
 
 === ":fontawesome-brands-windows: Windows"
 
+
     Before installing Python, try again without the `3`:
 
-    <div class="termy">
-      
-    ```console
-    $ python --version
-    <span style="color: grey;">Python 3.11</span>
-
     ```
-   
-    </div>
-
+    python --version
+    ```
     Depending on the version of Python, you may need to use one or the other.  If this works, you're ready to go, jsut substitute `python` for `python3` in the couple places it appears below.
     
     Go to http://www.python.org/download and download the next-to-latest minor version of Python for Windows in 32 or 64-bit as appropriate for your system [probably 64-bit].  As this is written, that's 3.10, while the latest is 3.11.
-
-#### Why the next-to-latest?
-
-There is one dependency [`lxml`] that lags behind new Python releases; this will cause a failure when installing requirements in a moment if the newest Python version is too new [at time of writing the current is 3.11, and the requirements install fails on the lxml library].  You can avoid this by using the next-to-latest release.  At some point this will no longer be a problem, but that is outside the control of Plex Meta Manager.
-
-Once downloaded, run the installer.  Tick “Add to path” checkbox at the bottom and click “Install Now”.
-
-For Windows 10, you will need to enable scripts in PowerShell.  Follow the instructions [here](https://windowsloop.com/enable-powershell-scripts-execution-windows-10) to do so.  If you skip this step you're going to hit a hard stop in a moment.
+    
+    #### Why the next-to-latest?
+    
+    There is one dependency [`lxml`] that lags behind new Python releases; this will cause a failure when installing requirements in a moment if the newest Python version is too new [at time of writing the current is 3.11, and the requirements install fails on the lxml library].  You can avoid this by using the next-to-latest release.  At some point this will no longer be a problem, but that is outside the control of PMM.
+    
+    Once downloaded, run the installer.  Tick “Add to path” checkbox at the bottom and click “Install Now”.
+    
+    For Windows 10, you will need to enable scripts in PowerShell.  Follow the instructions [here](https://windowsloop.com/enable-powershell-scripts-execution-windows-10) to do so.  If you skip this step you're going to hit a hard stop in a moment.
 
 
 ---
 
 ### Installing git
 
-To copy the Plex Meta Manager code to your machine, we'll be using git.  This may be installed on Mac or Linux, and probably isn't in Windows.
+To copy the Plex-Meta-Manager code to your machine, we'll be using git.  This may be installed on Mac or Linux, and probably isn't in Windows.
 
-First let's check if it's installed already:
-
-<div class="termy">
-   
-```console
-$ git --version
-<span style="color: grey;">git version 2.39.1</span>
+First let's check if it's installed already [type this into your terminal]:
 
 ```
-
-</div>
+git --version
+```
 
 If this doesn't return a version number, you'll need to get git installed.
 
@@ -165,7 +139,7 @@ If this doesn't return a version number, you'll need to get git installed.
 === ":fontawesome-brands-windows: Windows"
 
     Download the installer from [here](https://git-scm.com/download/windows)
-    
+
     Run the install; you can probably just accept the defaults and click through except for the step that asks you to choose an editor; you probably want to choose something other than the default there:
     
     ![Git Install](git-install.png)
@@ -175,47 +149,47 @@ If this doesn't return a version number, you'll need to get git installed.
 
 ---
 
-### Retrieving the Plex Meta Manager code
+### Retrieving the Plex-Meta-Manager code
 
 Now we're going to use `git` to make a copy of the code on your local computer.
 
-Clone the repo into your home directory and go into that directory:
+Clone the repo into your home directory and go into that directory [type this into your terminal]:
 
-<div class="termy">
-   
-```console
-$ cd ~
-<span style="color: grey;">The above command will navigate to your home directory</span>
-$ git clone https://github.com/meisnate12/Plex-Meta-Manager
-<span style="color: grey;">The above command will use `git` to make a copy (`clone`) of the Plex Meta Manager code from where it is stored on `github`. You will see output similar to this:
-
-Cloning into 'Plex-Meta-Manager'...
-remote: Enumerating objects: ..., done.
-remote: Counting objects: 100% ..., done.
-remote: Compressing objects: 100% ..., done.
-Receiving objects: 100% ..., done.
-remote: Total  ...
-Resolving deltas: 100% ..., done.</span>
-$ cd Plex-Meta-Manager
-<span style="color: grey;">The above command will into the directory that was created by the `git clone` command above</span>
+```
+cd ~
+git clone https://github.com/meisnate12/Plex-Meta-Manager
+cd Plex-Meta-Manager
 ```
 
-</div>
+**NOTE: The rest of this walkthrough assumes you are staying in this directory in this terminal/Powershell window.**
 
-When you open a command window to run Plex Meta Manager, the first step will always be:
+**IMPORTANT: In the future, when you want to run PMM at the command line, you have to be in this directory.**
 
-``` { .shell .no-copy linenums="1"}
+When you open a command window to run PMM, the first step will always be:
+
+```
 cd ~
 cd Plex-Meta-Manager
 ```
 
-???+ warning "Important"
+There are parts of the code that are assuming and expecting that you will be in this directory when you run PMM [the fonts used in overlays are one example].  Be sure that you are always in this directory when you run PMM.
 
-    The rest of this walkthrough assumes you are staying in this directory in this terminal/Powershell window.
+<details>
+  <summary>What did that do?</summary>
 
-    In the future, when you want to run Plex Meta Manager at the command line, you have to be in this directory.
-
-There are parts of the code that are assuming and expecting that you will be in this directory when you run Plex Meta Manager [the fonts used in overlays are one example].  Be sure that you are always in this directory when you run Plex Meta Manager.
+  ```
+  cd ~
+  ```
+  This changes to your home directory, which will be something like `/home/yourname` or `/Users/yourname` or `C:\Users\YourName` depending on the platform.
+  ```
+  git clone https://github.com/meisnate12/Plex-Meta-Manager
+  ```
+  This uses `git` to make a copy of (`clone`) the PMM code from where it is stored on `github`.
+  ```
+  cd Plex-Meta-Manager
+  ```
+  This moves into the directory that was created by the `clone` command.
+</details>
 
 Later on you can move it elsewhere if you want, but for now put it there.  This will ensure that everything to follow works just like it says here.  Presumably you’re reading this because the other docs are unclear to you.  Don’t make unilateral changes to my assumptions while doing this.
 
@@ -223,29 +197,17 @@ Later on you can move it elsewhere if you want, but for now put it there.  This 
   <summary>Why use git instead of downloading the release ZIP?</summary>
 
   Retrieving the code with `git` makes updating simpler.  When you want to update to the newest version, you can go into this directory and type:
-  <div class="termy">
-      
-  ```console
-  $ git pull
-  <span style="color: grey;"Already up to date.</span>
   ```
-   
-  </div>
-
+  git pull
+  ```
   No need to download a new ZIP, uncompress it, etc.
   Also, if you are asked to [or want to] switch to the latest develop or nightly code, you can do so with:
-  <div class="termy">
-      
-  ```console
-  $ git checkout develop
-  <span style="color: grey;">The above command will switch to the develop branch</span>
-  $ git checkout nightly
-  <span style="color: grey;">The above command will switch to the nightly branch</span>
-  $ git checkout master
-  <span style="color: grey;">The above command will switch back to the master branch</span>
   ```
-   
-  </div>
+  git checkout develop
+  ```
+  ```
+  git checkout nightly
+  ```
 </details>
 
 ---
@@ -256,70 +218,53 @@ This walkthrough is going to use a "virtual environment", since that provides a 
 
 === ":fontawesome-brands-linux: Linux"
 
-    <div class="termy">
-         
-    ```console
-    $ python3 -m venv pmm-venv
-    <span style="color: grey;">This tells Python3 to use the `venv` module to create a virtual environment called `pmm-venv`.
-    The only visible effect will be the creation of a `pmm-venv` directory.</span>
-    $ 
-    <span style="color: grey;">If you get no response, as shown above, then the virtual environment is successfully set up</span>
+    [type this into your terminal]
     ```
-
-    </div>
-
+    python3 -m venv pmm-venv
+    ```
     If you see an error like:
-    ``` { .shell .no-copy }
+    ```
     Error: Command '['/home/mroche/Plex-Meta-Manager/pmm-venv/bin/python3', '-Im', 'ensurepip', '--upgrade', '--default-pip']' returned non-zero exit status 1.
     ```
     You probably need to make sure the Python 3.9-specific virtualenv support library is installed:
-    <div class="termy">
-         
-    ```console
-    $ sudo apt-get install python3.9-venv
+    [type this into your terminal]
     ```
-
-    </div>
-
+    sudo apt-get install python3.9-venv
+    ```
     Then try the original venv command above again.
 
 === ":fontawesome-brands-apple: macOS"
 
-    <div class="termy">
-         
-    ```console
-    $ python3 -m venv pmm-venv
-    <span style="color: grey;">This tells Python3 to use the `venv` module to create a virtual environment called `pmm-venv`.
-    The only visible effect will be the creation of a `pmm-venv` directory.</span>
-    $ 
-    <span style="color: grey;">If you get no response, as shown above, then the virtual environment is successfully set up</span>
+    [type this into your terminal]
     ```
-
-    </div>
+    python3 -m venv pmm-venv
+    ```
 
 === ":fontawesome-brands-windows: Windows"
 
-    <div class="termy">
-         
-    ```console
-    $ python3 -m venv pmm-venv
-    <span style="color: grey;">This tells Python3 to use the `venv` module to create a virtual environment called `pmm-venv`.
-    The only visible effect will be the creation of a `pmm-venv` directory.</span>
-    $ 
-    <span style="color: grey;">If you get no response, as shown above, then the virtual environment is successfully set up</span>
+    [type this into your terminal]
     ```
-
-    </div>
-
+    python -m venv pmm-venv
+    ```
     If you see:
-    ``` { .shell .no-copy }
+    ```
     Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Manage App Execution Aliases.
     ```
     You apparently didn't check the “Add to path” checkbox above under [installing Python](#installing-python).  "Repair" your Python install and check "add python to environment variables".
 
-Your terminal should now look something like this:
 
-``` { .shell .no-copy }
+<details>
+  <summary>What did that do?</summary>
+
+  ```
+  python3 -m venv pmm-venv
+  ```
+  This tells Python3 to use the `venv` module to create a virtual environment called `pmm-venv`.  The only visible effect will be the creation of a `pmm-venv` directory.
+</details>
+
+That command will not produce any output if it works; it will display an error if a problem occurs.  If everything is fine, you will be looking at something like this:
+
+```
 > python -m venv pmm-venv
 >
 ```
@@ -349,7 +294,7 @@ That will create the virtual environment, and then you need to activate it:
     .\pmm-venv\Scripts\activate
     ```
     If you see something like this:
-    ``` { .powershell .no-copy linenums="1"}
+    ```powershell
     .\pmm-venv\Scripts\activate : File C:\Users\mroche\Plex-Meta-Manager\pmm-venv\Scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink LinkID=135170.
     At line:1 char:1
     + .\pmm-venv\Scripts\activate
@@ -368,49 +313,58 @@ That command will not produce any output if it works; it will display an error i
 
 You may see a change in your prompt, something like this:
 
-``` { .shell .no-copy }
+```
 ➜  Plex-Meta-Manager git:(master) ✗ source pmm-venv/bin/activate
 (pmm-venv) ➜  Plex-Meta-Manager git:(master) ✗
 ```
 
-Note that the prompt now shows the name of the virtual environment.  You may not see this; it's dependent on *your* terminal configuration, not anything to do with Python or Plex Meta Manager.
+Note that the prompt now shows the name of the virtual environment.  You may not see this; it's dependent on *your* terminal configuration, not anything to do with Python or PMM.
 
 <details>
   <summary>What did that do?</summary>
 
-  This tells Python to make the virtual environment "active", which means to use the copy of python that is available there, install all support libraries there, etc.  This keeps the Plex Meta Manager code and its runtime environment totally separate from your host machine's environment.
+  This tells Python to make the virtual environment "active", which means to use the copy of python that is available there, install all support libraries there, etc.  This keeps the PMM code and its runtime environment totally separate from your host machine's environment.
 </details>
 
 An advantage of doing this in a virtual environment is that in the event something goes wrong with this part of the setup, you can delete that pmm-venv directory and do the setup again.
 
-???+ warning "Important"
+**IMPORTANT: In the future, when you want to run the script, you will need to do this "activation" step every time.  Not the venv creation, just the activation**:
 
-    In the future, when you want to run Plex Meta Manager, you will need to do this "activation" step every time.  Not the venv creation, just the activation:
+=== ":fontawesome-brands-linux: Linux"
 
-    === ":fontawesome-brands-linux: Linux"
-   
-        [type this into your terminal]
-        ```
-        source pmm-venv/bin/activate
-        ```
-   
-    === ":fontawesome-brands-apple: macOS"
-   
-        [type this into your terminal]
-        ```
-        source pmm-venv/bin/activate
-        ```
-   
-    === ":fontawesome-brands-windows: Windows"
-   
-        [type this into your terminal]
-        ```
-        .\pmm-venv\Scripts\activate
-        ```
+    [type this into your terminal]
+    ```
+    source pmm-venv/bin/activate
+    ```
+
+=== ":fontawesome-brands-apple: macOS"
+
+    [type this into your terminal]
+    ```
+    source pmm-venv/bin/activate
+    ```
+
+=== ":fontawesome-brands-windows: Windows"
+
+    [type this into your terminal]
+    ```
+    .\pmm-venv\Scripts\activate
+    ```
+
+
+### If you are running Python 3.12
+
+with the virtual environment activated, type this into your terminal:
+
+```
+pip install setuptools
+```
+
+This will update a piece of the Python infrastructure and prevent an error later.
 
 ### Installing requirements
 
-Plex Meta Manager, like every other Python script, depends on support libraries that manage things like connections to Plex, or getting things from the internet, or writing files and so on.
+Plex-Meta-Manager, like every other Python script, depends on support libraries that manage things like connections to Plex, or getting things from the internet, or writing files and so on.
 
 These support libraries are called “requirements”, and they are defined in that file called `requirements.txt`.  To install them, type the following command [type this into your terminal]:
 
@@ -420,7 +374,7 @@ python -m pip install -r requirements.txt
 
 You should see something like this [I’ve removed a few lines for space, and the specific versions may have changed since this was captured]:
 Studio: 441 and 1807 and 2495 and 1286 and 2503 and 2264
-``` { .shell .no-copy }
+```
 Collecting PlexAPI==4.7.0
   Downloading PlexAPI-4.7.0-py3-none-any.whl (133 kB)
      |████████████████████████████████| 133 kB 821 kB/s
@@ -443,7 +397,7 @@ Don't worry about the WARNING about `pip version thus-and-such` if it comes up.
 
   If you see an error that ends in something like this:
 
-``` { .shell .no-copy }
+```
    ...
    building 'lxml.etree' extension
    error: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/
@@ -462,22 +416,24 @@ Don't worry about the WARNING about `pip version thus-and-such` if it comes up.
 <details>
   <summary>What did that do?</summary>
 
-  This told Python to use the `pip` module to install some libraries that Plex Meta Manager needs.
+  This told Python to use the `pip` module to install some libraries that PMM needs.
 </details>
 
 Let’s make sure it’s working so far.
 
-{% include-markdown "./wt/wt-run-shell.md" %}
+{%
+   include-markdown "./wt/wt-run-shell.md"
+%}
 
 This is going to fail with an error, which you will then fix.
 
 You should see something like this:
 
-``` { .shell .no-copy }
+```
 Config Error: config not found at /Users/mroche/Plex-Meta-Manager/config
 ```
 
-That error means you don’t have a config file, but we at least know that the requirements are in place and Plex Meta Manager can run.
+That error means you don’t have a config file, but we at least know that the requirements are in place and the script can run.
 
 ### Create a directory to quiet an error later
 
@@ -509,7 +465,9 @@ We'll create it here so the error doesn't show up later.
 
 ### Setting up the initial config file
 
-{% include-markdown "./wt/wt-01-basic-config.md" %}
+{%
+   include-markdown "./wt/wt-01-basic-config.md"
+%}
 
 #### Editing the config template
 
@@ -608,14 +566,16 @@ deactivate
 
 ### Scheduling
 
-{% include-markdown "./wt/wt-10-scheduling.md" %}
+{%
+   include-markdown "./wt/wt-10-scheduling.md"
+%}
 
-### I want to update to the latest version of Plex Meta Manager
+### I want to update to the latest version of PMM
 
 === ":fontawesome-brands-linux: Linux"
 
     [type this into your terminal]
-    ``` { .shell .no-copy linenums="1"}
+    ```
     cd ~/Plex-Meta-Manager
     git pull
     source pmm-venv/bin/activate
@@ -625,7 +585,7 @@ deactivate
 === ":fontawesome-brands-apple: macOS"
 
     [type this into your terminal]
-    ``` { .shell .no-copy linenums="1"}
+    ```
     cd ~/Plex-Meta-Manager
     git pull
     source pmm-venv/bin/activate
@@ -635,7 +595,7 @@ deactivate
 === ":fontawesome-brands-windows: Windows"
 
     [type this into your terminal]
-    ``` { .shell .no-copy linenums="1"}
+    ```
     cd ~\Plex-Meta-Manager
     git pull
     .\pmm-venv\Scripts\activate
@@ -648,7 +608,7 @@ deactivate
 === ":fontawesome-brands-linux: Linux"
 
     [type this into your terminal]
-    ``` { .shell .no-copy linenums="1"}
+    ```
     cd ~/Plex-Meta-Manager
     git checkout develop
     git pull
@@ -659,7 +619,7 @@ deactivate
 === ":fontawesome-brands-apple: macOS"
 
     [type this into your terminal]
-    ``` { .shell .no-copy linenums="1"}
+    ```
     cd ~/Plex-Meta-Manager
     git checkout develop
     git pull
@@ -670,7 +630,7 @@ deactivate
 === ":fontawesome-brands-windows: Windows"
 
     [type this into your terminal]
-    ``` { .shell .no-copy linenums="1"}
+    ```
     cd ~/Plex-Meta-Manager
     git checkout develop
     git pull
@@ -688,4 +648,3 @@ Follow the instructions for the `develop` branch above, subsituting `nightly` fo
 Follow the instructions for the `develop` branch above, subsituting `master` for `develop`
 
 The reinstall of requirements every time is probably overkill, but it's harmless and ensures that you always get any new versions or new requirements.
-

@@ -93,24 +93,26 @@ The default config file contains a reference to a directory that will show an er
 
 We'll create it here so the error doesn't show up later.
 
-````{tab} Linux
-[type this into your terminal]
-```
-mkdir config/assets
-```
-````
-````{tab} OS X
-[type this into your terminal]
-```
-mkdir config/assets
-```
-````
-````{tab} Windows
-[type this into your terminal]
-```
-mkdir config\assets
-```
-````
+=== ":fontawesome-brands-linux: Linux"
+
+    [type this into your terminal]
+    ```
+    mkdir config/assets
+    ```
+
+=== ":fontawesome-brands-apple: macOS"
+
+    [type this into your terminal]
+    ```
+    mkdir config/assets
+    ```
+
+=== ":fontawesome-brands-windows: Windows"
+
+    [type this into your terminal]
+    ```
+    mkdir config\assets
+    ```
 
 ### Setting up the initial config file
 
@@ -122,24 +124,26 @@ mkdir config\assets
 
 First, make a copy of the template:
 
-````{tab} Linux
-Get a copy of the template to edit [type this into your terminal]:
-```
-curl -fLvo config/config.yml https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager/master/config/config.yml.template
-```
-````
-````{tab} OS X
-Get a copy of the template to edit [type this into your terminal]:
-```
-curl -fLvo config/config.yml https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager/master/config/config.yml.template
-```
-````
-````{tab} Windows
-Go to [this URL](https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager/master/config/config.yml.template) using a web browser; choose the "Save" command, then save the file at:
-```
-C:\Users\YOURUSERNAME\plex-meta-manager\config\config.yml
-```
-````
+=== ":fontawesome-brands-linux: Linux"
+
+    Get a copy of the template to edit [type this into your terminal]:
+    ```
+    curl -fLvo config/config.yml https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager/master/config/config.yml.template
+    ```
+
+=== ":fontawesome-brands-apple: macOS"
+
+    Get a copy of the template to edit [type this into your terminal]:
+    ```
+    curl -fLvo config/config.yml https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager/master/config/config.yml.template
+    ```
+
+=== ":fontawesome-brands-windows: Windows"
+
+    Go to [this URL](https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager/master/config/config.yml.template) using a web browser; choose the "Save" command, then save the file at:
+    ```
+    C:\Users\YOURUSERNAME\plex-meta-manager\config\config.yml
+    ```
 Now open the copy in an editor on the machine of your choice(All 3 are fine. Just decide on one):
 
 {%
