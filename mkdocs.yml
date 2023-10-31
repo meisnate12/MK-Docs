@@ -48,6 +48,7 @@ theme:
         name: Switch to dark mode
 
 plugins:
+  - include-markdown
 extra:
   social:
   - icon: fontawesome/solid/heart

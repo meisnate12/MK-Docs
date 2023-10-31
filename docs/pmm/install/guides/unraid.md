@@ -48,7 +48,7 @@ That’s a command you’re going to type or paste into your unRAID Plex Meta Ma
 ### Prepare a small test library [optional]
 
 {%
-   include-markdown "wt/wt-test-library.md"
+   include-markdown "./wt/wt-test-library.md"
 %}
 
 ### Installing Community Applications in unRAID
@@ -115,7 +115,7 @@ mkdir config\assets
 ### Setting up the initial config file
 
 {%
-   include-markdown "wt/wt-01-basic-config.md"
+   include-markdown "./wt/wt-01-basic-config.md"
 %}
 
 #### Editing the config template
@@ -143,11 +143,11 @@ C:\Users\YOURUSERNAME\plex-meta-manager\config\config.yml
 Now open the copy in an editor on the machine of your choice(All 3 are fine. Just decide on one):
 
 {%
-   include-markdown "wt/wt-editor.md"
+   include-markdown "./wt/wt-editor.md"
 %}
 
 {%
-   include-markdown "wt/wt-02-config-bad-library.md"
+   include-markdown "./wt/wt-02-config-bad-library.md"
 %}
 
 #### Testing the config file
@@ -155,83 +155,83 @@ Now open the copy in an editor on the machine of your choice(All 3 are fine. Jus
 Save the file:
 
 {%
-   include-markdown "wt/wt-save.md"
+   include-markdown "./wt/wt-save.md"
 %}
 
 Then run the script again:
 
 {%
-   include-markdown "wt/wt-run-shell.md"
+   include-markdown "./wt/wt-run-shell.md"
 %}
 
 {%
-   include-markdown "wt/wt-03-lib-err-and-fix.md"
+   include-markdown "./wt/wt-03-lib-err-and-fix.md"
 %}
 
 
 ### Creating a few sample collections.
 
 {%
-   include-markdown "wt/wt-04-default-intro.md"
+   include-markdown "./wt/wt-04-default-intro.md"
 %}
 
 So let's run the script and see this happen:
 
 
 {%
-   include-markdown "wt/wt-run-shell.md"
+   include-markdown "./wt/wt-run-shell.md"
 %}
 
 {%
-   include-markdown "wt/wt-04b-default-after.md"
+   include-markdown "./wt/wt-04b-default-after.md"
 %}
 
 ### Setting up a metadata file and creating a sample collection.
 
 {%
-   include-markdown "wt/wt-05-local-file.md"
+   include-markdown "./wt/wt-05-local-file.md"
 %}
 
 Save the file:
 
 {%
-   include-markdown "wt/wt-save.md"
+   include-markdown "./wt/wt-save.md"
 %}
 
 Then run the script again:
 
 {%
-   include-markdown "wt/wt-run-shell.md"
+   include-markdown "./wt/wt-run-shell.md"
 %}
 
 {%
-   include-markdown "wt/wt-06-local-after.md"
+   include-markdown "./wt/wt-06-local-after.md"
 %}
 
 ### Adding Overlays to movies.
 
 {%
-   include-markdown "wt/wt-07-overlay-add.md"
+   include-markdown "./wt/wt-07-overlay-add.md"
 %}
 
 Save the file:
 
 {%
-   include-markdown "wt/wt-save.md"
+   include-markdown "./wt/wt-save.md"
 %}
 
 Then run the script again:
 
 {%
-   include-markdown "wt/wt-run-shell.md"
+   include-markdown "./wt/wt-run-shell.md"
 %}
 
 {%
-   include-markdown "wt/wt-08-overlay-after.md"
+   include-markdown "./wt/wt-08-overlay-after.md"
 %}
 
 {%
-   include-markdown "wt/wt-09-next-steps.md"
+   include-markdown "./wt/wt-09-next-steps.md"
 %}
 
 ## Other Topics
@@ -239,7 +239,7 @@ Then run the script again:
 ### Scheduling
 
 {%
-   include-markdown "wt/wt-10-scheduling.md"
+   include-markdown "./wt/wt-10-scheduling.md"
 %}
 ### I want to use the develop branch
 
