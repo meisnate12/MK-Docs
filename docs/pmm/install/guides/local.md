@@ -56,7 +56,7 @@ Finally, this article provides a basic guide to get you started with Plex Meta M
 ### Prepare a small test library [optional]
 
 {%
-   include-markdown "wt/wt-test-library.md"
+   include-markdown "./wt/wt-test-library.md"
 %}
 
 ### Starting up your terminal
@@ -467,7 +467,7 @@ Don't worry about the WARNING about `pip version thus-and-such` if it comes up.
 
 Let’s make sure it’s working so far.
 
-{% include-markdown "wt/wt-run-shell.md" %}
+{% include-markdown "./wt/wt-run-shell.md" %}
 
 This is going to fail with an error, which you will then fix.
 
@@ -509,7 +509,7 @@ We'll create it here so the error doesn't show up later.
 
 ### Setting up the initial config file
 
-{% include-markdown "wt/wt-01-basic-config.md" %}
+{% include-markdown "./wt/wt-01-basic-config.md" %}
 
 #### Editing the config template
 
@@ -539,62 +539,62 @@ First, make a copy of the template.  This is going to create a copy of the base 
 
 Now open the copy in an editor:
 
-{% include-markdown "wt/wt-editor.md" %}
+{% include-markdown "./wt/wt-editor.md" %}
 
-{% include-markdown "wt/wt-02-config-bad-library.md" %}
+{% include-markdown "./wt/wt-02-config-bad-library.md" %}
 
 #### Testing the config file
 
 Save the file:
 
-{% include-markdown "wt/wt-save.md" %}
+{% include-markdown "./wt/wt-save.md" %}
 
 Then run Plex Meta Manager again:
 
-{% include-markdown "wt/wt-run-shell.md" %}
+{% include-markdown "./wt/wt-run-shell.md" %}
 
-{% include-markdown "wt/wt-03-lib-err-and-fix.md" %}
+{% include-markdown "./wt/wt-03-lib-err-and-fix.md" %}
 
 ### Creating a few sample collections
 
-{% include-markdown "wt/wt-04-default-intro.md" %}
+{% include-markdown "./wt/wt-04-default-intro.md" %}
 
 So let's run Plex Meta Manager and see this happen:
 
 
-{% include-markdown "wt/wt-run-shell.md" %}
+{% include-markdown "./wt/wt-run-shell.md" %}
 
-{% include-markdown "wt/wt-04b-default-after.md" %}
+{% include-markdown "./wt/wt-04b-default-after.md" %}
 
 ### Setting up a metadata file and creating a sample collection
 
-{% include-markdown "wt/wt-05-local-file.md" %}
+{% include-markdown "./wt/wt-05-local-file.md" %}
 
 Save the file:
 
-{% include-markdown "wt/wt-save.md" %}
+{% include-markdown "./wt/wt-save.md" %}
 
 Then run Plex Meta Manager again:
 
-{% include-markdown "wt/wt-run-shell.md" %}
+{% include-markdown "./wt/wt-run-shell.md" %}
 
-{% include-markdown "wt/wt-06-local-after.md" %}
+{% include-markdown "./wt/wt-06-local-after.md" %}
 
 ### Adding Overlays to movies
 
-{% include-markdown "wt/wt-07-overlay-add.md" %}
+{% include-markdown "./wt/wt-07-overlay-add.md" %}
 
 Save the file:
 
-{% include-markdown "wt/wt-save.md" %}
+{% include-markdown "./wt/wt-save.md" %}
 
 Then run Plex Meta Manager again:
 
-{% include-markdown "wt/wt-run-shell.md" %}
+{% include-markdown "./wt/wt-run-shell.md" %}
 
-{% include-markdown "wt/wt-08-overlay-after.md" %}
+{% include-markdown "./wt/wt-08-overlay-after.md" %}
 
-{% include-markdown "wt/wt-09-next-steps.md" %}
+{% include-markdown "./wt/wt-09-next-steps.md" %}
 
 When you are done, deactivate the virtual environment:
 
@@ -608,7 +608,7 @@ deactivate
 
 ### Scheduling
 
-{% include-markdown "wt/wt-10-scheduling.md" %}
+{% include-markdown "./wt/wt-10-scheduling.md" %}
 
 ### I want to update to the latest version of Plex Meta Manager
 
