@@ -1,3 +1,7 @@
+---
+search:
+  boost: 3
+---
 # Item Metadata Updates
 
 All the following attributes update various details of the metadata for every item in the collection. 

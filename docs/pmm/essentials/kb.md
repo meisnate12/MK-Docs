@@ -1,3 +1,7 @@
+---
+search:
+  boost: 4
+---
 # Frequently Asked Questions & Knowledgebase
 
 This page aims to provide knowledge based on combined user experience, and to answer the frequent questions that we are asked in our [Discord Server](https://discord.gg/NfH6mGFuAB).

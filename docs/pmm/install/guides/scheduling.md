@@ -1,3 +1,7 @@
+---
+search:
+  boost: 3
+---
 # Scheduling Guide
 
 Plex Meta Manager is designed to be a background running service that "wakes up" and "sleeps" when it is scheduled to do so. By default and unless configured using the [Time to Run Command](../../essentials/environmental.md#time-to-run), Plex Meta Manager expects to run every day at 5AM local time.

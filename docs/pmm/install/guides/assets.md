@@ -1,3 +1,7 @@
+---
+search:
+  boost: 2
+---
 # Image Asset Directory Guide
 
 The Image Asset Directories can be used to update the posters and backgrounds of collections, movies, shows, seasons, and episodes.

@@ -14,7 +14,7 @@ mdblist:
 | Attribute          | Allowed Values                                                            | Default | Required |
 |:-------------------|:--------------------------------------------------------------------------|:--------|:--------:|
 | `apikey`           | MdbList API Key                                                           | N/A     | :fontawesome-solid-circle-check:{ .green }  |
-| `cache_expiration` | Number of days before each cache mapping expires and has to be re-cached. | 60      | :fontawesome-solid-circle-check:{ .grey } |
+| `cache_expiration` | Number of days before each cache mapping expires and has to be re-cached. | 60      | :fontawesome-solid-circle-xmark:{ .red } |
 
 * The MdbList apikey can be found [here](https://mdblist.com/preferences/).
 

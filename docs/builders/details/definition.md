@@ -1,3 +1,7 @@
+---
+search:
+  boost: 3
+---
 # Definition Settings
 
 All the following attributes serve various functions as how the definition functions inside of Plex Meta Manager.
