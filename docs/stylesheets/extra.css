@@ -57,6 +57,10 @@
     word-break: unset;
 }
 
+[data-md-color-scheme="slate"] .md-typeset code {
+    background-color: hsl(225deg 17.25% 6.84%);
+}
+
 @media only screen and (min-width: 76.25em) {
   .md-main__inner {
     max-width: 80%;
@@ -117,6 +121,16 @@
     background-color: #f8f8f8;
 }
 
+.md-typeset table:not([class]) {
+    background-color: var(--md-default-bg-color);
+    border: 0.05rem solid var(--md-typeset-table-color);
+    border-radius: 0.1rem;
+    display: inline-block;
+    font-size: .8rem;
+    max-width: 100%;
+    overflow: auto;
+    touch-action: auto;
+}
 /* dark mode alternating table bg colors */
 [data-md-color-scheme="slate"] .md-typeset__table tr:nth-child(2n) {
     background-color: #1b1b1b;
