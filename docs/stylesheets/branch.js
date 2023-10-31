@@ -12,7 +12,7 @@ function checkURLForBranch() {
     // Change the text of <span class="md-ellipsis">
     const ellipsisSpan = document.querySelector(".md-ellipsis");
     if (ellipsisSpan) {
-      ellipsisSpan.textContent = "Plex Meta Manager Wiki - NIGHTLY BRANCH";
+      ellipsisSpan.textContent = "PMM Wiki - NIGHTLY BRANCH";
     }
   } else if (currentURL.indexOf("metadata") !== -1) {
     // If "metadata" is found in the URL, change the CSS of .md-header to yellow
@@ -22,7 +22,7 @@ function checkURLForBranch() {
     // Change the text of <span class="md-ellipsis">
     const ellipsisSpan = document.querySelector(".md-ellipsis");
     if (ellipsisSpan) {
-      ellipsisSpan.textContent = "Plex Meta Manager Wiki - DEVELOP BRANCH";
+      ellipsisSpan.textContent = "PMM Wiki - DEVELOP BRANCH";
     }
   }
 }
