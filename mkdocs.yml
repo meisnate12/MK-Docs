@@ -21,7 +21,6 @@ theme:
     - navigation.sections
     - navigation.top
     - navigation.tracking
-    - navigation.instant
     - navigation.prune
     - navigation.expand
     - toc.follow
@@ -95,6 +94,7 @@ extra_css:
 extra_javascript:
   - stylesheets/termynal.js
   - stylesheets/custom.js
+  - stylesheets/branch.js
 
 nav:
   - PLEX META MANAGER:
