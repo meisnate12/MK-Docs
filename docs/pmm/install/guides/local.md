@@ -19,7 +19,7 @@ The specific steps you will be taking:
    1. use `python` to run the script
    2. use a text editor to modify a couple of text files until you have a working config file and a single working metadata file.
 
-Note that running a Python script is inherently a pretty technical process.  If you are unable or unwilling to learn the rudiments of using tools like python and git, you should probably strongly consider running PMM in [Docker](docker).  That will eliminate the Python and git installs from this process and make it as simple as it can be.
+Note that running a Python script is inherently a pretty technical process.  If you are unable or unwilling to learn the rudiments of using tools like python and git, you should probably strongly consider running PMM in [Docker](docker.md).  That will eliminate the Python and git installs from this process and make it as simple as it can be.
 
 If the idea of editing YAML files by hand is daunting, this may not be the tool for you.  All the configuration of PMM is done via YAML text files, so if you are unable or unwilling to learn how those work, you should stop here.
 
