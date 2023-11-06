@@ -6,13 +6,13 @@ function checkURLForBranch() {
 
   if (currentURL.indexOf("nightly") !== -1) {
     // If "config" is found in the URL, change the CSS of .md-header to red
-    document.querySelector(".md-header").style.backgroundColor = "#ef5552";
-    document.querySelector(".md-tabs").style.backgroundColor = "#ef5552";
+    document.querySelector(".md-header").style.backgroundColor = "#262dbd";
+    document.querySelector(".md-tabs").style.backgroundColor = "#262dbd";
 
     // Change the text of <span class="md-ellipsis">
     const ellipsisSpan = document.querySelector(".md-ellipsis");
     if (ellipsisSpan) {
-      ellipsisSpan.textContent = "PMM Wiki - NIGHTLY BRANCH";
+      ellipsisSpan.textContent = "PMM Nightly Wiki";
     }
   } else if (currentURL.indexOf("develop") !== -1) {
     // If "metadata" is found in the URL, change the CSS of .md-header to yellow
@@ -22,7 +22,7 @@ function checkURLForBranch() {
     // Change the text of <span class="md-ellipsis">
     const ellipsisSpan = document.querySelector(".md-ellipsis");
     if (ellipsisSpan) {
-      ellipsisSpan.textContent = "PMM Wiki - DEVELOP BRANCH";
+      ellipsisSpan.textContent = "PMM Develop Wiki";
     }
   }
 }
