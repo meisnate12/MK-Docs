@@ -1,31 +1,44 @@
 // custom.js
 
-// Function to check if the current URL contains "config" or "metadata"
+// Function to check if the current URL contains "latest" or "develop"
 function checkURLForBranch() {
   const currentURL = window.location.href;
 
+  // Check for "latest" in the URL
   if (currentURL.indexOf("latest") !== -1) {
-    // If "config" is found in the URL, change the CSS of .md-header to red
-    document.querySelector(".md-header").style.backgroundColor = "#262dbd";
-    document.querySelector(".md-tabs").style.backgroundColor = "#262dbd";
-
-    // Change the text of <span class="md-ellipsis">
+    const header = document.querySelector(".md-header");
+    const tabs = document.querySelector(".md-tabs");
     const ellipsisSpan = document.querySelector(".md-ellipsis");
+
+    if (header && tabs) {
+      // Change the CSS of .md-header and .md-tabs to blue
+      header.style.backgroundColor = "#262dbd";
+      tabs.style.backgroundColor = "#262dbd";
+    }
+
     if (ellipsisSpan) {
+      // Change the text of <span class="md-ellipsis">
       ellipsisSpan.textContent = "PMM Latest Wiki";
     }
-  } else if (currentURL.indexOf("develop") !== -1) {
-    // If "metadata" is found in the URL, change the CSS of .md-header to yellow
-    document.querySelector(".md-header").style.backgroundColor = "#ffa724";
-    document.querySelector(".md-tabs").style.backgroundColor = "#ffa724";
-
-    // Change the text of <span class="md-ellipsis">
+  }
+  // Check for "develop" in the URL
+  else if (currentURL.indexOf("develop") !== -1) {
+    const header = document.querySelector(".md-header");
+    const tabs = document.querySelector(".md-tabs");
     const ellipsisSpan = document.querySelector(".md-ellipsis");
+
+    if (header && tabs) {
+      // Change the CSS of .md-header and .md-tabs to orange
+      header.style.backgroundColor = "#ffa724";
+      tabs.style.backgroundColor = "#ffa724";
+    }
+
     if (ellipsisSpan) {
+      // Change the text of <span class="md-ellipsis">
       ellipsisSpan.textContent = "PMM Develop Wiki";
     }
   }
 }
 
-// Call the function on page load
+// Call the function when the window is fully loaded
 window.addEventListener("load", checkURLForBranch);
