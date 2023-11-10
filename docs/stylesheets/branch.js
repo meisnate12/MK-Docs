@@ -4,7 +4,7 @@
 function checkURLForBranch() {
   const currentURL = window.location.href;
 
-  if (currentURL.indexOf("nightly") !== -1) {
+  if (currentURL.indexOf("latest") !== -1) {
     // If "config" is found in the URL, change the CSS of .md-header to red
     document.querySelector(".md-header").style.backgroundColor = "#262dbd";
     document.querySelector(".md-tabs").style.backgroundColor = "#262dbd";
@@ -12,7 +12,7 @@ function checkURLForBranch() {
     // Change the text of <span class="md-ellipsis">
     const ellipsisSpan = document.querySelector(".md-ellipsis");
     if (ellipsisSpan) {
-      ellipsisSpan.textContent = "PMM Nightly Wiki";
+      ellipsisSpan.textContent = "PMM Latest Wiki";
     }
   } else if (currentURL.indexOf("develop") !== -1) {
     // If "metadata" is found in the URL, change the CSS of .md-header to yellow

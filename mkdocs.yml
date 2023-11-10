@@ -15,6 +15,7 @@ theme:
     - content.tabs.link
     - content.code.copy
     - header.autohide
+    - navigation.instant
     - navigation.footer
     - navigation.tabs
     - navigation.tabs.sticky
