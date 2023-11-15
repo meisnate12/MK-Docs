@@ -29,8 +29,8 @@ The available attributes for the operations attribute are as follows
 | [Mass Original Title Update](#mass-original-title-update)             | Updates every item's original title in the library to the chosen site's original title.                                                                    |  :fontawesome-solid-circle-check:{ .green }   | :fontawesome-solid-circle-check:{ .green }  | :fontawesome-solid-circle-xmark:{ .red } |
 | [Mass Studio Update](#mass-studio-update)                             | Updates every item's studio in the library to the chosen site's studio.                                                                                    |  :fontawesome-solid-circle-check:{ .green }   | :fontawesome-solid-circle-check:{ .green }  | :fontawesome-solid-circle-xmark:{ .red } |
 | [Mass Originally Available Update](#mass-originally-available-update) | Updates every item's originally available date in the library to the chosen site's date.                                                                   |  :fontawesome-solid-circle-check:{ .green }   | :fontawesome-solid-circle-check:{ .green }  | :fontawesome-solid-circle-xmark:{ .red } |
-| [Mass * Rating Update](#mass--rating-update)                          | Updates every item's audience/critic/user rating in the library to the chosen site's rating.                                                               |  :fontawesome-solid-circle-check:{ .green }   | :fontawesome-solid-circle-check:{ .green }  | :fontawesome-solid-circle-xmark:{ .red } |
-| [Mass Episode * Rating Update](#mass-episode--rating-update)          | Updates every item's episode's audience/critic/user rating in the library to the chosen site's rating.                                                     |  :fontawesome-solid-circle-xmark:{ .red }  | :fontawesome-solid-circle-check:{ .green }  | :fontawesome-solid-circle-xmark:{ .red } |
+| [Mass * Rating Update](#mass-rating-update)                          | Updates every item's audience/critic/user rating in the library to the chosen site's rating.                                                               |  :fontawesome-solid-circle-check:{ .green }   | :fontawesome-solid-circle-check:{ .green }  | :fontawesome-solid-circle-xmark:{ .red } |
+| [Mass Episode * Rating Update](#mass-episode-rating-update)          | Updates every item's episode's audience/critic/user rating in the library to the chosen site's rating.                                                     |  :fontawesome-solid-circle-xmark:{ .red }  | :fontawesome-solid-circle-check:{ .green }  | :fontawesome-solid-circle-xmark:{ .red } |
 | [Mass Poster Update](#mass-poster-update)                             | Updates every item's poster to the chosen sites poster. Will fallback to `plex` if the given option fails. Assets will be used over anything else.         |  :fontawesome-solid-circle-check:{ .green }   | :fontawesome-solid-circle-check:{ .green }  | :fontawesome-solid-circle-xmark:{ .red } |
 | [Mass Background Update](#mass-background-update)                     | Updates every item's background to the chosen sites background. Will fallback to `plex` if the given option fails. Assets will be used over anything else. |  :fontawesome-solid-circle-check:{ .green }   | :fontawesome-solid-circle-check:{ .green }  | :fontawesome-solid-circle-xmark:{ .red } |
 | [Mass IMDb Parental Labels](#mass-imdb-parental-labels)               | Updates every item's labels in the library to match the IMDb Parental Guide.                                                                               |  :fontawesome-solid-circle-check:{ .green }   | :fontawesome-solid-circle-xmark:{ .red } | :fontawesome-solid-circle-xmark:{ .red } |
@@ -66,7 +66,7 @@ Deletes collections based on a set of given attributes. The Collection must matc
 |:-------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `managed`    | **Values:**<br>`true`: Collection must be a Managed Collection to be deleted (the collection has the `PMM` label)<br>`false`: Collection must be an Unmanaged Collection to be deleted (the collection does not have the `PMM` label)                                                                                                                                                                       |
 | `configured` | **Values:**<br>`true`: Collection must be a Configured Collection to be deleted (collection is in the config file of the specific PMM run)<br>`false`: Collection must be an Unconfigured Collection to be deleted (collection is not in the config file of the specific PMM run).<br>**The collection does not need to be scheduled to be considered configured and only needs to be in the config file.** |
-| `less`       | Collection must contain less then the given number of items to be deleted.<br>**Values:** Number Greater then 0                                                                                                                                                                                                                                                                                             |
+| `less`       | Collection must contain less then the given number of items to be deleted.<br>**Values:** Number greater than 0                                                                                                                                                                                                                                                                                             |
 
 **Example:**
 
@@ -246,6 +246,11 @@ Updates every item's episode's audience/critic/user rating in the library to the
 
 Updates every item's poster to the chosen sites poster. Will fallback to `plex` if the given option fails. Assets will be used over anything else.
 
+???+ warning
+
+    When used in combination with Overlays, this could cause PMM to reset the poster and then reapply all overlays on each run, which will result in [image bloat](../pmm/essentials/scripts/image-cleanup.md).
+
+
 **Attribute:** `mass_poster_update`
 
 **Values:** There are a few different options to determine how the `mass_poster_update` works.
@@ -271,6 +276,10 @@ library:
 ## Mass Background Update
 
 Updates every item's background to the chosen sites background. Will fallback to `plex` if the given option fails. Assets will be used over anything else.
+
+???+ warning
+
+    When used in combination with Overlays, this could cause PMM to reset the background and then reapply all overlays on each run, which will result in [image bloat](../pmm/essentials/scripts/image-cleanup.md).
 
 **Attribute:** `mass_background_update`
 
