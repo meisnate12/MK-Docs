@@ -49,12 +49,12 @@ To connect to MyAnimeList.net you must create a MyAnimeList application and supp
 
 15.  You should see a page that looks like this 
 
-     ![MAL Details](mal.png)
+     ![MAL Details](images/mal.png)
 
 16.  Click "Allow"
 17.  You will be taken to a page that will not load. That's fine and expected.
 
-     ![Localhost Failure](localhost-fail.png)
+     ![Localhost Failure](images/localhost-fail.png)
 
 18.  Copy the URL, which will be `localhost/?code=BLAH` and paste in your config file next to `localhost_url`.
 
@@ -89,11 +89,11 @@ On first run:
 
 Click on that URL to open your browser to MyAnimeList; you'll be looking at a page like this:
 
-![MAL Details](mal.png)
+![MAL Details](images/mal.png)
 
 Click "Allow", and you will be taken to a page that will not load.  That's fine and expected.
 
-![Localhost Failure](localhost-fail.png)
+![Localhost Failure](images/localhost-fail.png)
 
 Copy the URL, which will be `localhost/?code=BLAH` and paste it at the prompt.
 

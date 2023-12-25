@@ -40,7 +40,7 @@ To connect to Trakt.tv you must create a Trakt application and supply Plex Meta 
 5.  Record the `Client ID` and `Client Secret` as `client_id` and `client_secret` in your Configuration File.
 6.  Click the Green Authorize Button next to the Redirect URI
 
-    ![Trakt Authorize](trakt.png)
+    ![Trakt Authorize](images/trakt.png)
 
 7.  Record the `PIN` as `pin` in your Configuration File.
 
