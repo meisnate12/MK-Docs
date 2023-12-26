@@ -29,7 +29,7 @@ Finds every item in an IMDb Chart.
 
 The expected input are the options below. Multiple values are supported as either a list or a comma-separated string.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 | Name                                                                           | Attribute        |             Works with Movies              |              Works with Shows              |
 |:-------------------------------------------------------------------------------|:-----------------|:------------------------------------------:|:------------------------------------------:|
@@ -59,11 +59,11 @@ collections:
     These must instead use the [IMDb Search Builder](#imdb-search)
 
 
-Finds every item in an IMDb List
+Finds every item in an IMDb List.
 
 The expected input is an IMDb List URL. Multiple values are supported as a list only a comma-separated string will not work.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:
@@ -99,7 +99,7 @@ Finds every item in an IMDb User's Watchlist.
 
 The expected input is an IMDb User ID (example: `ur12345678`). Multiple values are supported as a list or as a comma-separated string.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:
@@ -158,7 +158,7 @@ collections:
 
 Finds every item using an [IMDb Advance Title Search](https://www.imdb.com/search/title/).
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 ???+ tip
 

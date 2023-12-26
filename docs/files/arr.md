@@ -58,18 +58,18 @@ When `radarr_add_existing`/`sonarr_add_existing` are true the items that exist i
 
 If your Radarr/Sonarr has different file system mappings from your plex use `radarr_path`/`sonarr_path` along with `plex_path` from your [Radarr](../config/radarr.md)/[Sonarr](../config/sonarr.md) global config settings.
 
-### Radarr Add Details
+### Radarr Add Settings
 
 When adding a movie in Radarr you get the screen below to set these options use `radarr_folder`, `radarr_monitor`, `radarr_availability`, `radarr_quality`, `radarr_tag`, and `radarr_search`.
 
 ![Radarr Details](images/radarr.png)
 
-### Sonarr Add Details
+### Sonarr Add Settings
 
 When adding a show in Sonarr you get the screen below to set these options use `sonarr_folder`, `sonarr_monitor`, `sonarr_quality`, `sonarr_language`, `sonarr_series`, `sonarr_season`, `sonarr_tag`, `sonarr_search`, and `sonarr_cutoff_search`.
 
 ![Sonarr Details](images/sonarr.png)
 
-## Arr Edit Details
+## Arr Edit Settings
 
 When editing the details of items that exist in the collection/playlist and in Radarr/Sonarr use `item_radarr_tag` and `item_sonarr_tag`

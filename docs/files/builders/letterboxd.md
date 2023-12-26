@@ -15,7 +15,7 @@ Finds every movie in the Letterboxd List or [Letterboxd Films Search](https://le
 
 The expected input is a Letterboxd List URL or Letterboxd Film Search URL. Multiple values are supported as either a list or a comma-separated string.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 Using the `limit` filter attribute is recommended when using a Letterboxd Film Search as the number of results returned could be very large.
 

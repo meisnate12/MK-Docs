@@ -91,7 +91,7 @@ Examples of these can be seen here
         ```
 
         1.  This is a Trakt List builder, telling PMM to build a collection based on the items in this list
-        1.  If items are removed from the source list, having sync mode set to `append` means they will not be removed from the collection in Plex. Set this to `sync` if you want the items removed in the collection too
+        2.  If items are removed from the source list, having sync mode set to `append` means they will not be removed from the collection in Plex. Set this to `sync` if you want the items removed in the collection too
         3.  Sort the collection in the order that it is received from the Trakt list
 
     === "Example 2 - Send to Arr"

@@ -355,7 +355,7 @@ collections:
       limit: 20
 ```
 
-If you specify TMDb Person ID's using the Detail `tmdb_person` and then tell either `actor`, `director`, `producer`, or `writer` to add `tmdb`, the script will translate the TMDb Person IDs into their names and run the filter on those names.
+If you specify TMDb Person ID's using the Setting `tmdb_person` and then tell either `actor`, `director`, `producer`, or `writer` to add `tmdb`, the script will translate the TMDb Person IDs into their names and run the filter on those names.
 
 ```yaml
 collections:

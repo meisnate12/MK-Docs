@@ -19,7 +19,7 @@ Finds every item in a [TVDb List](https://www.thetvdb.com/lists) or [TVDb Userli
 
 The expected input is a TVDb List URL or TVDb Userlist URL. Multiple values are supported as either a list or a comma-separated string.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:

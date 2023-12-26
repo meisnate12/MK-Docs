@@ -14,7 +14,7 @@ Finds every movie on Reciperr a list.
 
 The expected input is the url that points to the JSON data or a list of urls that do.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:

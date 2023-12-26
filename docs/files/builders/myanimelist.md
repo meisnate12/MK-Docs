@@ -25,7 +25,7 @@ You can find anime using the features of [MyAnimeList.net](https://myanimelist.n
 
 Gets every anime in a MyAnimeList search. The different sub-attributes are detailed below. At least one attribute is required.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 | Attribute              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |:-----------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -65,7 +65,7 @@ Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/top
 
 The expected input value is a single integer value of how many movies/shows to query.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
@@ -81,7 +81,7 @@ Gets every anime in MyAnimeList's [Top Airing Anime](https://myanimelist.net/top
 
 The expected input value is a single integer value of how many movies/shows to query.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
@@ -97,7 +97,7 @@ Gets every anime in MyAnimeList's [Top Upcoming Anime](https://myanimelist.net/t
 
 The expected input value is a single integer value of how many movies/shows to query.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
@@ -113,7 +113,7 @@ Gets every anime in MyAnimeList's [Top Anime TV Series](https://myanimelist.net/
 
 The expected input value is a single integer value of how many movies/shows to query.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
@@ -129,7 +129,7 @@ Gets every anime in MyAnimeList's [Top Anime Movies](https://myanimelist.net/top
 
 The expected input value is a single integer value of how many movies/shows to query.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
@@ -145,7 +145,7 @@ Gets every anime in MyAnimeList's [Top Anime OVA Series](https://myanimelist.net
 
 The expected input value is a single integer value of how many movies/shows to query.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
@@ -161,7 +161,7 @@ Gets every anime in MyAnimeList's [Top Anime Specials](https://myanimelist.net/t
 
 The expected input value is a single integer value of how many movies/shows to query.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
@@ -177,7 +177,7 @@ Gets every anime in MyAnimeList's [Most Popular Anime](https://myanimelist.net/t
 
 The expected input value is a single integer value of how many movies/shows to query.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
@@ -193,7 +193,7 @@ Gets every anime in MyAnimeList's [Most Favorited Anime](https://myanimelist.net
 
 The expected input value is a single integer value of how many movies/shows to query.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
@@ -209,7 +209,7 @@ Gets the suggested anime in by MyAnimeList for the authorized user. (Maximum: 10
 
 The expected input value is a single integer value of how many movies/shows to query.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
@@ -235,7 +235,7 @@ collections:
 
 Gets anime in MyAnimeList User's Anime list. The different sub-attributes are detailed below. The only required attribute is `username`
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 | Attribute  | Description                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |:-----------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -260,7 +260,7 @@ collections:
 
 Gets anime in MyAnimeList's [Seasonal Anime](https://myanimelist.net/anime/season) list the options are detailed below. 
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 | Attribute       | Description & Values                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |:----------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

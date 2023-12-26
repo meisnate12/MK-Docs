@@ -43,7 +43,7 @@ The expected input is the sort you want returned. It defaults to `added.asc`.
 | `critic_rating.asc`<br>`critic_rating.desc` | Sort by Critic Rating                       |
 | `added.asc`<br>`added.desc`                 | Sort by Date Added to your Watchlist        |
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended.
 
 ```yaml
 collections:
@@ -440,7 +440,7 @@ Here's an example of an episode collection using `plex_search`.
      summary: A collection of the highest rated simpsons episodes.
 ```
 
-If you specify TMDb Person ID's using the Detail `tmdb_person` and then tell either `actor`, `director`, `producer`, or `writer` to add `tmdb`, the script will translate the TMDb Person IDs into their names and run the search on those names.
+If you specify TMDb Person ID's using the Setting `tmdb_person` and then tell either `actor`, `director`, `producer`, or `writer` to add `tmdb`, the script will translate the TMDb Person IDs into their names and run the search on those names.
 
 ```yaml
 collections:

@@ -108,7 +108,7 @@ collections:
 
 Finds every item in the TMDb List.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
@@ -302,7 +302,7 @@ Finds the movies/shows in TMDb's [Popular Movies](https://www.themoviedb.org/mov
 
 Use `tmdb_region` with this builder to set the region.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:
@@ -318,7 +318,7 @@ Finds the movies in TMDb's [Now Playing](https://www.themoviedb.org/movie/now-pl
 
 Use `tmdb_region` with this builder to set the region.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:
@@ -334,7 +334,7 @@ Finds the movies/shows in TMDb's [Top Rated Movies](https://www.themoviedb.org/m
 
 Use `tmdb_region` with this builder to set the region.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:
@@ -350,7 +350,7 @@ Finds the movies in TMDb's [Upcoming Movies](https://www.themoviedb.org/movie/up
 
 Use `tmdb_region` with this builder to set the region.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:
@@ -364,7 +364,7 @@ collections:
 
 Finds the shows in TMDb's [Airing Today Shows](https://www.themoviedb.org/tv/airing-today) list.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:
@@ -378,7 +378,7 @@ collections:
 
 Finds the shows in TMDb's [On TV Shows](https://www.themoviedb.org/tv/on-the-air) list.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:
@@ -392,7 +392,7 @@ collections:
 
 Finds the movies/shows in TMDb's Trending Daily list.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:
@@ -406,7 +406,7 @@ collections:
 
 Finds the movies/shows in TMDb's Trending Weekly list.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:
@@ -422,7 +422,7 @@ Uses [TMDb's Discover Search](https://developer.themoviedb.org/docs/search-and-q
 
 I've observed many attributes that begin with `with_` or `without_` being able to use `|` as an `OR` and `&` as an `AND` when specifying multiple items even though it's not listed as possible.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 | Type               | Description                                       |
 |:-------------------|:--------------------------------------------------|

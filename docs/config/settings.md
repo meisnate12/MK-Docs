@@ -5,6 +5,7 @@ search:
 # Settings
 
 ## Overview
+
 The `settings:` attribute and subsequent settings can be used to command various aspects of the functionality of Plex Meta Manager.
 
 Examples of these settings include the ability to:
@@ -15,7 +16,7 @@ Examples of these settings include the ability to:
 
 The settings attribute and attributes can be specified individually per library, or can be inherited from the global value if it has been set. If an attribute is specified at both the library and global level, then the library level attribute will take priority.
 
-There are some attributes which can be specified at the collection level using [Setting Details](../files/settings.md).
+There are some attributes which can be specified at the collection level using [Settings](../files/settings.md).
 
 Attributes set at the collection level will take priority over any library or global-level attribute.
 
@@ -465,7 +466,7 @@ The available setting attributes which can be set at each level are outlined bel
     
     ???+ note
     
-        A collection is a `run_again` collection if it has the `run_again` [Setting Detail](../files/settings.md) attribute set to true.
+        A collection is a `run_again` collection if it has the `run_again` [Setting](../files/settings.md) attribute set to true.
 
     <hr style="margin: 0px;">
     

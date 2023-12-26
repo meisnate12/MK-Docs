@@ -14,7 +14,7 @@ Finds every item from [FlixPatrol's Top Platform Lists](https://flixpatrol.com/t
 
 The only required attribute is `platform`.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ### Top Platform Attributes
 

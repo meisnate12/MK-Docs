@@ -65,7 +65,7 @@ Running filters are often slower than builders so whenever possible use only bui
 
 ???+ example "Setting Example"
 
-    This sets the colleciton to only build if the builders find at **minimum 10 items** and will sync itmes to the collection (removing items that no longer are found by the builders).
+    This sets the colleciton to only build if the builders find at **minimum 10 items** and will sync items to the collection (removing items that no longer are found by the builders).
     
     ```yaml
     collections:

@@ -15,7 +15,7 @@ Finds every movie in the ICheckMovies List.
 
 The expected input is a ICheckMovies List URL. Multiple values are supported as either a list or a comma-separated string.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:

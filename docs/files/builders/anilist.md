@@ -21,7 +21,7 @@ Finds every anime in AniList's [Top Rated Anime](https://anilist.co/search/anime
 
 The expected input is a single integer value of how many movies/shows to query. 
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
@@ -37,7 +37,7 @@ Finds every anime in AniList's [Popular Anime](https://anilist.co/search/anime/p
 
 The expected input is a single integer value of how many movies/shows to query. 
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
@@ -53,7 +53,7 @@ Finds every anime in AniList's [Trending Anime](https://anilist.co/search/anime/
 
 The expected input is a single integer value of how many movies/shows to query. 
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ```yaml
 collections:
@@ -105,7 +105,7 @@ Gets anime in AniList User's Anime list. The different sub-attributes are detail
 
 Both `username` and `list_name` are required.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 | Attribute               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |:------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -136,7 +136,7 @@ Finds the anime specified by the AniList Search the options are detailed below.
 
 There are three fields per search option when using AniList's Search just like Plex's Advanced Filters in the Web UI. The first is the **Attribute** (what attribute you wish to search), the second is the **Modifier** (which modifier to use), and the third is the **Term** (actual term to search).
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order. 
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order. 
 
 ## Special Attributes
 

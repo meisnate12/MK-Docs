@@ -362,9 +362,6 @@ spec:
 
 ### Templatizing your configuration
 
-This example will (re)generate the IMDb list URL and include the current date as the end date for the `release_date` value.
-`https://www.imdb.com/search/title/?title_type=tv_series,tv_miniseries&release_date=1980-01-01,{{ now().strftime('%Y-%m-%d') }}`
-
 `{{ now().strftime('%Y-%m-%d') }}` is the Jinja code, which when rendered will be replaced with the current date in
 YYYY-MM-DD format.  `now()` is a special method defined in the Python code running in the init container to allow access
 to the current date, so changing the output format is as simple as changing the string in `strftime` to your desired

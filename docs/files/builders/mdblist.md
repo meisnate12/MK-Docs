@@ -12,7 +12,7 @@ Finds every item in a [MdbList List](https://mdblist.com/toplists/).
 
 The expected input is an MdbList List URL. Multiple values are supported as a list only a comma-separated string will not work.
 
-The `sync_mode: sync` and `collection_order: custom` Details are recommended since the lists are continuously updated and in a specific order.
+The `sync_mode: sync` and `collection_order: custom` Setting are recommended since the lists are continuously updated and in a specific order.
 
 ```yaml
 collections:
