@@ -162,6 +162,6 @@ Note that the `template_variables:` section only needs to be used if you do want
         rocky: https://mdblist.com/lists/plexmetamanager/external/9248
         star: https://mdblist.com/lists/plexmetamanager/external/15105
         askew: https://mdblist.com/lists/plexmetamanager/external/15362
-        wizard: https://mdblist.com/lists/plexmetamanager/external/9242
+        wizard: https://mdblist.com/lists/plexmetamanager/external/23683
         xmen: https://mdblist.com/lists/plexmetamanager/external/9244
     ```
