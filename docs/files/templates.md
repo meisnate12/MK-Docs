@@ -3,8 +3,8 @@
 Collection, Playlist, Metadata, and Overlay Files often share a lot of common or generalizable configuration details. 
 Templates allow you to define these details in order for them to be used across multiple definitions.
 
-Templates are defined under the top level attribute `templates`. The `templates` top level attribute and its templates 
-can either be defined in the same file as the other definitions or from an external file using the top level 
+Templates definitions are placed under the top level attribute `templates`. The `templates` top level attribute and its 
+templates can either be defined in the same file as the other definitions or from an external file using the top level 
 `external_templates` attribute. See [File Blocks](../config/files.md) for how to define files for `external_templates`.
 
 ??? example "External Template Example (Click to Expand)"
@@ -36,6 +36,91 @@ can either be defined in the same file as the other definitions or from an exter
           name: Actor
           person: 73457
     ```
+
+## Template Definition
+
+Inside a template, you can use all the [Builders](builders/overview.md), [Filters](filters.md), 
+[Settings](settings.md), [Updates](updates.md), and [Item Updates](item_updates.md) attributes that you can give 
+collections/playlists [except `template`; templates cannot be nested].
+
+### Template Attributes
+
+
+
+### Template Name
+
+To call a template with another definition you use the `template` attribute. The only required attribute under 
+`template` is `name` which must correspond exactly to the template mapping name.
+
+**The template names that you define are arbitrary, but they must match between the template mapping name and the 
+template call name.**
+
+??? example "Template Name Example (Click to Expand)"
+    
+    This is an example using the template name `Actor` showing the template being called in two different ways.
+    
+    ```yaml
+    templates:
+      Actor: #(1)!
+        plex_search:
+          all:
+            actor: tmdb
+        tmdb_person: <<person>>
+        sort_title: "!_<<collection_name>>"
+        sync_mode: sync
+        collection_order: release
+    collections:
+      Bruce Lee:
+        template: {name: Actor, person: 19429} #(2)!
+      Chris Pratt:
+        template:
+          name: Actor #(3)!
+          person: 73457
+    ```
+
+    1. This defines the template name as `Actor`.
+    2. This calls the `Actor` template using inline YAML syntax.
+    3. This calls the `Actor` template using a more readable YAML syntax.
+
+### Template Variables
+
+Template Variables are used to define the data that going to be changing in the template.
+
+When calling templates any attribute besides `name` under `template` is considered a template variables whose names 
+must correspond exactly with the template variable name surrounded by `<<` and `>>` in the template definition. These 
+template variables will replace any part of any value that contains the template variable name surrounded by `<<` and 
+`>>` in the template with the specified template variable's value.
+
+**The template variable names that you define are arbitrary, but they must match exactly between the template definition
+and the template call.**
+
+??? example "Template Variables Example (Click to Expand)"
+    
+    This is an example using the template name `Actor` showing the template being called in two different ways.
+    
+    ```yaml
+    templates:
+      Actor:
+        plex_search:
+          all:
+            actor: tmdb
+        tmdb_person: <<person>> #(1)!
+        sort_title: "!_<<collection_name>>"
+        sync_mode: sync
+        collection_order: release
+    collections:
+      Bruce Lee:
+        template: {name: Actor, person: 19429} #(2)!
+      Chris Pratt:
+        template:
+          name: Actor
+          person: 73457 #(3)!
+    ```
+
+    1. The template variable `person` will replace `<<person>>` here.
+    2. This calls the `Actor` template with the template variable `person` set to `19429` using inline YAML syntax.
+    3. This calls the `Actor` template with the template variable `person` set to `73457` using a more readable YAML syntax.
+
 
 ## Template Example
 
