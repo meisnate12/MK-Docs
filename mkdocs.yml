@@ -87,7 +87,7 @@ extra:
   analytics:
     provider: plausible
     domain: mk.metamanger.wiki/en/latest
-    src: "https://analytics.metamanager.wiki/js/script.js"
+    src: "https://analytics.servernation.xyz/js/script.js"
   consent:
     title: Cookie consent
     description: >-
