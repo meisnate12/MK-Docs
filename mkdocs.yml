@@ -1,7 +1,7 @@
 site_name: Plex Meta Manager Wiki
 site_author: meisnate12
 site_description: Plex Meta Manager is an open-source python project allowing you to unlock the potential of your media server.
-site_url: https://mk.metamanager.wiki/en/latest/
+site_url: https://mk.metamanager.wiki/en/latest
 repo_name: Plex Meta Manager
 repo_url: https://github.com/meisnate12/Plex-Meta-Manager
 
