@@ -83,6 +83,25 @@ extra:
     class: md-social__link
     link: 'https://github.com/meisnate12/Plex-Meta-Manager'
     name: GitHub
+  analytics:
+    provider: plausible
+    domain: mk.metamanger.wiki
+    src: "https://analytics.metamanager.wiki/js/script.js"
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - reject
+      - manage
+    cookies:
+      analytics:
+        name: plausible
+        checked: false
 copyright: Copyright &copy; 2024 meisnate12
 markdown_extensions:
   - pymdownx.tasklist:
