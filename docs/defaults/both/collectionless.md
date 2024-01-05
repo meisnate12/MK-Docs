@@ -69,7 +69,7 @@ libraries:
           collection_order: release
 ```
 
-## Default values
+## Default Values
 
 ???+ tip
 

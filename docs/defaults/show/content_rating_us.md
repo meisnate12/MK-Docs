@@ -103,7 +103,7 @@ Note that the `template_variables:` section only needs to be used if you do want
     4.  Adds the "de/18" content rating to the "R" addon list, "de/18" must exist in your library if the "R" content rating does not
 
 
-## Default values
+## Default Values
 
 ??? tip
 

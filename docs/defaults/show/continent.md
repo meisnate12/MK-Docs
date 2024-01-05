@@ -110,7 +110,7 @@ Note that the `template_variables:` section only needs to be used if you do want
     3.  Set the [Color Style](#color-style)
     4.  Exclude "Europe" from the list of collections that are created
 
-## Default values
+## Default Values
 
 ??? tip
 

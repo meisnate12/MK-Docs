@@ -104,92 +104,35 @@ Note that the `template_variables:` section only needs to be used if you do want
     3.  Defines a collection which will be called "R", this does not need to already exist in your library
     4.  Adds the "de/18" content rating to the "R" addon list, "de/18" must exist in your library if the "R" content rating does not
 
-## Default values
+## Default Values
 
-???+ tip
+These are lists provided for reference to show what values will be in use if you do no customization.  **These do not show how to change a name or a list.**
 
-    These are lists provided for reference to show what values will be in use if you do no customization.  **These do not show how to change a name or a list.**
+If you want to customize these values, use the methods described above.
 
-    If you want to customize these values, use the methods described above.
+??? example "Default `include` (click to expand) <a class="headerlink" href="#include" title="Permanent link">¶</a>"
 
-    **Default `include`**:
+    <div id="include" />
 
     ```yaml
-    include:
-      - G
-      - PG
-      - PG-13
-      - R
-      - NC-17
+    include: {%    
+      include-markdown "../../../defaults/movie/content_rating_us.yml" 
+      comments=false
+      preserve-includer-indent=false
+      start="include:"
+      end="addons:"
+    %}
     ```
 
-    **Default `addons`**:
+??? example "Default `addons` (click to expand) <a class="headerlink" href="#addons" title="Permanent link">¶</a>"
+
+    <div id="addons" />
 
     ```yaml
-    addons:
-      G:
-        - gb/U
-        - gb/0+
-        - U
-        - TV-Y
-        - TV-G
-        - E
-        - gb/E
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-        - 6
-        - "01"
-        - "02"
-        - "03"
-        - "04"
-        - "05"
-        - "06"
-        - G - All Ages
-      PG:
-        - gb/PG
-        - gb/9+
-        - TV-PG
-        - TV-Y7
-        - TV-Y7-FV
-        - 7
-        - 8
-        - 9
-        - "07"
-        - "08"
-        - "09"
-        - "10"
-        - "11"
-        - PG - Children
-      PG-13:
-        - gb/12A
-        - gb/12
-        - 12+
-        - TV-13
-        - gb/14+
-        - gb/15
-        - TV-14
-        - 12
-        - 13
-        - 14
-        - 15
-        - 16
-        - PG-13 - Teens 13 or older
-      R:
-        - 17
-        - 18
-        - gb/18
-        - MA-17
-        - TVMA
-        - TV-MA
-        - R - 17+ (violence & profanity)
-        - R+ - Mild Nudity
-      NC-17:
-        - gb/R18
-        - gb/X
-        - R18
-        - X
-        - Rx - Hentai
+    addons: {%    
+      include-markdown "../../../defaults/movie/content_rating_us.yml" 
+      comments=false
+      preserve-includer-indent=false
+      start="addons:"
+    %}
     ```

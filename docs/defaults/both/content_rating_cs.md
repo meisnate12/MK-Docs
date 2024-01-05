@@ -106,15 +106,15 @@ Note that the `template_variables:` section only needs to be used if you do want
     3.  Defines a collection which will be called "German 18", this does not need to already exist in your library
     4.  Adds the "de/18" content rating to the "German 18" addon list, "de/18" must exist in your library if the "German 18" content rating does not
 
-## Default values
+## Default Values
 
-??? warning
+These are lists provided for reference to show what values will be in use if you do no customization.  **These do not show how to change a name or a list.**
 
-    These are lists provided for reference to show what values will be in use if you do no customization.  **These do not show how to change a name or a list.**
+If you want to customize these values, use the methods described above.
 
-    If you want to customize these values, use the methods described above.
+??? example "Default `include` (click to expand) <a class="headerlink" href="#include" title="Permanent link">¶</a>"
 
-    **Default `include`:**
+    <div id="include" />
 
     ```yaml
     include: {%    
@@ -126,7 +126,9 @@ Note that the `template_variables:` section only needs to be used if you do want
     %}
     ```
 
-    **Default `addons`:**
+??? example "Default `addons` (click to expand) <a class="headerlink" href="#addons" title="Permanent link">¶</a>"
+
+    <div id="addons" />
 
     ```yaml
     addons: {%    

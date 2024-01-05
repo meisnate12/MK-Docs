@@ -97,15 +97,15 @@ Note that the `template_variables:` section only needs to be used if you do want
     2.  Do not create an "Audio Language Collections" separator
     3.  Exclude "French" from having an Audio Collection
 
-## Default values
+## Default Values
 
-??? tip
+These are lists provided for reference to show what values will be in use if you do no customization.  **These do not show how to change a name or a list.**
 
-    These are lists provided for reference to show what values will be in use if you do no customization.  **These do not show how to change a name or a list.**
+If you want to customize these values, use the methods described above.
 
-    If you want to customize these values, use the methods described above.
+??? example "Default `include` (click to expand) <a class="headerlink" href="#include" title="Permanent link">¶</a>"
 
-    **Default `include`:**
+    <div id="include" />
 
     ```yaml
     include: {%    
@@ -117,7 +117,9 @@ Note that the `template_variables:` section only needs to be used if you do want
     %}
     ```
 
-    **Default `key_name_override`:**
+??? example "Default `key_name_override` (click to expand) <a class="headerlink" href="#key-name-override" title="Permanent link">¶</a>"
+
+    <div id="key-name-override" />
 
     ```yaml
     key_name_override: {%    

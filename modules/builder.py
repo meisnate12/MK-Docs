@@ -917,7 +917,7 @@ class CollectionBuilder:
                 test_sort = self.data[methods["collection_order"]]
         elif "collection_order" not in methods and not self.playlist and not self.blank_collection and self.build_collection and self.library.default_collection_order and not self.smart:
             test_sort = self.library.default_collection_order
-            logger.warning("")
+            logger.info("")
             logger.warning(f"{self.Type} Warning: collection_order not found using library default_collection_order: {test_sort}")
         self.custom_sort = "custom" if self.playlist else None
         if test_sort:

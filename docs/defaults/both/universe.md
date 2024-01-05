@@ -115,15 +115,15 @@ Note that the `template_variables:` section only needs to be used if you do want
     4.  Create a new universe called "MonsterVerse", the key for this universe will be "monster"
     5.  Add a trakt list to the "monster" key
 
-## Default values
+## Default Values
 
-??? tip
+These are lists provided for reference to show what values will be in use if you do no customization.  **These do not show how to change a name or a list.**
 
-    These are lists provided for reference to show what values will be in use if you do no customization.  **These do not show how to change a name or a list.**
+If you want to customize these values, use the methods described above.
 
-    If you want to customize these values, use the methods described above.
+??? example "Default `data` (click to expand) <a class="headerlink" href="#data" title="Permanent link">¶</a>"
 
-    **Default `data`:**
+    <div id="data" />
 
     ```yaml
     data: {%    
@@ -135,7 +135,9 @@ Note that the `template_variables:` section only needs to be used if you do want
     %}
     ```
 
-    **Default `mdblist_list`:**
+??? example "Default `template_variables` (click to expand) <a class="headerlink" href="#template-variables" title="Permanent link">¶</a>"
+
+    <div id="template-variables" />
 
     ```yaml
     data: {%    

@@ -95,7 +95,7 @@ Note that the `template_variables:` section only needs to be used if you do want
     2.  Show these collections and their items within the "Library" tab
     3.  Use the gray [Separator Style](../separators.md#separator-styles)
 
-## Default values
+## Default Values
 
 ??? tip
 

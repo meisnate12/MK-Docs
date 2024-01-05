@@ -105,7 +105,7 @@ Note that the `template_variables:` section only needs to be used if you do want
     2.  Add [TMDb Shows 46958](https://www.themoviedb.org/tv/46958), [79863](https://www.themoviedb.org/tv/79863) and [110531](https://www.themoviedb.org/tv/110531) as addons of [TMDb Show 31917](https://www.themoviedb.org/tv/31917-pretty-little-liars) so that they appear in the same collection
     3.  Add items missing from your library in Plex to Sonarr
 
-## Default values
+## Default Values
 
 ??? tip
 

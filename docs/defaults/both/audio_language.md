@@ -96,7 +96,7 @@ Note that the `template_variables:` section only needs to be used if you do want
     2.  Do not create an "Audio Language Collections" separator
     3.  Exclude "French" from having an Audio Collection
 
-## Default values
+## Default Values
 
 These are lists provided for reference to show what values will be in use if you do no customization.  **These do not show how to change a name or a list.**
 

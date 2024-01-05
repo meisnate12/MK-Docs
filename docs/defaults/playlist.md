@@ -82,7 +82,7 @@ playlist_files:
       radarr_add_missing: true
 ```
 
-## Default values
+## Default Values
 
 ???+ tip
 

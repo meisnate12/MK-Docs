@@ -127,7 +127,7 @@ Note that the `template_variables:` section only needs to be used if you do want
     6.  Add an IMDb List to be used for the "Planet of the Apes Day" collection
     7.  Add the 🐵 emoji to the "Planet of the Apes Day" collection so that the title in Plex is "🐵 Planet of the Apes Day Movies"
 
-## Default values
+## Default Values
 
 ??? tip
 

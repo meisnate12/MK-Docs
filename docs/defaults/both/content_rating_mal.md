@@ -105,15 +105,15 @@ The below is an example config.yml extract with some Template Variables added in
     3.  Defines a collection which will be called "R+ - Mild Nudity", this does not need to already exist in your library
     4.  Adds the "de/18" content rating to the "R+ - Mild Nudity" addon list, "de/18" must exist in your library if the "R+ - Mild Nudity" content rating does not
 
-## Default values
+## Default Values
 
-??? tip
+These are lists provided for reference to show what values will be in use if you do no customization.  **These do not show how to change a name or a list.**
 
-    These are lists provided for reference to show what values will be in use if you do no customization.  **These do not show how to change a name or a list.**
+If you want to customize these values, use the methods described above.
 
-    If you want to customize these values, use the methods described above.
+??? example "Default `include` (click to expand) <a class="headerlink" href="#include" title="Permanent link">¶</a>"
 
-    **Default `include`:**
+    <div id="include" />
 
     ```yaml
     include: {%    
@@ -125,7 +125,9 @@ The below is an example config.yml extract with some Template Variables added in
     %}
     ```
 
-    **Default `addons`:**
+??? example "Default `addons` (click to expand) <a class="headerlink" href="#addons" title="Permanent link">¶</a>"
+
+    <div id="addons" />
 
     ```yaml
     addons: {%    

@@ -103,15 +103,15 @@ Note that the `template_variables:` section only needs to be used if you do want
     2.  Add [TMDb Movie 336560](https://www.themoviedb.org/movie/336560-lake-placid-vs-anaconda) to [TMDb Collection 105995](https://www.themoviedb.org/collection/105995-anaconda-collection) 
     3.  Add items missing from your library in Plex to Radarr. When used in this particular file, hundreds if not thousands of items may be sent to Radarr - proceed with caution!
 
-## Default values
+## Default Values
 
-???+ tip
+These are lists provided for reference to show what values will be in use if you do no customization.  **These do not show how to change a name or a list.**
 
-    These are lists provided for reference to show what values will be in use if you do no customization.  **These do not show how to change a name or a list.**
+If you want to customize these values, use the methods described above.
 
-    If you want to customize these values, use the methods described above.
+??? example "Default `addons` (click to expand) <a class="headerlink" href="#addons" title="Permanent link">¶</a>"
 
-    **Default `addons`**:
+    <div id="addons" />
 
     ```yaml
     addons: {%    
@@ -122,6 +122,10 @@ Note that the `template_variables:` section only needs to be used if you do want
       end="title_override:"
     %}
     ```
+
+??? example "Default `title_override` (click to expand) <a class="headerlink" href="#title-override" title="Permanent link">¶</a>"
+
+    <div id="title-override" />
 
     **Default `title_override`**:
 
@@ -134,6 +138,24 @@ Note that the `template_variables:` section only needs to be used if you do want
       end="template_variables:"
     %}
     ```
+
+??? example "Default Template Variable `movie` (click to expand) <a class="headerlink" href="#movie" title="Permanent link">¶</a>"
+
+    <div id="movie" />
+
+    ???+ tip 
+
+        Pass `movie_<<key>>` to the file as template variables and you can change this values. 
+
+    ```yaml
+    movie: {%    
+      include-markdown "../../../defaults/movie/franchise.yml" 
+      comments=false
+      preserve-includer-indent=false
+      start="template_variables:"
+    %}
+    ```
+
 
     **Default Template Variables `movie` & `name_mapping`**:
 
