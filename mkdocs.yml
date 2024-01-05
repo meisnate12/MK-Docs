@@ -86,7 +86,7 @@ extra:
     name: GitHub
   analytics:
     provider: plausible
-    domain: mk.metamanger.wiki
+    domain: mk.metamanger.wiki/en/latest
     src: "https://analytics.metamanager.wiki/js/script.js"
   consent:
     title: Cookie consent
@@ -103,7 +103,8 @@ extra:
       analytics:
         name: plausible
         checked: false
-copyright: Copyright &copy; 2024 meisnate12
+copyright: Copyright &copy; 2024 meisnate12 -
+<a href="#__consent">Change cookie settings</a>
 markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
